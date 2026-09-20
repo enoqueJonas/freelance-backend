@@ -198,3 +198,10 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - 27 casos de uso derivados dos 28 RF; RF28 foi absorvido no fluxo UC06 de verificação.
 - Trabalhador/Empregador são capacidades acumuláveis do mesmo User, não contas exclusivas.
 - Próximo: modelo conceptual/classes do domínio.
+
+
+### Modelação — modelo conceptual/classes
+
+- **G-MODEL-CLASS: PASS** — definidos agregados, classes, cardinalidades e invariantes do domínio-alvo.
+- AS-IS confrontado: Worker/Employer OneToOne são boa base; Document exclusivo de Employer e Assessment >=50 conflitam com a baseline; Contract/Signature evoluem para Engagement/AgreementVersion.
+- Próximo: diagramas de actividade dos fluxos representativos e sequências.

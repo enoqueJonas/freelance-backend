@@ -2,7 +2,7 @@
 
 ## Objectivo
 
-Registar de forma rastreável as evidências extraídas do corpus documental que podem ajudar a compreender o contexto, identificar problemas/necessidades e fundamentar decisões futuras da solução ServiPlus.
+Registar de forma rastreável as evidências extraídas do corpus documental que podem ajudar a compreender o contexto, identificar problemas/necessidades e fundamentar decisões futuras da solução ConecTA.
 
 Esta matriz **não converte automaticamente evidências em requisitos**. A cadeia adoptada é:
 
@@ -50,7 +50,7 @@ Os requisitos definitivos serão consolidados somente depois da análise das ent
 | DOC-05-E01 | CTX | O estudo do Quénia identifica plataformas de freelancing com tarefas como desenvolvimento web, design, criação de conteúdo e marketing. | Existe evidência africana de mediação digital de trabalho compatível com actividades de TI/digitais. | Utilizar como referência regional, deixando claro que evidência do Quénia não representa directamente Maputo. | Confirmado |
 | DOC-05-E02 | NEC | Plataformas financeiras como M-PESA permitem receber/pagar trabalho mediado por plataformas e simplificam pagamentos no contexto queniano. | Mobile money pode ser relevante para plataformas de trabalho em contexto africano. | Triangular com dados moçambicanos do BdM e entrevistas; não extrapolar preferência queniana para Moçambique. | Confirmado |
 | DOC-06-E01 | CTX | A ENIF 2025–2031 e o relatório de 2025 tratam pagamentos digitais, educação financeira e protecção do consumidor como áreas de trabalho da inclusão financeira. | Pagamentos digitais são uma componente actual da política/ecossistema financeiro moçambicano. | Fundamentar contexto actual e perguntas sobre meios de pagamento/segurança. | Confirmado |
-| DOC-06-E02 | REG/NEC | O relatório enquadra inclusão financeira como acesso e uso efectivo de serviços de instituições reguladas e define interoperabilidade como comunicação segura entre sistemas/plataformas financeiras. | Integração financeira exige atenção a provedores regulados, segurança e interoperabilidade. | Se houver integração real, especificar limites da plataforma e integração com provedores autorizados; não representar a ServiPlus como prestador financeiro. | Candidato; requer análise regulatória específica |
+| DOC-06-E02 | REG/NEC | O relatório enquadra inclusão financeira como acesso e uso efectivo de serviços de instituições reguladas e define interoperabilidade como comunicação segura entre sistemas/plataformas financeiras. | Integração financeira exige atenção a provedores regulados, segurança e interoperabilidade. | Se houver integração real, especificar limites da plataforma e integração com provedores autorizados; não representar a ConecTA como prestador financeiro. | Candidato; requer análise regulatória específica |
 | DOC-07-E01 | BEN | Upwork permite pesquisa de projectos por skills e filtros. | Matching pode beneficiar de informação estruturada e mecanismos de pesquisa. | Comparar com a necessidade local de descoberta; pode fundamentar desenho de pesquisa/filtros após entrevistas. | Confirmado |
 | DOC-07-E02 | BEN | A proposta inclui preço/taxa, apresentação, informação solicitada pelo cliente e exemplos relevantes; o cliente analisa propostas e pode entrevistar antes da oferta. | Contratação pode exigir comparação estruturada de candidatos/propostas. | Investigar como clientes de Maputo recebem/comparam propostas actualmente. | Confirmado |
 | DOC-07-E03 | BEN | Em contratos fixed-price, o guia usa milestones, financiamento prévio e escrow, entrega pela plataforma e libertação do pagamento. | Existem mecanismos para reduzir risco de não pagamento e de entrega. | Tratar escrow/milestones como alternativas de benchmark, não como requisitos já aprovados; verificar viabilidade legal/técnica local. | Benchmark |
@@ -121,3 +121,83 @@ Nenhum novo requisito funcional é aprovado nesta ronda. As três fontes reforç
 `contexto oficial/local → enquadramento da economia digital → funcionamento internacional das plataformas → investigação empírica local → necessidades → requisitos`.
 
 A próxima ronda deve aprofundar secções específicas do World Bank e ILO relevantes a matching, confiança/reputação, pagamentos e conflitos, e extrair apenas indicadores do INFOR que sejam realmente utilizáveis no texto.
+
+
+## Análise substantiva — ronda 2: mecanismos das plataformas
+
+### Tema A — Descoberta e matching
+
+O WESO 2021 mostra que recrutamento e matching são elementos centrais do modelo de negócio das plataformas digitais de trabalho. Na amostra de plataformas analisada pela ILO, os sinais utilizados no matching incluem avaliações de clientes, ratings, perfil do trabalhador, histórico/portfólio e preço/taxa proposta. O mesmo relatório indica que, nas plataformas freelance estudadas, a dificuldade em encontrar clientes constitui uma limitação relevante para parte dos trabalhadores.
+
+**Leitura para a ConecTA:** existe suporte documental para tratar descoberta, pesquisa/matching e informação de perfil como categorias do problema. Não existe ainda suporte para tornar o matching algorítmico obrigatório, nem para escolher um ranking específico.
+
+**Triangulação esperada:** N01, N02 e N04.
+
+### Tema B — Confiança, reputação e demonstração de capacidade
+
+O WESO coloca construção de perfil, ratings, demonstração de capacidade e feedback dentro da experiência do trabalhador na plataforma. Contudo, ratings também integram mecanismos de avaliação e gestão algorítmica, podendo afectar acesso ao trabalho e condições de participação.
+
+O estudo ILO Kenya 2024 reforça que contas com ratings elevados adquirem valor económico para os trabalhadores e que dificuldades de criação/manutenção de contas podem produzir comportamentos secundários, incluindo compra de contas.
+
+**Leitura para a ConecTA:** perfil, portfólio/histórico e reputação são mecanismos documentados de redução de assimetria de informação, mas não devem ser tratados como equivalentes a “confiança garantida”. A concepção de avaliações deve considerar contestabilidade, contexto e risco de efeitos injustos.
+
+**Triangulação esperada:** N02, N03, N11 e N12.
+
+### Tema C — Comunicação, negociação e formalização
+
+A ILO documenta que plataformas freelance podem manter canais oficiais de comunicação e regras sobre o conteúdo e as transacções que ocorrem nesses canais. Também documenta acompanhamento do trabalho e, em alguns modelos, monitoria digital intensa.
+
+**Leitura para a ConecTA:** a evidência suporta a necessidade de preservar informação relevante do relacionamento e de estruturar condições do trabalho, mas não prova que um chat interno completo seja necessário. A função científica a investigar é rastreabilidade de decisões/acordos, não “chat” como solução pré-definida.
+
+**Triangulação esperada:** N05, N06, N07 e N08.
+
+### Tema D — Pagamentos e protecção bilateral
+
+A literatura distingue método de pagamento, momento de pagamento, taxas, aceitação/rejeição do trabalho e mecanismos de protecção. O WESO documenta escrow em algumas plataformas freelance, enquanto o estudo do Quénia mostra que trabalhadores valorizam sistemas seguros de pagamento, mas também podem sentir-se limitados pelos métodos disponibilizados. No estudo queniano, a maioria dos freelancers online pesquisados utilizava sistemas de pagamento online, com outros a recorrerem a transferência bancária ou métodos móveis.
+
+**Leitura para a ConecTA:** existe forte fundamento para investigar e especificar clareza sobre valor, método, momento e condições de pagamento. Não existe fundamento para concluir que a ConecTA deve custodiar dinheiro, operar escrow ou integrar um meio específico. Escrow permanece benchmark e dependeria de viabilidade técnica/regulatória.
+
+**Triangulação esperada:** N09 e N10.
+
+### Tema E — Rejeição, conflitos e governação
+
+A ILO trata rejeição de trabalho, withholding/non-payment, account deactivation, feedback e dispute resolution como pontos relevantes da experiência do trabalhador e das regras de governação das plataformas. A literatura também mostra que regras unilaterais da plataforma podem criar desequilíbrios.
+
+**Leitura para a ConecTA:** há suporte documental para que conflitos e preservação de evidência sejam investigados como parte do domínio. Não há suporte suficiente para transformar automaticamente a ConecTA num árbitro de disputas ou para assumir decisão administrativa sobre conflitos técnicos.
+
+**Triangulação esperada:** N12, N13 e N14.
+
+### Tema F — Diversidade dos serviços de TI e localização
+
+O WESO distingue plataformas online web-based, nas quais o trabalho pode ser executado remotamente, de plataformas location-based. Software development aparece entre os trabalhos que podem ser mediados online. O corpus africano também mostra diversidade entre serviços mediados digitalmente.
+
+**Leitura para a ConecTA:** o domínio de TI não deve assumir que todos os serviços são remotos. A localização pode ser relevante para serviços presenciais, mas não deve funcionar como requisito universal de matching.
+
+**Triangulação esperada:** N15 e N16.
+
+## Resultado da ronda 2 — estatuto das funcionalidades actualmente visíveis no protótipo
+
+| Capacidade | Suporte documental | Decisão nesta fase |
+|---|---|---|
+| Pesquisa/descoberta de trabalhadores/ofertas | Forte | Manter como capacidade candidata; triangular localmente |
+| Perfil profissional | Forte | Manter como capacidade candidata |
+| Portfólio/histórico | Forte | Manter como mecanismo candidato de demonstração de capacidade |
+| Ratings/reviews | Forte como padrão de plataforma; riscos também documentados | Candidato, desenho ainda não definido |
+| Propostas | Moderado/forte no modelo freelance | Candidato; triangular forma local de negociação |
+| Registo de condições/acordo | Forte como necessidade de clareza | Candidato; forma de formalização ainda aberta |
+| Chat interno | Fraco como requisito autónomo | Não derivar directamente; investigar rastreabilidade |
+| Notificações | Não estabelecido como necessidade central nesta ronda | Não derivar ainda |
+| Pagamentos integrados | Parcial | Não aprovar integração; necessidade é clareza/protecção do pagamento |
+| Escrow | Benchmark | Não aprovar como requisito |
+| Assinatura electrónica | Não estabelecida nesta ronda | Não aprovar |
+| Verificação documental | Parcial/indirecto | Requer triangulação local e análise normativa |
+| Teste/assessment de competências | Não estabelecido como necessidade universal | Não aprovar |
+| Avaliação bilateral | Plausível; reputação é forte, bilateralidade precisa triangulação | Candidato |
+| Gestão administrativa de disputas | Conflitos são suportados; arbitragem pela plataforma não | Não aprovar como desenho |
+| Localização | Contextual | Usar apenas quando o tipo de serviço a torna relevante |
+
+### Conclusão da ronda 2
+
+A análise documental começa a separar claramente **necessidades do domínio** de **soluções de interface/produto**. O corpus suporta descoberta, informação profissional, clareza das condições, pagamento/protecção, reputação e tratamento de conflitos como temas relevantes. Não suporta ainda a adopção automática de chat, escrow, assinatura electrónica, assessments, geolocalização universal ou arbitragem administrativa.
+
+Nenhum RF é fechado apenas com esta ronda.

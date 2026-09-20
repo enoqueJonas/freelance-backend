@@ -54,9 +54,9 @@
 - [x] Reescrever/alinha a pergunta de pesquisa.
 - [x] Rever objectivo geral.
 - [x] Rever objectivos específicos e estabelecer cadeia de rastreabilidade.
-- [ ] Verificar exigência institucional da hipótese e decidir se deve ser reformulada ou removida.
-- [ ] Completar delimitação do estudo (espacial, temática e tecnológica definidas; temporal pendente).
-- [ ] Verificar coerência Problema → Pergunta → Objectivos → Metodologia.
+- [x] Verificar exigência institucional e manter hipótese em formulação compatível com o desenho do estudo.
+- [ ] Completar delimitação do estudo (espacial, temática e tecnológica definidas; texto temporal preparado, período real pendente).
+- [x] Verificar coerência Problema → Pergunta → Objectivos → Metodologia (auditoria vertical aprovada com pendência temporal).
 
 ## Fase 3 — Reconciliação do estudo empírico
 

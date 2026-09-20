@@ -212,3 +212,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-MODEL-ACTIVITY: PASS** — quatro fluxos representativos definidos: oportunidade/proposta; formalização/alteração; execução/entrega/pagamento; conflito.
 - Evitada duplicação de CRUD; estados e decisões de negócio são explícitos.
 - Próximo: diagramas de sequência correspondentes, com fronteiras de aplicação e domínio.
+
+
+### Modelação — sequências
+
+- **G-MODEL-SEQUENCE: PASS** — sequências derivadas dos quatro fluxos de actividade.
+- Fronteiras lógicas: UI/API → Application Service → Domain → ORM/Repository; PSP via Adapter opcional.
+- Repositories são abstrações UML e não obrigam repository pattern artificial em Django.
+- Próximo: representação UML dos estados + arquitectura lógica/física + auditoria cruzada para fechar G-MODEL.

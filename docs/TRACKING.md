@@ -182,3 +182,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - Contract evolui conceptualmente para Engagement + AgreementVersion; alterações preservam histórico.
 - PaymentTerms, PaymentRecord e PaymentTransaction foram separados; ConecTA não assume custódia.
 - Próximo: atomicidade final + RN/RNF verificáveis + matriz de rastreabilidade para fechar G-REQ.
+
+
+### Baseline final de requisitos
+
+- **G-REQ: PASS** — baseline fechada após triangulação, reconciliação do draft e modelação de estados.
+- Resultado: **16 RN, 28 RF, 7 RNF e 7 Macro Requisitos**.
+- Matriz de rastreabilidade N01–N18 → RN → RF/RNF → critério de validação criada; N18 permanece condição de adopção, não requisito.
+- Próximo gate: **G-MODEL** — actores/casos de uso, classes/domínio, actividades, sequências, estados e arquitectura.

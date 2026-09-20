@@ -289,3 +289,116 @@ A ronda reduz três riscos de desenho:
 3. confundir necessidade de pagamento seguro com a ConecTA custodiar/processar fundos.
 
 Isto preserva a possibilidade de uma solução tecnicamente realista e juridicamente proporcional ao âmbito da monografia.
+
+
+## Análise substantiva — ronda 4: consolidação do corpus
+
+### 1. Mapa de utilização documental por capítulo
+
+| Fonte | Contextualização | Revisão Bibliográfica | Metodologia / Caso de Estudo | Necessidades / Requisitos | Uso principal |
+|---|---|---|---|---|---|
+| DOC-01 INFOR 2021/22 | Sim, após extracção de indicadores pertinentes | Secundário | Sim, para caracterizar contexto nacional/local quando houver indicador compatível | Não directamente | Contexto oficial do sector informal/emprego |
+| DOC-02 World Bank DECA 2019 | Sim | Sim | Sim, como enquadramento do ecossistema digital moçambicano | Indirecto | Economia digital, plataformas, serviços financeiros, competências |
+| DOC-03 ILO 2018 | Secundário | Sim | Não como evidência local | Sim, como categorias/necessidades internacionais a triangular | Condições, pagamento, protecção do trabalhador |
+| DOC-04 ILO WESO 2021 | Secundário | Sim, fonte central | Não como representação de Maputo | Sim, como modelo analítico/benchmark | Matching, perfis, reputação, comunicação, pagamentos, governação |
+| DOC-05 ILO Kenya | Não como evidência de Moçambique | Sim, comparação regional | Não como evidência local | Sim, apenas para triangulação regional | Freelancing africano, pagamentos, adopção |
+| DOC-06 BdM / ENIF 2025–2031 | Sim, para contexto financeiro/digital actual | Sim | Sim, contexto moçambicano | Sim, sobretudo limites/regulação de pagamentos | Inclusão financeira, moeda electrónica, interoperabilidade, protecção |
+| DOC-07 Upwork Guide | Não | Sim, como benchmark de solução existente | Não | Sim, apenas como solução possível | Pesquisa, propostas, milestones, escrow, contratação |
+| Lei 3/2017 + SCDM | Não salvo necessidade | Sim, enquadramento jurídico | Sim, se formalização electrónica fizer parte do caso | Sim, RN/RNF quando aplicável | Transacções e assinatura electrónica |
+| Leis 13/2026 e 14/2026 | Não | Sim, se segurança for discutida | Sim, enquadramento vigente | Sim, sobretudo RNF | Segurança/crimes cibernéticos |
+| Lei 15/2026 + BdM | Sim apenas se necessário | Sim | Sim | Sim, se pagamentos forem especificados | Sistema nacional de pagamentos |
+| Proposta de lei de dados pessoais | Não como lei vigente | Pode ser mencionada apenas como desenvolvimento legislativo, se relevante | Não | Não como obrigação vigente | Acompanhar, não normatizar |
+
+### 2. Fontes candidatas para o Capítulo I
+
+O Capítulo I deverá usar poucas fontes institucionais e apenas onde acrescentem evidência.
+
+**Candidatas principais:**
+- INE/INFOR: dimensão/contexto oficial, somente após indicador exacto;
+- World Bank DECA: transformação/economia digital e ecossistema moçambicano;
+- ILO WESO: emergência e papel das plataformas digitais de trabalho;
+- Banco de Moçambique/ENIF: apenas se pagamentos digitais/inclusão financeira forem necessários à contextualização.
+
+ILO Kenya e Upwork não são fontes prioritárias para a Introdução; são mais adequadas à revisão bibliográfica/benchmark.
+
+### 3. Fontes centrais para a Revisão Bibliográfica
+
+A revisão deverá ser reorganizada por conceitos/problemas, e não por acumulação de definições:
+1. trabalho autónomo/freelancing e plataformas digitais de trabalho;
+2. intermediação, descoberta e matching;
+3. assimetria de informação, perfil, competência e reputação;
+4. negociação, formalização e rastreabilidade;
+5. pagamentos e risco bilateral;
+6. governação, conflitos e mecanismos de contestação;
+7. segurança, privacidade e enquadramento digital moçambicano;
+8. soluções existentes/benchmark.
+
+ILO WESO será a fonte transversal principal; World Bank/BdM dão contexto moçambicano; Upwork e ILO Kenya funcionam como benchmark/comparação, não como substitutos da realidade local.
+
+### 4. Evidência documental que pode alimentar necessidades
+
+**Com convergência documental forte:**
+- descoberta/matching;
+- informação profissional e demonstração de capacidade;
+- clareza de condições de contratação;
+- pagamentos e risco de incumprimento;
+- reputação/feedback;
+- conflitos e necessidade de mecanismos de contestação/evidência;
+- segurança e protecção dos dados como atributos transversais.
+
+**Com suporte parcial/contextual:**
+- verificação de identidade;
+- localização;
+- comunicação interna;
+- avaliação bilateral;
+- integração de pagamentos.
+
+**Sem suporte suficiente para requisito nesta fase:**
+- assessment obrigatório;
+- assinatura digital avançada obrigatória;
+- escrow operado pela ConecTA;
+- geolocalização universal;
+- arbitragem administrativa de conflitos;
+- chat como requisito autónomo;
+- notificações como necessidade central.
+
+### 5. Lacunas documentais restantes
+
+O corpus é suficiente para iniciar triangulação temática, mas há lacunas específicas a resolver antes da especificação final:
+
+1. **INFOR:** extrair somente indicadores quantitativos que efectivamente possam caracterizar o contexto pretendido; se não houver indicador adequado para trabalhadores autónomos de TI/Maputo, declarar a limitação.
+2. **Trabalho autónomo/TI em Moçambique:** procurar fonte oficial ou académica específica apenas se for necessária para uma afirmação factual no Capítulo I; não é obrigatório inventar uma estatística de dimensão deste grupo.
+3. **Dados pessoais:** acompanhar o estatuto legislativo; não criar obrigações com base numa proposta.
+4. **Pagamentos:** aprofundar regulação apenas se a solução final ultrapassar mero registo de pagamento e integrar iniciação/processamento.
+5. **Assinatura:** aprofundar certificação apenas se a solução final exigir assinatura com efeito jurídico específico.
+6. **Usabilidade/acessibilidade:** deverão ser fundamentadas por standards/heurísticas técnicas na fase de RNF, não por entrevistas apenas.
+
+### 6. Avaliação de suficiência do corpus
+
+**Resultado: SUFICIENTE PARA INICIAR TRIANGULAÇÃO, NÃO SUFICIENTE PARA FECHAR REQUISITOS.**
+
+O corpus já permite:
+- reconstruir o enquadramento teórico;
+- sustentar categorias de análise;
+- contextualizar a economia digital moçambicana;
+- identificar riscos de desenho;
+- confrontar necessidades emergentes das entrevistas;
+- rejeitar a justificação retrospectiva de funcionalidades existentes.
+
+Ainda não permite:
+- afirmar prevalência local de cada problema;
+- substituir entrevistas por evidência internacional;
+- fechar RF/RNF;
+- decidir mecanismos regulatoriamente sensíveis sem conhecer o desenho final.
+
+### 7. Gate documental
+
+**G-DOC: PASS para triangulação.**
+
+Condição para continuar:
+- manter cada evidência ligada à sua população/geografia/período;
+- não converter BEN em necessidade;
+- não converter contexto nacional/internacional em comportamento específico de Maputo;
+- preservar as lacunas como lacunas.
+
+Próxima actividade: construir a matriz de triangulação **Evidência empírica × Evidência documental → Necessidade consolidada**, mantendo separadas as entrevistas efectivamente realizadas das respostas sintéticas usadas no piloto metodológico.

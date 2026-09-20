@@ -97,11 +97,61 @@ O trabalho limita-se ao desenvolvimento e validação de um protótipo de aplica
 
 A análise documental e a triangulação permanecem na Fase 3. Portanto, esta baseline não transforma necessidades candidatas em requisitos definitivos.
 
-## 9. Próximo bloco
+## 9. Bloco 1.1–1.3
 
-Reconstruir:
+Contextualização, justificativa e problematização reconstruídas e aprovadas como baseline de redacção. O texto encontra-se nas secções seguintes deste documento.
 
-- **1.1 Contextualização**
-- **1.2 Justificativa**
 
-Essas secções deverão conduzir naturalmente à problematização aprovada, sem introduzir dados quantitativos ou afirmações documentais ainda não verificadas.
+## 10. Baseline de redacção — 1.1 Contextualização
+
+> As transformações associadas à digitalização têm influenciado as formas de organização e prestação de serviços, criando novas possibilidades de aproximação entre profissionais e potenciais contratantes. Neste contexto, o trabalho autónomo constitui uma alternativa através da qual profissionais podem prestar serviços de forma independente, recorrendo a diferentes meios para divulgar as suas competências e estabelecer relações com clientes.
+>
+> Na área de Tecnologias de Informação, esta modalidade de trabalho assume particular relevância devido à diversidade de serviços que podem ser prestados de forma autónoma, incluindo desenvolvimento de software, design de interfaces, suporte técnico, manutenção de equipamentos, redes de computadores e outras actividades especializadas. A natureza destes serviços permite que algumas actividades sejam executadas remotamente, enquanto outras exigem contacto ou deslocação presencial, originando diferentes formas de procura, negociação e contratação.
+>
+> Na Cidade de Maputo, a conexão entre trabalhadores autónomos da área de TI e potenciais empregadores ou clientes pode ocorrer através de diferentes canais, incluindo redes pessoais, recomendações e meios digitais. Embora estes mecanismos permitam estabelecer relações de trabalho, torna-se relevante compreender em que medida respondem às necessidades das partes envolvidas, particularmente no que respeita à descoberta de oportunidades e profissionais, disponibilização de informação para apoiar a escolha, definição das condições do serviço e acompanhamento da relação estabelecida.
+>
+> Paralelamente, as tecnologias digitais possibilitam a criação de plataformas capazes de estruturar a interacção entre diferentes intervenientes num mesmo ambiente. Contudo, a adopção de uma solução tecnológica para este contexto requer que a sua concepção parta da compreensão do processo existente e das necessidades dos seus potenciais utilizadores, em vez de assumir previamente as funcionalidades necessárias.
+>
+> É neste enquadramento que se insere a presente investigação, centrada no desenvolvimento de um protótipo de uma aplicação web para apoiar a conexão entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores na Cidade de Maputo. A definição das características da solução será orientada pelo levantamento das necessidades dos intervenientes, pela análise documental e pelo estudo de soluções digitais relacionadas.
+
+## 11. Baseline de redacção — 1.2 Justificativa
+
+> A realização deste estudo justifica-se pela necessidade de compreender e apoiar o processo de conexão entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores na Cidade de Maputo. A existência de profissionais que prestam serviços de forma independente e de pessoas ou organizações que necessitam desses serviços cria a necessidade de mecanismos que facilitem o encontro entre as partes e disponibilizem informação adequada para apoiar o processo de contratação.
+>
+> Do ponto de vista social e profissional, o estudo é relevante por abordar as dificuldades associadas ao acesso a oportunidades, à visibilidade profissional e ao estabelecimento de relações entre trabalhadores autónomos e potenciais contratantes. A investigação considera igualmente a perspectiva dos empregadores, uma vez que estes necessitam de identificar profissionais adequados às características dos serviços que pretendem contratar.
+>
+> Do ponto de vista tecnológico, a investigação permite estudar de que forma uma aplicação web pode apoiar este processo no contexto analisado. A escolha de uma solução web possibilita a construção de um protótipo acessível através de navegadores e adequado à experimentação das funcionalidades que vierem a ser identificadas durante o levantamento de necessidades, sem pressupor antecipadamente quais mecanismos deverão compor a solução.
+>
+> Do ponto de vista académico, o estudo permite aplicar conhecimentos de análise e desenvolvimento de sistemas a um problema contextualizado, percorrendo as etapas de levantamento e análise de necessidades, especificação de requisitos, modelação, desenvolvimento e validação de um protótipo. Desta forma, procura-se estabelecer uma relação rastreável entre o problema investigado, as evidências recolhidas, os requisitos definidos e a solução desenvolvida.
+>
+> Assim, a relevância da investigação não reside apenas na construção de uma aplicação, mas na concepção de uma solução fundamentada nas características e necessidades do contexto estudado, permitindo avaliar em que medida um protótipo de aplicação web pode apoiar a conexão entre trabalhadores autónomos da área de TI e empregadores na Cidade de Maputo.
+
+### Nota de controlo documental
+
+As referências e afirmações quantitativas existentes no draft não são automaticamente transportadas para estas secções. Serão reintegradas apenas quando a análise documental confirmar que a fonte suporta a afirmação e que esta é necessária à argumentação.
+
+## 12. Baseline de redacção — 1.3 Problematização
+
+> O trabalho autónomo na área de Tecnologias de Informação depende não apenas da existência de profissionais com competências para prestar serviços, mas também da capacidade destes profissionais e dos potenciais contratantes se encontrarem, trocarem informação suficiente e estabelecerem condições adequadas para a realização do trabalho.
+>
+> No contexto estudado, a conexão entre trabalhadores autónomos de TI e empregadores pode ocorrer por meio de recomendações, redes pessoais e diferentes canais digitais. A utilização destes meios, embora permita a realização de contratações, pode tornar o processo disperso e dependente dos contactos já existentes. Consequentemente, trabalhadores podem enfrentar dificuldades para alcançar oportunidades fora das suas redes habituais, enquanto empregadores podem ter dificuldade em identificar, comparar e seleccionar profissionais adequados às suas necessidades.
+>
+> A problemática não se limita, contudo, à descoberta entre as partes. O processo de contratação envolve também a necessidade de compreender as competências e experiência do profissional, clarificar o serviço pretendido, definir condições de execução e preservar informação relevante ao longo da relação estabelecida. A forma concreta como estas necessidades se manifestam e a importância relativa de cada uma devem ser determinadas pelo levantamento junto dos intervenientes e pela análise documental, não sendo adequado assumir antecipadamente que uma determinada funcionalidade tecnológica constitui a solução.
+>
+> Deste modo, o problema central da investigação reside na necessidade de compreender os constrangimentos existentes no processo de conexão e contratação entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores na Cidade de Maputo e, a partir das necessidades identificadas, conceber uma solução tecnológica que possa apoiar esse processo.
+>
+> Perante esta problemática, formula-se a seguinte pergunta de pesquisa:
+>
+> **Como uma aplicação web pode facilitar a conexão entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores na Cidade de Maputo?**
+
+### Regra de redacção
+
+A problematização não deverá enumerar como solução prévia perfis verificados, geolocalização, chat, pagamentos digitais, assinatura electrónica, assessments ou qualquer outra funcionalidade. Essas decisões deverão resultar das fases de levantamento, triangulação e especificação.
+
+## 13. Estado do Capítulo I após este bloco
+
+A sequência conceptual aprovada passa a ser:
+
+`1.1 Contextualização → 1.2 Justificativa → 1.3 Problematização → Pergunta de pesquisa → Objectivos`
+
+O próximo trabalho da Fase 2 é fechar o tratamento da hipótese, a delimitação temporal e a coerência global do Capítulo I antes da edição controlada do documento principal.

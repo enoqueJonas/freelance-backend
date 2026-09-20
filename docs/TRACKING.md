@@ -49,13 +49,13 @@
 
 ## Fase 2 — Espinha dorsal científica
 
-- [ ] Estabilizar o âmbito: aplicação web, trabalhadores autónomos de TI, empregadores/clientes e Cidade de Maputo.
-- [ ] Reescrever/alinha o problema de pesquisa.
-- [ ] Reescrever/alinha a pergunta de pesquisa.
-- [ ] Rever objectivo geral.
-- [ ] Rever objectivos específicos e garantir rastreabilidade.
-- [ ] Rever hipótese e decidir se deve ser reformulada ou removida.
-- [ ] Completar delimitação do estudo.
+- [x] Estabilizar o âmbito: aplicação web, trabalhadores autónomos de TI, empregadores/clientes e Cidade de Maputo.
+- [x] Definir baseline para reconstrução do problema de pesquisa.
+- [x] Reescrever/alinha a pergunta de pesquisa.
+- [x] Rever objectivo geral.
+- [x] Rever objectivos específicos e estabelecer cadeia de rastreabilidade.
+- [ ] Verificar exigência institucional da hipótese e decidir se deve ser reformulada ou removida.
+- [ ] Completar delimitação do estudo (espacial, temática e tecnológica definidas; temporal pendente).
 - [ ] Verificar coerência Problema → Pergunta → Objectivos → Metodologia.
 
 ## Fase 3 — Reconciliação do estudo empírico

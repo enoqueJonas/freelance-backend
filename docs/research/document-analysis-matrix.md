@@ -36,8 +36,8 @@ Os requisitos definitivos serão consolidados somente depois da análise das ent
 
 | Evidência | Tipo | Achado suportado pelo documento | Problema/Necessidade | Implicação para a investigação/solução | Estado |
 |---|---|---|---|---|---|
-| DOC-01-E01 | CTX | O INFOR 2021/22 caracteriza o sector informal moçambicano e recolhe dados sobre emprego, actividades e receitas. O estudo possui 12.534 casos e 710 variáveis. | A informalidade é um fenómeno suficientemente relevante para enquadramento empírico nacional. | Usar para caracterização do contexto; não inferir automaticamente necessidades específicas de freelancers de TI em Maputo. | Confirmado |
-| DOC-01-E02 | CTX | O INFOR contém variáveis sobre emprego e actividade informal, incluindo informação geográfica e área de residência. | O contexto local pode ser analisado com dados oficiais em vez de afirmações genéricas sobre informalidade. | Seleccionar apenas indicadores directamente pertinentes à população/área do estudo e explicitar população, ano e geografia. | A aprofundar |
+| DOC-01-E01 | CTX | O INFOR 2021/22 é um inquérito por amostragem aos agregados familiares, de cobertura nacional, destinado a caracterizar o sector informal, recolhendo informação sobre emprego, actividades e receitas. A documentação disponibilizada identifica indivíduos e estabelecimentos como unidades de análise e informa que os dados permitem desagregação nacional, provincial, urbano/rural e por grupos de actividade. | Existe uma fonte oficial para contextualizar emprego e actividade informal em Moçambique, mas a sua população não equivale automaticamente a trabalhadores autónomos de TI. | Usar apenas indicadores cuja definição, população, geografia e período sejam compatíveis com a afirmação pretendida. | Verificado na documentação do INFOR |
+| DOC-01-E02 | CTX | A documentação do INFOR regista recolha entre Outubro e Dezembro de 2021 e cobertura nacional, com estimativas previstas para domínios provincial, urbano/rural, regional e nacional. | Afirmações sobre Maputo ou sobre um subconjunto profissional exigem extracção específica; totais nacionais não devem ser apresentados como se representassem trabalhadores autónomos de TI da Cidade de Maputo. | Procurar indicadores específicos antes de usar o INFOR para sustentar magnitude, prevalência ou perfil do fenómeno no Capítulo I. | Verificado; indicadores específicos ainda a extrair |
 | DOC-02-E01 | CTX | O diagnóstico identifica infraestrutura digital, plataformas, serviços financeiros digitais, empreendedorismo e competências como componentes da economia digital de Moçambique. | A solução depende de um ecossistema digital e financeiro que apresenta oportunidades e limitações próprias. | Fundamentar a viabilidade/contexto da plataforma, sem usar o documento como prova de funcionalidades específicas. | Confirmado |
 | DOC-02-E02 | NEC | O documento reporta crescimento do mobile money e simultaneamente limitações de confiança, aceitação de pagamentos digitais, interoperabilidade e identificação/KYC. | Pagamentos digitais trazem conveniência, mas também riscos de confiança, acesso e conformidade. | Investigar nas entrevistas métodos usados, dificuldades e percepção de segurança; evitar assumir que pagamento integrado é obrigatório. | Confirmado |
 | DOC-02-E03 | REG/TEC | O diagnóstico destaca identidade, reputação, privacidade, protecção do consumidor e ambiente legal para transacções digitais, incluindo e-signature/e-contracts. | Identidade e transacções digitais exigem controlos e enquadramento além da UI. | Caso contratos/verificação/pagamentos sejam mantidos, avaliar legislação actual e requisitos de segurança/privacidade antes de especificar implementação. | Confirmado; legislação actual a verificar |
@@ -90,3 +90,34 @@ Estes temas já estão cobertos pelos dois guiões semiestruturados.
 - Verificar legislação moçambicana vigente aplicável a contratos electrónicos, assinaturas, privacidade/dados e serviços de pagamento antes de transformar estas matérias em requisitos.
 - Acrescentar documentos que venham a ser seleccionados para o corpus.
 - Após as entrevistas, criar matriz de codificação temática e cruzá-la com as evidências DOC-xx.
+
+
+## Análise substantiva — ronda 1
+
+### DOC-01 — INFOR 2021/22
+
+**O que a fonte suporta:** fonte oficial do INE sobre sector informal, emprego, actividades e receitas; cobertura nacional; possibilidade de desagregação provincial/urbano-rural/grupos de actividade; recolha em 2021.
+
+**O que não suporta ainda:** percentagens específicas de informalidade na Cidade de Maputo; predominância de jovens; dimensão dos trabalhadores autónomos de TI; dificuldades de conexão com clientes; preferência por plataformas digitais. Essas afirmações exigem tabelas/indicadores específicos ou outras fontes.
+
+**Uso previsto na monografia:** contextualização quantitativa apenas depois de seleccionar indicadores concretos. Não é fonte directa de RF.
+
+### DOC-02 — Mozambique Digital Economy Diagnostic (World Bank, 2019)
+
+A revisão integral da estrutura do relatório confirma cinco pilares: infraestrutura digital, plataformas digitais, serviços financeiros digitais, empreendedorismo digital e competências digitais. O relatório enquadra conectividade como meio de reduzir assimetrias de informação, ligar cidadãos a mercados/serviços e reduzir custos de transacção. Também documenta que a economia digital em Moçambique deve ser analisada como ecossistema, não apenas como disponibilidade de uma aplicação.
+
+**Implicação:** esta fonte é adequada para a contextualização tecnológica e para justificar a relevância de estudar uma solução digital em Moçambique. Não demonstra, por si só, que trabalhadores autónomos de TI em Maputo necessitam de chat, geolocalização, avaliações, pagamentos integrados ou qualquer outra funcionalidade.
+
+### DOC-04 — ILO WESO 2021
+
+O relatório define as plataformas digitais de trabalho como intermediárias entre trabalhadores que executam tarefas e clientes/empresas, e documenta oportunidades e desafios associados à mediação digital do trabalho. O próprio relatório assenta numa base internacional ampla (12.000 trabalhadores em 100 países, além de empresas, plataformas e associações), pelo que é uma fonte forte para compreender o fenómeno e construir categorias analíticas.
+
+**Limite de validade:** é evidência internacional, não uma descrição directa da Cidade de Maputo. Os mecanismos observados no relatório devem ser tratados como categorias/benchmark a triangular com o estudo local.
+
+### Decisão após a ronda 1
+
+Nenhum novo requisito funcional é aprovado nesta ronda. As três fontes reforçam a cadeia:
+
+`contexto oficial/local → enquadramento da economia digital → funcionamento internacional das plataformas → investigação empírica local → necessidades → requisitos`.
+
+A próxima ronda deve aprofundar secções específicas do World Bank e ILO relevantes a matching, confiança/reputação, pagamentos e conflitos, e extrair apenas indicadores do INFOR que sejam realmente utilizáveis no texto.

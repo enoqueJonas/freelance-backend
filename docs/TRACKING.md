@@ -152,3 +152,10 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-DOC: PASS** — corpus documental suficiente para iniciar triangulação temática; não para fechar requisitos.
 - Próximo artefacto: matriz Evidência empírica × Evidência documental → Necessidade consolidada.
 - Manter entrevistas reais separadas do piloto sintético.
+
+
+### Gate de triangulação — Fase 3
+
+- **G-TRI: PASS** — N01–N16 consolidadas (N16 condicional); N17 classificada como atributo de qualidade/adopção; N18 como condição de ecossistema.
+- Divergências preservadas: assessment, chat, assinatura, integração/custódia de pagamentos, preço, localização, arbitragem e reputação.
+- Próxima actividade: derivar RN/RF/RNF candidatos com rastreabilidade explícita.

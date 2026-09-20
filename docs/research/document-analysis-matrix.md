@@ -201,3 +201,91 @@ O WESO distingue plataformas online web-based, nas quais o trabalho pode ser exe
 A análise documental começa a separar claramente **necessidades do domínio** de **soluções de interface/produto**. O corpus suporta descoberta, informação profissional, clareza das condições, pagamento/protecção, reputação e tratamento de conflitos como temas relevantes. Não suporta ainda a adopção automática de chat, escrow, assinatura electrónica, assessments, geolocalização universal ou arbitragem administrativa.
 
 Nenhum RF é fechado apenas com esta ronda.
+
+
+## Análise substantiva — ronda 3: identidade, dados, contratos e pagamentos em Moçambique
+
+### Tema G — Identidade e verificação
+
+A ENIF 2025–2031 reconhece explicitamente a identificação do cidadão como elemento relevante para acesso a serviços financeiros e documenta o NUIB, cuja emissão depende de documentos de identificação e NUIT. Esta evidência demonstra que identificação e verificação são relevantes em ecossistemas regulados, mas não estabelece que uma plataforma de freelancing deva executar KYC financeiro.
+
+**Leitura para a ConecTA:** distinguir três conceitos que o protótipo não deve misturar:
+1. autenticação da conta;
+2. verificação de identidade/perfil para confiança entre utilizadores;
+3. KYC regulatório aplicável a serviços financeiros.
+
+Uma eventual verificação documental da ConecTA precisa de finalidade, dados mínimos, processo e retenção definidos. Não será chamada de KYC salvo se existir obrigação/regime aplicável.
+
+### Tema H — Protecção de dados e segurança
+
+A ENIF trata protecção de dados, segurança digital e mecanismos de reclamação como componentes da confiança em serviços financeiros. A análise normativa actual mostra ainda que a Lei n.º 3/2017 regula transacções electrónicas e estabelece um quadro geral aplicável a actividades que utilizam TIC. Em 2026, Moçambique passou também a dispor da Lei n.º 13/2026 de Segurança Cibernética e da Lei n.º 14/2026 de Crimes Cibernéticos.
+
+A pesquisa institucional mais recente do INTIC indica que a lei específica de protecção de dados pessoais permanece em processo legislativo em 2026; portanto, não deve ser citada como lei vigente.
+
+**Leitura para a ConecTA:** privacidade e segurança devem originar RNF e regras de tratamento de dados quando a arquitectura for especificada. A plataforma deverá evitar recolher documentos/dados sem finalidade demonstrada e sem definição de acesso, retenção e protecção.
+
+### Tema I — Contratos e assinatura electrónica
+
+A Lei n.º 3/2017 estabelece o regime jurídico das transacções electrónicas. O Sistema de Certificação Digital de Moçambique, operacionalizado pelo INTIC, distingue mecanismos de assinatura electrónica/digital e relaciona a validade jurídica com o tipo de assinatura e certificação utilizada.
+
+**Leitura para a ConecTA:** existe enquadramento jurídico para transacções/documentos electrónicos, mas isso não transforma “assinatura electrónica avançada” numa necessidade do produto. A necessidade empírica já identificada é formalizar/confirmar condições do serviço de forma proporcional. O mecanismo pode variar desde confirmação electrónica das condições até formas de assinatura que exijam certificação, caso o domínio e o risco o justifiquem.
+
+**Decisão:** não aprovar a funcionalidade actual de assinatura como requisito apenas porque o protótipo a contém.
+
+### Tema J — Pagamentos e fronteira regulatória
+
+A ENIF documenta forte expansão da moeda electrónica e interoperabilidade entre instituições de moeda electrónica e bancos através da SIMO. O quadro regulatório vigente distingue empresas prestadoras de serviços de pagamento e operações autorizadas. A Lei n.º 15/2026 modernizou o Sistema Nacional de Pagamentos e reforçou supervisão do Banco de Moçambique.
+
+**Leitura para a ConecTA:** há diferença arquitectural e regulatória entre:
+- registar na plataforma que um pagamento foi acordado/efectuado;
+- iniciar/facilitar um pagamento através de um prestador autorizado;
+- receber/custodiar fundos;
+- operar mecanismos semelhantes a escrow.
+
+A necessidade N09/N10 não autoriza saltar para as três últimas opções.
+
+**Decisão:** para o protótipo académico, pagamentos podem ser modelados como parte do fluxo de contratação, mas qualquer integração real deverá utilizar prestadores/serviços compatíveis com o quadro regulatório e será tratada como integração externa, não como actividade financeira própria da ConecTA.
+
+### Tema K — Assessment e validação de competências
+
+As fontes regulatórias moçambicanas analisadas nesta ronda não estabelecem necessidade de testes de competências para trabalhadores autónomos de TI. A literatura de plataformas demonstra que competência pode ser sinalizada por perfil, histórico, portfólio, ratings e outros mecanismos.
+
+**Decisão:** assessment obrigatório continua sem suporte documental suficiente. Se permanecer no produto, deverá resultar de evidência empírica ou ser explicitamente classificado como mecanismo experimental/opcional, nunca como requisito derivado da análise documental actual.
+
+## Resultado da ronda 3
+
+| Questão | Evidência actual | Consequência |
+|---|---|---|
+| Autenticação de conta | Necessária tecnicamente | Separar de verificação de identidade |
+| Verificação de identidade | Relevante para confiança; forma local ainda aberta | Candidata, não KYC por defeito |
+| KYC financeiro | Pertence a contexto financeiro regulado | Não aplicar automaticamente à ConecTA |
+| Protecção de dados | Forte | Deve influenciar RNF e minimização de dados |
+| Segurança digital | Forte | Deve influenciar arquitectura/RNF |
+| Contrato/acordo electrónico | Juridicamente enquadrado e empiricamente relevante | Candidato forte |
+| Assinatura digital avançada | Mecanismo jurídico/técnico disponível | Não obrigatória |
+| Registo de pagamento | Compatível com domínio | Candidato |
+| Integração com PSP/IME | Possível, mas regulada | Apenas se necessária; integração externa |
+| Custódia/escrow | Regulatoriamente sensível | Não aprovar |
+| Assessment obrigatório | Sem suporte suficiente | Não aprovar |
+
+## Actualização do corpus normativo
+
+Para a fase de regras de negócio/RNF deverão ser consideradas, em versão oficial e vigente:
+- Lei n.º 3/2017, de 9 de Janeiro — Transacções Electrónicas;
+- Decreto n.º 59/2019, de 3 de Julho — Sistema de Certificação Digital de Moçambique;
+- Decreto n.º 59/2023, de 27 de Outubro, e alterações — provedores intermediários/operadores de plataformas digitais;
+- Lei n.º 13/2026 — Segurança Cibernética;
+- Lei n.º 14/2026 — Crimes Cibernéticos;
+- Lei n.º 15/2026 — Sistema Nacional de Pagamentos;
+- regulamentação aplicável do Banco de Moçambique a prestadores de serviços de pagamento.
+
+A proposta de Lei de Protecção de Dados Pessoais será acompanhada, mas **não será tratada como lei vigente enquanto o processo legislativo não estiver concluído**.
+
+### Conclusão da ronda 3
+
+A ronda reduz três riscos de desenho:
+1. confundir verificação de utilizador com KYC financeiro;
+2. confundir formalização do acordo com assinatura digital avançada;
+3. confundir necessidade de pagamento seguro com a ConecTA custodiar/processar fundos.
+
+Isto preserva a possibilidade de uma solução tecnicamente realista e juridicamente proporcional ao âmbito da monografia.

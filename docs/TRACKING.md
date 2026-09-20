@@ -2,104 +2,140 @@
 
 Última actualização: 2026-09-20.
 
-## Estado geral
+## Plano da auditoria — 7 fases
+
+| Fase | Objectivo | Estado |
+|---|---|---|
+| **1. Auditoria estrutural** | Diagnosticar estrutura, coerência, lacunas, inconsistências e estado real do protótipo/código | **Em fecho** |
+| **2. Espinha dorsal científica** | Alinhar problema, pergunta de pesquisa, objectivos, hipótese, âmbito e delimitação | **Pendente** |
+| **3. Reconciliação do estudo empírico** | Consolidar metodologia, amostra, instrumentos, registos de entrevistas, análise documental, análise temática e triangulação | **Parcialmente preparada** |
+| **4. Engenharia da solução** | Derivar necessidades → RN → RF/RNF → actores → modelação → arquitectura e reconciliar com frontend/backend | **Bloqueada por G2** |
+| **5. Validação** | Definir e executar validação/testes contra requisitos e objectivos | **Bloqueada** |
+| **6. Resultados e conclusão** | Discussão, resposta à pergunta, cumprimento dos objectivos, limitações, conclusão e recomendações | **Bloqueada** |
+| **7. Auditoria final** | Rastreabilidade, coerência, terminologia, referências, figuras/quadros, numeração e qualidade final | **Pendente no fim** |
+
+## Estado dos artefactos
 
 | Área | Estado | Próxima acção |
 |---|---|---|
-| Auditoria backend AS-IS | Concluída | Reavaliar após definição dos requisitos |
-| Auditoria frontend AS-IS | Concluída | Reavaliar após definição dos requisitos |
-| Gap frontend/backend | Concluído | Usar na futura reconstrução técnica |
-| Guião — trabalhadores | Preparado | Validar/ajustar antes da recolha real |
-| Guião — empregadores | Preparado | Validar/ajustar antes da recolha real |
-| Piloto sintético — 11 entrevistas | Concluído | Usar apenas para validar instrumento/método |
-| Codificação do piloto | Concluída | Não tratar N01–N18 como resultados reais |
-| Análise documental | **Pendente** | Executar durante a reconstrução da monografia |
-| Entrevistas reais | **Pendente** | Executar e registar separadamente |
-| Codificação das entrevistas reais | **Pendente** | Criar matriz com excertos/códigos/temas |
-| Triangulação | **Bloqueada** | Fazer somente após entrevistas reais + análise documental |
+| Auditoria backend AS-IS | Concluída | Reavaliar após requisitos |
+| Auditoria frontend AS-IS | Concluída | Reavaliar após requisitos |
+| Gap frontend/backend | Concluído | Usar na Fase 4 |
+| Guião — trabalhadores | Preparado | Usar como referência do instrumento |
+| Guião — empregadores | Preparado | Usar como referência do instrumento |
+| Entrevistas efectivamente realizadas | Realizadas parcialmente / notas existentes | Consolidar apenas o que foi efectivamente recolhido |
+| Simulação de 11 entrevistas | Concluída | Usar como piloto metodológico; não substituir respostas não recolhidas |
+| Codificação da simulação | Concluída | N01–N18 são hipóteses/necessidades candidatas até confronto com evidência real/documental |
+| Análise documental | **Pendente** | Executar durante a Fase 3 ao reconstruir a monografia |
+| Triangulação | **Bloqueada** | Requer corpus empírico documentado + análise documental |
 | Regras de negócio | **Bloqueadas** | Derivar após triangulação |
 | RF/RNF definitivos | **Bloqueados** | Reconstruir após RN/necessidades validadas |
 | Modelação UML | **Bloqueada** | Rever após requisitos definitivos |
-| Alinhamento código ↔ requisitos | **Bloqueado** | Implementar depois da modelação |
-| Testes/validação do protótipo | **Bloqueados** | Definir contra requisitos implementados |
-| Redacção final de resultados/conclusão | **Bloqueada** | Fazer com evidência real |
+| Alinhamento código ↔ requisitos | **Bloqueado** | Executar na Fase 4 |
+| Testes/validação | **Bloqueados** | Fase 5 |
+| Resultados/conclusão | **Bloqueados** | Fase 6 |
 
-## Backlog de investigação
+## Fase 1 — Critérios de fecho
 
-### P1 — Antes/durante a reconstrução da monografia
-- [ ] Estabilizar definitivamente o âmbito: aplicação web, trabalhadores autónomos de TI, empregadores/clientes, Cidade de Maputo.
-- [ ] Corrigir pergunta de pesquisa e objectivos para o mesmo âmbito.
-- [ ] Rever metodologia para remover métodos/análises que não tenham evidência de execução.
-- [ ] Resolver inconsistência da amostra presente no draft.
-- [ ] Executar análise documental a partir das fontes efectivamente utilizadas na monografia.
-- [ ] Para cada documento, registar evidência → interpretação → necessidade/implicação, com página/secção verificável.
-- [ ] Verificar fontes bibliográficas e remover referências não verificáveis/malformadas.
-- [ ] Verificar legislação moçambicana aplicável antes de afirmar requisitos legais sobre contratos electrónicos, assinatura, dados pessoais ou pagamentos.
+- [x] Auditoria estrutural do draft.
+- [x] Auditoria AS-IS do backend.
+- [x] Auditoria AS-IS do frontend.
+- [x] Gap analysis frontend/backend.
+- [x] Identificação de inconsistências de âmbito, metodologia, amostra, resultados, requisitos e referências.
+- [x] Registo dos principais riscos de sobreafirmação da implementação.
+- [x] Preparação dos guiões de entrevista.
+- [x] Piloto do instrumento e análise temática exploratória.
+- [ ] Registar formalmente o resumo de fecho da Fase 1 e handoff para a Fase 2.
 
-### P2 — Recolha qualitativa
-- [ ] Rever os dois guiões à luz do piloto.
-- [ ] Definir identificação anonimizada dos participantes reais.
-- [ ] Realizar 8 entrevistas reais com trabalhadores autónomos de TI.
-- [ ] Realizar 3 entrevistas reais com empregadores/clientes.
-- [ ] Registar pergunta/resposta e follow-ups sem forçar o guião.
-- [ ] Separar transcrição/evidência de interpretação.
-- [ ] Codificar entrevistas reais por temas.
-- [ ] Registar casos negativos/divergências, não apenas convergências.
+## Fase 2 — Espinha dorsal científica
 
-### P3 — Síntese científica
-- [ ] Cruzar análise documental com entrevistas reais.
-- [ ] Construir matriz de triangulação.
-- [ ] Consolidar necessidades validadas.
-- [ ] Identificar regras de negócio.
-- [ ] Reconstruir RF e RNF com fonte/rastreabilidade.
-- [ ] Comparar requisitos reconstruídos com os 32 RF existentes: manter / alterar / remover / adicionar.
-- [ ] Rever hipótese de pesquisa e decidir se deve ser reformulada/removida.
+- [ ] Estabilizar o âmbito: aplicação web, trabalhadores autónomos de TI, empregadores/clientes e Cidade de Maputo.
+- [ ] Reescrever/alinha o problema de pesquisa.
+- [ ] Reescrever/alinha a pergunta de pesquisa.
+- [ ] Rever objectivo geral.
+- [ ] Rever objectivos específicos e garantir rastreabilidade.
+- [ ] Rever hipótese e decidir se deve ser reformulada ou removida.
+- [ ] Completar delimitação do estudo.
+- [ ] Verificar coerência Problema → Pergunta → Objectivos → Metodologia.
 
-### P4 — Engenharia da solução
-- [ ] Rever modelo de papéis Worker/Employer e exclusividade de roles.
+## Fase 3 — Reconciliação do estudo empírico
+
+- [ ] Consolidar amostra efectivamente utilizada e corrigir números contraditórios do draft.
+- [ ] Consolidar os registos das entrevistas efectivamente realizadas.
+- [ ] Manter dados simulados claramente separados de dados efectivamente recolhidos.
+- [ ] Rever metodologia para corresponder apenas aos métodos efectivamente executados.
+- [ ] Executar análise documental a partir das fontes efectivamente utilizadas.
+- [ ] Registar documento → evidência verificável → interpretação → necessidade/implicação.
+- [ ] Incluir página/secção verificável sempre que aplicável.
+- [ ] Verificar bibliografia e legislação relevante.
+- [ ] Codificar o corpus empírico consolidado.
+- [ ] Cruzar entrevistas/documentos numa matriz de triangulação.
+- [ ] Consolidar necessidades validadas e divergências.
+
+## Fase 4 — Engenharia da solução
+
+- [ ] Identificar regras de negócio a partir das necessidades validadas.
+- [ ] Reconstruir RF/RNF com fonte e rastreabilidade.
+- [ ] Comparar os 32 RF existentes: manter / alterar / remover / adicionar.
+- [ ] Rever modelo Worker/Employer e exclusividade de roles.
 - [ ] Decidir modelo de verificação bilateral.
-- [ ] Decidir se assessment existe, para quem e com que carácter (opcional/obrigatório).
+- [ ] Decidir papel do assessment.
 - [ ] Modelar diferentes evidências de competência/experiência.
-- [ ] Rever ciclo Offer → Proposal → Agreement/Contract, incluindo serviços sem preço inicial fechado.
+- [ ] Rever Offer → Proposal → Agreement/Contract e serviços sem preço inicial fechado.
 - [ ] Modelar alterações ao acordo/escopo.
-- [ ] Rever pagamentos e distinguir simulação de integração real.
-- [ ] Rever reputação bilateral e cold-start.
-- [ ] Definir papel real de disputes/mediação.
-- [ ] Decidir se chat interno é necessário ou se basta rastreabilidade contextual.
+- [ ] Rever pagamentos e separar simulação de integração real.
+- [ ] Rever reputação bilateral/cold-start.
+- [ ] Definir papel de disputes/mediação.
+- [ ] Decidir necessidade de chat versus rastreabilidade contextual.
 - [ ] Rever localização como atributo contextual.
-- [ ] Alinhar frontend e backend.
-- [ ] Corrigir findings técnicos do backend já registados na auditoria.
-- [ ] Remover artefactos de ambiente/segredos do repositório e reforçar configuração.
-- [ ] Criar testes automatizados relevantes.
+- [ ] Actualizar actores, casos de uso, actividades, sequências, classes/estados e arquitectura.
+- [ ] Alinhar frontend/backend com o modelo aprovado.
+- [ ] Corrigir findings técnicos do backend.
+- [ ] Reforçar configuração/segredos/higiene do repositório.
 
-### P5 — Monografia e validação
-- [ ] Actualizar capítulo de metodologia com o processo realmente executado.
-- [ ] Escrever resultados qualitativos por temas, não como confirmação do protótipo.
-- [ ] Integrar análise documental no enquadramento/levantamento apropriado.
-- [ ] Actualizar levantamento de actores e regras de negócio.
-- [ ] Actualizar tabela de RF/RNF.
-- [ ] Criar/rever diagramas de casos de uso, actividades, sequência, classes/estados conforme necessário.
-- [ ] Documentar arquitectura e implementação real sem sobreafirmar integrações.
-- [ ] Definir casos de teste derivados dos requisitos.
-- [ ] Executar e registar validação do protótipo.
-- [ ] Redigir discussão, limitações, conclusão e recomendações.
-- [ ] Fazer auditoria final de rastreabilidade: problema → objectivos → metodologia → evidências → necessidades → requisitos → modelação → implementação → testes → conclusão.
-- [ ] Fazer revisão final de numeração, figuras, quadros, referências internas, terminologia e bibliografia.
+## Fase 5 — Validação
+
+- [ ] Derivar casos de teste dos requisitos.
+- [ ] Definir critérios de aceitação.
+- [ ] Criar testes automatizados relevantes.
+- [ ] Executar validação funcional do protótipo.
+- [ ] Registar evidências e limitações.
+- [ ] Demonstrar quais requisitos foram implementados, simulados ou ficaram fora do protótipo.
+
+## Fase 6 — Resultados e conclusão
+
+- [ ] Escrever resultados por temas e evidências.
+- [ ] Integrar resultados da triangulação.
+- [ ] Discutir resultados face à literatura/documentos.
+- [ ] Responder explicitamente à pergunta de pesquisa.
+- [ ] Avaliar cumprimento de cada objectivo.
+- [ ] Registar limitações.
+- [ ] Redigir conclusão e recomendações.
+
+## Fase 7 — Auditoria final
+
+- [ ] Auditar problema → objectivos → metodologia → evidências → necessidades → requisitos → modelação → implementação → testes → conclusão.
+- [ ] Conferir numeração e referências internas.
+- [ ] Conferir figuras, quadros, legendas e índices automáticos.
+- [ ] Uniformizar terminologia e variante linguística.
+- [ ] Verificar referências bibliográficas e citações.
+- [ ] Eliminar afirmações técnicas não demonstradas.
+- [ ] Fazer leitura final de consistência científica e técnica.
 
 ## Gates
 
-**Gate G1 — Evidência suficiente:** entrevistas reais e análise documental concluídas.
+**G1 — Evidência suficiente:** corpus empírico efectivamente documentado + análise documental concluída.
 
-**Gate G2 — Necessidades validadas:** triangulação concluída.
+**G2 — Necessidades validadas:** triangulação concluída.
 
-**Gate G3 — Especificação estável:** RN + RF + RNF aprovados e rastreáveis.
+**G3 — Especificação estável:** RN + RF + RNF aprovados e rastreáveis.
 
-**Gate G4 — Modelo estável:** UML/arquitectura alinhadas com requisitos.
+**G4 — Modelo estável:** UML/arquitectura alinhadas com requisitos.
 
-**Gate G5 — Implementação verificável:** frontend/backend alinhados e funcionalidades declaradas realmente implementadas.
+**G5 — Implementação verificável:** frontend/backend alinhados e funcionalidades declaradas realmente implementadas.
 
-**Gate G6 — Validação concluída:** testes/evidências permitem responder aos objectivos da investigação.
+**G6 — Validação concluída:** testes/evidências permitem responder aos objectivos da investigação.
 
 ## Regra de tracking
 
-Uma task bloqueada por um gate não deve ser marcada como concluída apenas porque existe código ou texto no draft. A evidência de conclusão deve corresponder à etapa científica/técnica indicada.
+Código existente, texto do draft ou dados simulados não fecham por si só uma etapa científica. Uma task só é concluída quando existe evidência correspondente à actividade indicada.

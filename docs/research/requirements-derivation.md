@@ -12,7 +12,7 @@ A prioridade inicial usa **Must / Should / Could / Out**, e deverá ser revista 
 
 | ID | Regra de negócio | Fonte | Estado |
 |---|---|---|---|
-| RN01 | A plataforma deve distinguir trabalhadores autónomos e empregadores, permitindo que a relação de contratação identifique claramente o papel assumido em cada contratação. | N03, N11 | Candidata |
+| RN01 | Um utilizador pode acumular os perfis de trabalhador autónomo e empregador. O papel relevante deve ser determinado pelo contexto de cada acção/contratação, sem obrigar o utilizador a possuir contas separadas. | Decisão de domínio + N03, N11 | **Aprovada** |
 | RN02 | A apresentação de competências deve admitir evidências adequadas a diferentes especialidades de TI, não dependendo de um único mecanismo de validação. | N02, N15 | Candidata |
 | RN03 | A localização só deve ser exigida/utilizada como critério quando a natureza do serviço exigir presença física ou tornar a localização relevante. | N15, N16 | Candidata |
 | RN04 | Uma contratação deve possuir condições acordadas identificáveis, incluindo escopo/serviço, prazo, entregáveis quando aplicável e condições de pagamento. | N05, N07, N09 | Candidata |
@@ -35,8 +35,8 @@ A prioridade inicial usa **Must / Should / Could / Out**, e deverá ser revista 
 |---|---|---|---|---|---|
 | RF01 | Registar utilizador | O sistema deve permitir o registo de utilizadores para utilização da plataforma. | Base operacional; N03 | Must | Autenticação não equivale a verificação. |
 | RF02 | Autenticar utilizador | O sistema deve permitir autenticação e gestão de sessão de utilizadores registados. | Base operacional | Must | Segurança detalhada em RNF. |
-| RF03 | Gerir perfil profissional | O sistema deve permitir ao trabalhador manter dados profissionais, especialidades, experiência e evidências de capacidade adequadas ao seu tipo de serviço. | N02, N15; RN02 | Must | Não limitar a GitHub/portfólio. |
-| RF04 | Gerir perfil de empregador | O sistema deve permitir ao empregador manter informação relevante para identificação/apresentação enquanto contratante. | N03 | Must | Dados mínimos serão definidos no modelo. |
+| RF03 | Gerir perfil profissional | O sistema deve permitir a um utilizador com perfil de trabalhador manter dados profissionais, especialidades, experiência e evidências de capacidade adequadas ao seu tipo de serviço. | N02, N15; RN01/RN02 | Must | O mesmo utilizador pode também possuir perfil de empregador; não limitar evidências a GitHub/portfólio. |
+| RF04 | Gerir perfil de empregador | O sistema deve permitir a um utilizador com perfil de empregador manter informação relevante para identificação/apresentação enquanto contratante. | N03; RN01 | Must | O mesmo utilizador pode também possuir perfil de trabalhador; dados mínimos serão definidos no modelo. |
 | RF05 | Registar evidências de competência | O sistema deve permitir associar ao perfil diferentes tipos de evidência, como portfólio, projectos, referências, certificações ou ligações externas. | N02, N15 | Should | Assessment obrigatório fica fora. |
 | RF06 | Verificar identidade/perfil | O sistema deve permitir um mecanismo proporcional de verificação de identidade/perfil quando definido pelas regras da plataforma. | N03; RN14 | Should | Mecanismo exacto ainda a modelar; não chamar KYC. |
 
@@ -141,7 +141,27 @@ A prioridade inicial usa **Must / Should / Could / Out**, e deverá ser revista 
 
 A baseline candidata contém **14 RN, 25 RF e 7 RNF**, ainda sujeita a:
 1. revisão de redundância e atomicidade;
-2. definição do modelo de papéis Worker/Employer;
+2. modelação técnica do modelo de papéis acumuláveis Worker/Employer já aprovado;
 3. modelação de estados de oportunidade, proposta, acordo, execução, pagamento e conflito;
 4. confronto detalhado com os 32 RF do draft e com o modelo/código;
 5. transformação das declarações em critérios verificáveis antes do gate final de requisitos.
+
+
+## 9. Decisão de domínio — acumulação de papéis
+
+**Decisão aprovada:** um utilizador pode ser trabalhador autónomo e empregador em simultâneo.
+
+### Consequências para o modelo
+
+- `User` representa a identidade/conta e não deve possuir um único campo de papel mutuamente exclusivo como fonte de verdade.
+- `WorkerProfile` e `EmployerProfile` são capacidades/perfis opcionais e acumuláveis associados ao mesmo utilizador.
+- Um utilizador pode possuir apenas `WorkerProfile`, apenas `EmployerProfile` ou ambos.
+- O papel efectivo é contextual: ao publicar uma oportunidade actua como empregador; ao submeter uma proposta actua como trabalhador.
+- Autorização deve ser baseada na capacidade/perfil necessário para a acção, e não num enum global exclusivo `worker | employer`.
+- Reputação continua bilateral, mas deve distinguir a perspectiva/contexto em que a avaliação foi obtida.
+- A interface deve permitir activar/completar o segundo perfil sem criar outra conta.
+- A modelação deve impedir relações inválidas, incluindo um utilizador contratar-se a si próprio na mesma oportunidade.
+
+### Impacto no AS-IS
+
+Esta decisão aproxima o domínio do modelo backend, onde Worker e Employer já são relações independentes, e entra em conflito com o frontend actual, que usa um papel singular `employer | worker | admin`. O frontend deverá ser reformulado durante a implementação para representar perfis/capacidades acumuláveis.

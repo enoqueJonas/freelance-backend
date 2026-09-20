@@ -205,3 +205,10 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-MODEL-CLASS: PASS** — definidos agregados, classes, cardinalidades e invariantes do domínio-alvo.
 - AS-IS confrontado: Worker/Employer OneToOne são boa base; Document exclusivo de Employer e Assessment >=50 conflitam com a baseline; Contract/Signature evoluem para Engagement/AgreementVersion.
 - Próximo: diagramas de actividade dos fluxos representativos e sequências.
+
+
+### Modelação — fluxos de actividade
+
+- **G-MODEL-ACTIVITY: PASS** — quatro fluxos representativos definidos: oportunidade/proposta; formalização/alteração; execução/entrega/pagamento; conflito.
+- Evitada duplicação de CRUD; estados e decisões de negócio são explícitos.
+- Próximo: diagramas de sequência correspondentes, com fronteiras de aplicação e domínio.

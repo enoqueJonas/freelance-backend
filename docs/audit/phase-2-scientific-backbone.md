@@ -69,9 +69,9 @@ Cada objectivo deverá possuir evidência correspondente nos capítulos posterio
 
 A formulação actual, baseada em “garantir melhoria” de visibilidade, eficiência e confiança, é considerada demasiado forte para ser mantida sem métricas e desenho capazes de demonstrar essas relações.
 
-**Decisão provisória:** preferir a remoção da hipótese caso as normas institucionais não a exijam. Se a hipótese for obrigatória, deverá ser reformulada de modo compatível com o desenho metodológico e com aquilo que poderá ser efectivamente validado.
+**Decisão após verificação do Manual de Investigação Científica da USTM:** manter a hipótese. A estrutura específica indicada para cursos da FCTI inclui explicitamente a secção “Hipóteses”. A formulação deverá ser compatível com o desenho metodológico e com aquilo que poderá ser efectivamente validado.
 
-**Task pendente:** verificar exigência institucional antes da decisão definitiva.
+**Baseline:** A concepção de uma aplicação web baseada nas necessidades identificadas dos trabalhadores autónomos da área de Tecnologias de Informação e dos empregadores pode proporcionar mecanismos adequados para apoiar a conexão e o processo de contratação entre estas partes na Cidade de Maputo.
 
 ## 7. Delimitação
 

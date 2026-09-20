@@ -166,3 +166,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-REQ-CANDIDATE: PASS** — derivadas 14 RN, 25 RF e 7 RNF candidatos a partir da triangulação.
 - Fora do âmbito nesta baseline: assessment obrigatório, assinatura digital avançada obrigatória, escrow/custódia, matching algorítmico obrigatório, geolocalização universal, arbitragem administrativa e chat como requisito autónomo.
 - Próximo passo: confrontar esta baseline com os 32 RF do draft e com o AS-IS técnico, resolver papéis e estados do domínio, e só depois fechar G-REQ.
+
+
+### Reconciliação dos requisitos do draft
+
+- **G-REQ-RECONCILIATION: PASS** — os 32 RF do draft foram confrontados com a baseline derivada e o AS-IS técnico.
+- Recuperadas três capacidades administrativas justificáveis: gestão de utilizadores, moderação de oportunidades reportadas e análise de verificação (condicional ao fluxo de verificação), elevando a baseline para 28 RF candidatos.
+- Assessment obrigatório, assinatura digital universal, chat como core, custódia/escrow e arbitragem administrativa permanecem fora da baseline.
+- Próximo passo: definir estados/transições, rever atomicidade e fechar a matriz final de rastreabilidade antes de G-REQ.

@@ -6,7 +6,7 @@
 
 | Fase | Objectivo | Estado |
 |---|---|---|
-| **1. Auditoria estrutural** | Diagnosticar estrutura, coerência, lacunas, inconsistências e estado real do protótipo/código | **Em fecho** |
+| **1. Auditoria estrutural** | Diagnosticar estrutura, coerência, lacunas, inconsistências e estado real do protótipo/código | **Concluída** |
 | **2. Espinha dorsal científica** | Alinhar problema, pergunta de pesquisa, objectivos, hipótese, âmbito e delimitação | **Pendente** |
 | **3. Reconciliação do estudo empírico** | Consolidar metodologia, amostra, instrumentos, registos de entrevistas, análise documental, análise temática e triangulação | **Parcialmente preparada** |
 | **4. Engenharia da solução** | Derivar necessidades → RN → RF/RNF → actores → modelação → arquitectura e reconciliar com frontend/backend | **Bloqueada por G2** |
@@ -45,7 +45,7 @@
 - [x] Registo dos principais riscos de sobreafirmação da implementação.
 - [x] Preparação dos guiões de entrevista.
 - [x] Piloto do instrumento e análise temática exploratória.
-- [ ] Registar formalmente o resumo de fecho da Fase 1 e handoff para a Fase 2.
+- [x] Registar formalmente o resumo de fecho da Fase 1 e handoff para a Fase 2.
 
 ## Fase 2 — Espinha dorsal científica
 

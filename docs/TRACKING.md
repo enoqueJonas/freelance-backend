@@ -55,7 +55,7 @@
 - [x] Rever objectivo geral.
 - [x] Rever objectivos específicos e estabelecer cadeia de rastreabilidade.
 - [x] Verificar exigência institucional e manter hipótese em formulação compatível com o desenho do estudo.
-- [ ] Completar delimitação do estudo (espacial, temática e tecnológica definidas; texto temporal preparado, período real pendente).
+- [x] Fechar delimitação do tema em espaço, tempo e contexto temático; intervalo documental concreto será consolidado na Fase 3.
 - [x] Verificar coerência Problema → Pergunta → Objectivos → Metodologia (auditoria vertical aprovada com pendência temporal).
 
 ## Fase 3 — Reconciliação do estudo empírico
@@ -139,3 +139,9 @@
 ## Regra de tracking
 
 Código existente, texto do draft ou dados simulados não fecham por si só uma etapa científica. Uma task só é concluída quando existe evidência correspondente à actividade indicada.
+
+
+### Marco Fase 2
+
+- **PHASE-2-CLOSED** — espinha dorsal científica e auditoria vertical aprovadas.
+- Próximo marco: **PHASE-3-EMPIRICAL-RECONCILIATION**.

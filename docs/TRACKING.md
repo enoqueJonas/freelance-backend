@@ -145,3 +145,10 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 
 - **PHASE-2-CLOSED** — espinha dorsal científica e auditoria vertical aprovadas.
 - Próximo marco: **PHASE-3-EMPIRICAL-RECONCILIATION**.
+
+
+### Gate documental — Fase 3
+
+- **G-DOC: PASS** — corpus documental suficiente para iniciar triangulação temática; não para fechar requisitos.
+- Próximo artefacto: matriz Evidência empírica × Evidência documental → Necessidade consolidada.
+- Manter entrevistas reais separadas do piloto sintético.

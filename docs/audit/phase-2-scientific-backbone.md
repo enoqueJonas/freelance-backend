@@ -159,23 +159,17 @@ O próximo trabalho da Fase 2 é fechar o tratamento da hipótese, a delimitaç�
 
 ## 14. Baseline de redacção — Delimitação do tema
 
-### Delimitação espacial
+Inspirada na lógica usada na monografia de referência de blockchain, a delimitação é organizada em espaço, tempo e contexto temático, sem confundir delimitação temporal com o cronograma de elaboração da monografia.
 
-> Quanto à delimitação espacial, a investigação concentra-se na Cidade de Maputo, considerando trabalhadores autónomos da área de Tecnologias de Informação e empregadores/clientes que recorrem ou podem recorrer à contratação destes profissionais.
+> Para enquadrar o desenvolvimento de uma solução tecnológica destinada a apoiar a conexão entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores, a presente investigação encontra-se delimitada no espaço, no tempo e no contexto temático.
+>
+> **Quanto à delimitação espacial**, o estudo concentra-se na Cidade de Maputo, considerando o contexto de trabalhadores autónomos da área de Tecnologias de Informação e empregadores ou clientes que recorrem, ou podem recorrer, à contratação destes profissionais.
+>
+> **Quanto à delimitação temporal**, a investigação considera dados e documentos relativos ao contexto recente do trabalho autónomo, emprego, digitalização e utilização de plataformas digitais em Moçambique. O período abrangido será determinado pelas fontes documentais seleccionadas para caracterizar o fenómeno estudado, privilegiando dados recentes e relevantes para o contexto da investigação.
+>
+> **Quanto à delimitação temática**, a investigação centra-se na conexão e no processo de contratação entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores, considerando a identificação das necessidades dos intervenientes, a especificação dos requisitos, a concepção, o desenvolvimento e a validação de um protótipo de aplicação web. O foco não recai sobre o mercado de trabalho autónomo moçambicano em todas as áreas profissionais, nem sobre o desenvolvimento de uma plataforma comercial em ambiente de produção.
 
-### Delimitação temática
-
-> Quanto à delimitação temática, o estudo centra-se no processo de conexão e contratação entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores, abrangendo a identificação das necessidades dos intervenientes, a especificação da solução, o desenvolvimento do protótipo web e a sua validação. O estudo não pretende analisar o trabalho autónomo em todas as áreas profissionais, restringindo-se aos serviços relacionados com Tecnologias de Informação.
-
-### Delimitação tecnológica
-
-> Quanto à delimitação tecnológica, o trabalho limita-se à concepção, desenvolvimento e validação de um protótipo de aplicação web. A apresentação de uma funcionalidade na interface do protótipo não é, por si só, considerada evidência de integração com serviços externos ou de disponibilização da solução num ambiente de produção.
-
-### Delimitação temporal
-
-> Quanto à delimitação temporal, a investigação foi desenvolvida no período de **[PERÍODO REAL A CONFIRMAR]**, compreendendo as actividades de levantamento, análise, concepção, desenvolvimento e validação do protótipo.
-
-O marcador temporal é deliberado e deverá ser substituído apenas quando o período real do estudo for confirmado.
+**Regra para a Fase 3:** após a análise documental, a delimitação temporal deverá ser tornada concreta com base no intervalo efectivo das fontes seleccionadas. Não serão escolhidas datas arbitrárias antes da constituição do corpus documental.
 
 ## 15. Baseline de redacção — Estrutura do trabalho
 
@@ -195,8 +189,12 @@ A cadeia científica aprovada é:
 
 Não existe, na baseline reconstruída, contradição conceptual entre título, problema, pergunta, hipótese e objectivos.
 
-### Pendência factual única para o fecho integral da Fase 2
+### Estado da Fase 2
 
-- confirmar o **período temporal real da investigação** e substituir o marcador da delimitação temporal.
+A delimitação temporal deixou de ser tratada como período de elaboração da monografia. O intervalo documental será consolidado na Fase 3 a partir do corpus efectivamente utilizado.
 
-A edição controlada do DOCX pode avançar mantendo temporariamente esse marcador, desde que ele permaneça explicitamente assinalado como pendência e não seja apresentado como dado final.
+Com esta decisão, a espinha dorsal científica, a auditoria vertical e a estrutura-base do Capítulo I encontram-se fechadas.
+
+**Marco:** `PHASE-2-CLOSED` → `PHASE-3-EMPIRICAL-RECONCILIATION`
+
+A próxima actividade é aplicar de forma controlada ao documento principal as decisões já aprovadas da Fase 2 e, em seguida, avançar para a reconciliação do estudo empírico e análise documental.

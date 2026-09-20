@@ -155,3 +155,48 @@ A sequência conceptual aprovada passa a ser:
 `1.1 Contextualização → 1.2 Justificativa → 1.3 Problematização → Pergunta de pesquisa → Objectivos`
 
 O próximo trabalho da Fase 2 é fechar o tratamento da hipótese, a delimitação temporal e a coerência global do Capítulo I antes da edição controlada do documento principal.
+
+
+## 14. Baseline de redacção — Delimitação do tema
+
+### Delimitação espacial
+
+> Quanto à delimitação espacial, a investigação concentra-se na Cidade de Maputo, considerando trabalhadores autónomos da área de Tecnologias de Informação e empregadores/clientes que recorrem ou podem recorrer à contratação destes profissionais.
+
+### Delimitação temática
+
+> Quanto à delimitação temática, o estudo centra-se no processo de conexão e contratação entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores, abrangendo a identificação das necessidades dos intervenientes, a especificação da solução, o desenvolvimento do protótipo web e a sua validação. O estudo não pretende analisar o trabalho autónomo em todas as áreas profissionais, restringindo-se aos serviços relacionados com Tecnologias de Informação.
+
+### Delimitação tecnológica
+
+> Quanto à delimitação tecnológica, o trabalho limita-se à concepção, desenvolvimento e validação de um protótipo de aplicação web. A apresentação de uma funcionalidade na interface do protótipo não é, por si só, considerada evidência de integração com serviços externos ou de disponibilização da solução num ambiente de produção.
+
+### Delimitação temporal
+
+> Quanto à delimitação temporal, a investigação foi desenvolvida no período de **[PERÍODO REAL A CONFIRMAR]**, compreendendo as actividades de levantamento, análise, concepção, desenvolvimento e validação do protótipo.
+
+O marcador temporal é deliberado e deverá ser substituído apenas quando o período real do estudo for confirmado.
+
+## 15. Baseline de redacção — Estrutura do trabalho
+
+A descrição da estrutura deve corresponder à estrutura institucional FCTI e ao conteúdo que será efectivamente reconstruído.
+
+> A presente monografia encontra-se organizada em seis capítulos principais, para além dos elementos pré-textuais, referências bibliográficas e elementos pós-textuais. O **Capítulo I — Introdução** apresenta a contextualização do estudo, a justificativa, o problema e a pergunta de pesquisa, a hipótese, os objectivos, a síntese metodológica, as considerações éticas e a delimitação do tema. O **Capítulo II — Revisão Bibliográfica** apresenta os conceitos, abordagens e estudos relacionados que sustentam teoricamente a investigação. O **Capítulo III — Metodologia, Material e Métodos** descreve o desenho metodológico, os participantes, as técnicas e instrumentos de recolha e análise de dados, a análise documental e os procedimentos utilizados no desenvolvimento do protótipo. O **Capítulo IV — Caso de Estudo** caracteriza o contexto investigado e apresenta os elementos necessários à compreensão do processo de conexão e contratação entre trabalhadores autónomos de TI e empregadores. O **Capítulo V — Discussão e Apresentação de Resultados** apresenta e discute os resultados do levantamento, a triangulação das evidências, as necessidades identificadas, a especificação e modelação da solução, o protótipo desenvolvido e os resultados da sua validação. Por fim, o **Capítulo VI — Conclusão e Recomendações** sintetiza os principais resultados, responde à pergunta de pesquisa, aprecia o cumprimento dos objectivos, apresenta as limitações do estudo e propõe recomendações e possibilidades de trabalho futuro.
+
+### Nota estrutural
+
+A descrição acima segue a estrutura específica da monografia FCTI constante do Manual de Investigação Científica da USTM. A numeração e os títulos definitivos dos subcapítulos serão harmonizados durante a reconstrução de cada capítulo.
+
+## 16. Auditoria vertical — resultado consolidado
+
+A cadeia científica aprovada é:
+
+`Título → Contextualização → Justificativa → Problema → Pergunta → Hipótese → Objectivo Geral → Objectivos Específicos → Metodologia → Evidências → Necessidades → Requisitos → Modelação → Protótipo → Validação → Conclusão`
+
+Não existe, na baseline reconstruída, contradição conceptual entre título, problema, pergunta, hipótese e objectivos.
+
+### Pendência factual única para o fecho integral da Fase 2
+
+- confirmar o **período temporal real da investigação** e substituir o marcador da delimitação temporal.
+
+A edição controlada do DOCX pode avançar mantendo temporariamente esse marcador, desde que ele permaneça explicitamente assinalado como pendência e não seja apresentado como dado final.

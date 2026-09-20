@@ -190,3 +190,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - Resultado: **16 RN, 28 RF, 7 RNF e 7 Macro Requisitos**.
 - Matriz de rastreabilidade N01–N18 → RN → RF/RNF → critério de validação criada; N18 permanece condição de adopção, não requisito.
 - Próximo gate: **G-MODEL** — actores/casos de uso, classes/domínio, actividades, sequências, estados e arquitectura.
+
+
+### Modelação — actores e casos de uso
+
+- **G-MODEL-UC: PASS** — definidos Visitante, Utilizador autenticado, Trabalhador, Empregador, Administrador e PSP opcional.
+- 27 casos de uso derivados dos 28 RF; RF28 foi absorvido no fluxo UC06 de verificação.
+- Trabalhador/Empregador são capacidades acumuláveis do mesmo User, não contas exclusivas.
+- Próximo: modelo conceptual/classes do domínio.

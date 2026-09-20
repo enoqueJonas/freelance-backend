@@ -159,3 +159,10 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-TRI: PASS** — N01–N16 consolidadas (N16 condicional); N17 classificada como atributo de qualidade/adopção; N18 como condição de ecossistema.
 - Divergências preservadas: assessment, chat, assinatura, integração/custódia de pagamentos, preço, localização, arbitragem e reputação.
 - Próxima actividade: derivar RN/RF/RNF candidatos com rastreabilidade explícita.
+
+
+### Engenharia de requisitos — baseline candidata
+
+- **G-REQ-CANDIDATE: PASS** — derivadas 14 RN, 25 RF e 7 RNF candidatos a partir da triangulação.
+- Fora do âmbito nesta baseline: assessment obrigatório, assinatura digital avançada obrigatória, escrow/custódia, matching algorítmico obrigatório, geolocalização universal, arbitragem administrativa e chat como requisito autónomo.
+- Próximo passo: confrontar esta baseline com os 32 RF do draft e com o AS-IS técnico, resolver papéis e estados do domínio, e só depois fechar G-REQ.

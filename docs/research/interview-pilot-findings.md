@@ -82,3 +82,26 @@ com comunicação/rastreabilidade e conflitos/evidências como aspectos transver
 ## Limite desta análise
 
 Nenhuma N01–N18 deve ser promovida automaticamente a requisito. A validação científica deverá considerar entrevistas reais e, posteriormente, análise documental/benchmark. O código actual também não constitui evidência científica.
+
+
+## Notas empíricas adicionais — entrevistas reais
+
+> Regra de anonimização: os participantes não serão identificados por nome. Os registos e a apresentação dos resultados utilizarão apenas códigos/perfis de participante.
+
+As notas abaixo são **evidência empírica real fornecida a partir das entrevistas efectivamente realizadas**. Não devem ser confundidas com o piloto sintético.
+
+### Trabalhador — Desenvolvedor Web
+- Relatou utilizar anúncios pagos na plataforma Meta como um dos meios para conseguir clientes.
+- Implicação preliminar: a procura de clientes não ocorre apenas por referências, LinkedIn ou WhatsApp; existe também investimento activo em publicidade digital para aumentar alcance/visibilidade.
+- Necessidades potencialmente relacionadas: N01 (descoberta/visibilidade) e, indirectamente, N17/N18 (valor percebido e capacidade da plataforma gerar oportunidades).
+- Estado: evidência empírica; aguarda triangulação formal.
+
+### Trabalhador — Especialista em Redes
+- Possui aproximadamente 3 anos de experiência no mercado.
+- Esta informação actualiza o perfil descritivo do participante; não constitui, isoladamente, evidência de uma necessidade funcional.
+- Estado: dado de caracterização empírica.
+
+### Regra de utilização
+- Não publicar nomes dos entrevistados.
+- Não transformar estes apontamentos em citações textuais directas, porque foram fornecidos como notas/resumos e não como transcrição literal.
+- Podem ser apresentados como resultados parafraseados, identificando apenas o perfil/código do participante.

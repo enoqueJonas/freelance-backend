@@ -174,3 +174,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - Recuperadas três capacidades administrativas justificáveis: gestão de utilizadores, moderação de oportunidades reportadas e análise de verificação (condicional ao fluxo de verificação), elevando a baseline para 28 RF candidatos.
 - Assessment obrigatório, assinatura digital universal, chat como core, custódia/escrow e arbitragem administrativa permanecem fora da baseline.
 - Próximo passo: definir estados/transições, rever atomicidade e fechar a matriz final de rastreabilidade antes de G-REQ.
+
+
+### Modelo de estados do domínio
+
+- **G-DOMAIN-STATES: PASS** — definidos estados/transições de Opportunity, Proposal, Engagement/Agreement, Payment, Dispute e Review.
+- Contract evolui conceptualmente para Engagement + AgreementVersion; alterações preservam histórico.
+- PaymentTerms, PaymentRecord e PaymentTransaction foram separados; ConecTA não assume custódia.
+- Próximo: atomicidade final + RN/RNF verificáveis + matriz de rastreabilidade para fechar G-REQ.

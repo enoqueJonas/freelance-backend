@@ -235,3 +235,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-MIGRATION-PLAN: PASS** — plano incremental definido contra backend master 6617ddf e frontend master f41d72e.
 - Backend B01–B10; frontend F01–F07; PSP I01 opcional.
 - Primeiro incremento: PR-B01 (repository/test baseline), antes de alterar domínio.
+
+
+### Corpus empírico final
+
+- **G-EMPIRICAL-FINAL: PASS** — 11 entrevistas reais fornecidas (T01–T08; E01–E03) codificadas tematicamente.
+- N01–N18 reconciliadas; baseline 16 RN / 28 RF / 7 RNF permanece válida.
+- Divergências preservadas: testes facultativos, escrow como preferência, chat vs rastreabilidade, preço pós-diagnóstico, localização contextual.
+- Próximo: reconstrução controlada da monografia, começando por metodologia e resultados empíricos, seguida dos restantes capítulos e formatação USTM.

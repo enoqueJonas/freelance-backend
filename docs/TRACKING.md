@@ -243,3 +243,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - N01–N18 reconciliadas; baseline 16 RN / 28 RF / 7 RNF permanece válida.
 - Divergências preservadas: testes facultativos, escrow como preferência, chat vs rastreabilidade, preço pós-diagnóstico, localização contextual.
 - Próximo: reconstrução controlada da monografia, começando por metodologia e resultados empíricos, seguida dos restantes capítulos e formatação USTM.
+
+
+### Monografia — plano de reconstrução
+
+- Draft actual auditado: 67 páginas; inconsistências estruturais/metodológicas confirmadas.
+- Plano capítulo-a-capítulo criado em docs/monograph/reconstruction-plan.md.
+- Ordem: D1 Cap.I → D2 metodologia → D3 resultados empíricos → D4 literatura → D5 engenharia → D6 implementação/validação → D7 conclusão/resumos → D8 formatação final.
+- Próximo gate: **G-DOC-I**.

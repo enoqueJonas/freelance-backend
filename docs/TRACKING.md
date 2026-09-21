@@ -220,3 +220,11 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - Fronteiras lógicas: UI/API → Application Service → Domain → ORM/Repository; PSP via Adapter opcional.
 - Repositories são abstrações UML e não obrigam repository pattern artificial em Django.
 - Próximo: representação UML dos estados + arquitectura lógica/física + auditoria cruzada para fechar G-MODEL.
+
+
+### Modelação — estados, arquitectura e fecho
+
+- **G-MODEL-STATE-UML: PASS** — máquinas de estado consolidadas; Engagement recomendado como diagrama principal na monografia.
+- **G-MODEL-ARCH: PASS** — arquitectura-alvo definida: React → Django/DRF → domínio/ORM → PostgreSQL; integrações externas desacopladas.
+- **G-MODEL: PASS** — auditoria cruzada RF ↔ UC ↔ classes ↔ actividades ↔ sequências ↔ estados ↔ arquitectura concluída sem lacunas bloqueantes.
+- Próximo: plano AS-IS → TO-BE e implementação/refactor incremental do protótipo antes da validação.

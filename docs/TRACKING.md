@@ -251,3 +251,13 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - Plano capítulo-a-capítulo criado em docs/monograph/reconstruction-plan.md.
 - Ordem: D1 Cap.I → D2 metodologia → D3 resultados empíricos → D4 literatura → D5 engenharia → D6 implementação/validação → D7 conclusão/resumos → D8 formatação final.
 - Próximo gate: **G-DOC-I**.
+
+
+### Monografia — D1
+
+- **G-DOC-I: PASS** — capa/folha de rosto normalizadas quanto a autora e escopo; Capítulo I reconstruído.
+- Capítulo I agora contém: contextualização, justificativa, problema/pergunta, objectivos, hipótese, metodologia resumida, considerações éticas, delimitação e estrutura do trabalho.
+- Removidos do Cap. I: escopo mobile, estatísticas não verificadas, funcionalidades predefinidas e placeholders de delimitação.
+- Documento de trabalho gerado: Monografia_ConecTA_D1_Capitulo_I.docx.
+- Índice permanece provisório e será actualizado após a reconstrução estrutural dos capítulos.
+- Próximo: **D2 / G-DOC-METHOD** — reconstruir Capítulo III segundo as 11 entrevistas, análise documental, codificação temática e triangulação.

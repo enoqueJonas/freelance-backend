@@ -228,3 +228,10 @@ Código existente, texto do draft ou dados simulados não fecham por si só uma 
 - **G-MODEL-ARCH: PASS** — arquitectura-alvo definida: React → Django/DRF → domínio/ORM → PostgreSQL; integrações externas desacopladas.
 - **G-MODEL: PASS** — auditoria cruzada RF ↔ UC ↔ classes ↔ actividades ↔ sequências ↔ estados ↔ arquitectura concluída sem lacunas bloqueantes.
 - Próximo: plano AS-IS → TO-BE e implementação/refactor incremental do protótipo antes da validação.
+
+
+### Implementação — plano AS-IS → TO-BE
+
+- **G-MIGRATION-PLAN: PASS** — plano incremental definido contra backend master 6617ddf e frontend master f41d72e.
+- Backend B01–B10; frontend F01–F07; PSP I01 opcional.
+- Primeiro incremento: PR-B01 (repository/test baseline), antes de alterar domínio.

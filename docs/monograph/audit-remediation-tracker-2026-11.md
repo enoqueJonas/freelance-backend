@@ -17,7 +17,7 @@ O documento possui 7 capítulos numerados (I–VI mais VII Referências), 8 quad
 
 ### P0 — ordem de execução prioritária
 
-- [ ] **M01 — Fechar 1.9 Estrutura do trabalho.** Corrigir ordem hipóteses→objectivos, descrever exactamente capítulos I–VI e referências; comparar 1.3–1.9 com os títulos reais; renderizar e inspeccionar as páginas adjacentes. **Artefacto:** nova versão controlada do DOCX.
+- [x] **M01 — Fechar 1.9 Estrutura do trabalho.** Corrigir ordem hipóteses→objectivos, descrever exactamente capítulos I–VI e referências; comparar 1.3–1.9 com os títulos reais; renderizar e inspeccionar as páginas adjacentes. **Artefacto:** nova versão controlada do DOCX.
 - [ ] **M02 — Pré-textuais.** Verificar capa/folha de rosto, nomes, título, supervisor, moldura, declaração/agradecimentos quando aplicáveis, resumos PT/EN 100–200 palavras e 3–5 palavras-chave, índice e listas automáticos. **Gate:** campos actualizáveis e visual verificado.
 - [ ] **M03 — Capítulo II (teoria e comparação).** Auditar precisão bibliográfica; explicar conceitos em profundidade, comparar criticamente plataformas/canais; produzir **Figura 2.1 e Quadro 2.2** com fontes verificadas, sem funcionalidades inventadas. **Gate:** suporte documental e coerência com o âmbito.
 - [ ] **M04 — Capítulo III (métodos).** Reconciliar tipo de estudo, amostra intencional de 11 entrevistas T01–T08/E01–E03, análise temática, fontes documentais, triangulação, limites e desenvolvimento incremental. Não inventar consentimento, gravações, datas nem testes. **Gate:** rastreabilidade instrumentos→dados→análise.
@@ -29,6 +29,11 @@ O documento possui 7 capítulos numerados (I–VI mais VII Referências), 8 quad
 - [ ] **M10 — Referências e fontes.** Cruzar todas as citações com a bibliografia e os PDFs, validar data/autoria/título/páginas, remover links impróprios e fontes não verificáveis; normas e legislação contextualizadas sem sobreafirmações. **Gate:** correspondência bidireccional.
 - [ ] **M11 — Normalização técnica/visual global.** Legendas/cross-references e índices automáticos, margens USTM, TNR12, 1,5, títulos, paginação, tabelas, imagens, português moçambicano; eliminar placeholders, texto de trabalho, instruções internas ou de commit; render a 100% e inspecção integral. **Gate:** nenhum defeito aberto; corpo ≤60 páginas.
 - [ ] **M12 — Gate científico-editorial final.** Comparar problema→pergunta→hipóteses→objectivos→metodologia→evidências→necessidades→requisitos→UML→implementação→validação→conclusão; resumos fiéis aos resultados. **Gate:** auditoria final assinada por evidências, não por presunção.
+
+### Pendências adicionais identificadas na auditoria de 2026-11-01
+
+- [ ] **M15 — Reconciliar 14 comentários do supervisor preservados no DOCX.** O pacote `word/comments.xml` contém 14 comentários, todos ainda sinalizados sem resolução formal. Rever caso a caso: delimitação temporal (não inventar datas), elementos pós-textuais, glossário, numerar figuras por capítulo, legendas/fontes de tabelas, população/amostra, identificação de actores e associações caso de uso→actor. Os comentários elogiosos/sem alteração concreta podem ser registados como informativos. **Gate:** matriz comentário→excerto actual→resposta→evidência; só retirar comentários com decisão fundamentada.
+- [ ] **M16 — Retirar vestígios editoriais/metadiscursivos.** Há texto no parágrafo de abertura do Capítulo V que refere literalmente «monografia de referência», o que é inadequado ao manuscrito científico final; procurar também instruções internas, termos de commit e texto de produção. **Gate:** varrimento textual e visual sem conteúdo de processo ou notas para quem edita.
 
 ### P1 — dependentes de evidência e decisões técnicas
 
@@ -50,4 +55,6 @@ O ciclo de edições D10–D17 actualizou, em sequência, 1.1 Contextualização
 
 ## Diário de execução
 
-- **2026-11-01:** auditoria inicial da D17 identificou 21 placeholders, salto de numeração em 5.2, inconsistência de 1.9 e lacunas de evidência de implementação. Tentativa de usar GitHub Issues bloqueada por configuração do repositório; backlog criado aqui. Tarefas permanecem abertas até a verificação.
+- **2026-11-01:** auditoria inicial da D17 identificou 21 placeholders, salto de numeração em 5.2, inconsistência de 1.9 e lacunas de evidência de implementação. Tentativa de usar GitHub Issues bloqueada por configuração do repositório; backlog criado aqui.
+- **2026-11-01 / M01:** concluída a revisão estritamente localizada da secção 1.9. Documento **D18 — Monografia_D18_1.9_Estrutura_do_Trabalho.docx**, 57 páginas. Comparação estrutural confirmou **exactamente dois parágrafos modificados**; renderizado; inspeccionadas efectivamente as páginas 16, 17 e 18. A secção descreve seis capítulos e referências, e coloca hipóteses antes de objectivos.
+- **2026-11-01 / auditoria de comentários e campos:** detectados 14 comentários preexistentes e não formalmente resolvidos, `TOC` automático presente, mas **não foram encontrados campos `SEQ` para numeração automática de legendas nem bookmarks de referência**, pelo que o gate de legendas e referências cruzadas permanece aberto. A abertura do Capítulo V inclui uma menção metadiscursiva à «monografia de referência» (M16).

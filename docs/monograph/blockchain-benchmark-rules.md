@@ -1,6 +1,6 @@
 # Regras extraídas da monografia Blockchain/DID — benchmark editorial e técnico
 
-> Documento analisado: `Monografia_Enoque_Macanda_070926.docx`.
+> Documento analisado: `Monografia_Enoque_Macanda_30102026.docx`.
 > Este ficheiro regista práticas do benchmark que podem ser reutilizadas **somente quando compatíveis com o Manual USTM e com a investigação actual**.
 
 ## 1. Formatação física confirmada no DOCX
@@ -170,3 +170,18 @@ Para cada subcapítulo corrigido, comparar:
 7. ligação ao capítulo seguinte.
 
 A pergunta não é “tem o mesmo número de páginas da Blockchain?”, mas “cumpre a mesma função académica com profundidade e clareza compatíveis?”.
+
+## 14. Actualização do benchmark — edição recebida em 01/11/2026
+
+**Novo documento de referência prioritário:** `Monografia_Enoque_Macanda_30102026.docx`, fornecido pelo utilizador. Substitui a versão de 07/09/2026 como **padrão editorial visual e técnico** da monografia em revisão, sem substituir o Manual USTM.
+
+**Características confirmadas por inspecção DOCX:**
+- seis secções, A4, margens 4,0/3,5/3,5/2,0 cm, fonte-base Times New Roman;
+- duas folhas iniciais com moldura, instituição, autora/autor, título, supervisor e data; pré-textuais com índice, listas de figuras/quadros, siglas, glossário e resumos;
+- secções de fundamentação técnica com comparação explícita de estilos arquitecturais (2.7.4.1–2.7.4.5) e exposição de diferentes tipos de diagramas UML (2.7.5);
+- Capítulo 5 articula actores → regras de negócio → requisitos → casos de uso gerais e detalhados → classes → actividades → sequências → estados → arquitectura → interfaces → discussão;
+- requisitos apresentados por macro-requisito com identificação, declaração, fonte/prioridade/data e observações; casos de uso com fluxo alternativo e descrição estruturada; figuras acompanham referências no texto.
+
+**Advertência sobre o novo benchmark:** não copiar defeitos nem volume indiscriminadamente. A amostra contém **157 páginas totais** e corpo extenso, enquanto a USTM define **máximo de 60 páginas da Introdução às Referências** para a FCTI. O Resumo da amostra inclui seis palavras-chave e o índice tem linhas de subfluxos/alternativas; isto **não** revoga a regra institucional de 3–5 palavras-chave nem recomenda reproduzir essas peculiaridades. Examinar cada gráfico/figura criticamente quanto à precisão conceptual e legibilidade; nunca copiar números, afirmações, figuras, interfaces nem resultados da investigação Blockchain.
+
+**Transferência para a monografia de trabalhadores autónomos de TI:** reutilizar hierarquia, consistência de estilos, qualidade das fichas de casos de uso, densidade explicativa de engenharia, integração de ilustrações com texto, fonte/legenda e separação entre afirmações testadas versus concebidas. Preservar recorte e evidências próprios: 11 entrevistas; 16 RN, 28 RF, 7 RNF; frontend simulado e backend parcial, até verificação técnica nova.

@@ -1,0 +1,42 @@
+@startuml
+' Figura 5.1 — Visão de casos de uso centrais (não exaustiva)
+left to right direction
+skinparam monochrome true
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor #EFF4F8
+  BorderColor #344355
+}
+actor Trabalhador as T
+actor Empregador as E
+actor Administrador as A
+rectangle "Aplicação web proposta" {
+  usecase "UC08\nPesquisar oportunidades" as UC08
+  usecase "UC07\nGerir oportunidade" as UC07
+  usecase "UC11\nGerir proposta" as UC11
+  usecase "UC12\nAvaliar proposta" as UC12
+  usecase "UC13\nFormalizar acordo" as UC13
+  usecase "UC14\nAlterar acordo" as UC14
+  usecase "UC24\nReportar conflito" as UC24
+  usecase "UC25\nAcompanhar conflito" as UC25
+}
+T -- UC08
+T -- UC11
+T -- UC13
+T -- UC14
+T -- UC24
+T -- UC25
+E -- UC07
+E -- UC12
+E -- UC13
+E -- UC14
+E -- UC24
+E -- UC25
+A -- UC25
+note bottom
+A Figura 5.1 representa uma selecção dos fluxos centrais,
+não o catálogo exaustivo de UC01–UC27.
+O mesmo utilizador pode assumir perfis de trabalhador e empregador,
+mas não simultaneamente os dois lados de uma mesma contratação.
+end note
+@enduml

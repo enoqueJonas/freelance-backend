@@ -1,0 +1,62 @@
+@startuml
+' Figura 5.4 — DA02: Formalização e alteração das condições do acordo
+' Modelo-alvo: docs/modeling/activity-flows.md
+' Não representa funcionalidades cuja implementação já tenha sido comprovada.
+title DA02 — Formalizar e alterar o acordo
+skinparam activity {
+  BackgroundColor #edf4f8
+  BorderColor #43596a
+  FontColor #193a51
+}
+|Sistema|
+start
+:Engagement = PENDING_AGREEMENT;
+|Parte proponente|
+:Propor escopo, prazo, entregáveis
+(quando aplicável) e pagamento;
+|Sistema|
+:Criar AgreementVersion v1 = PROPOSED;
+:Registar autor e data;
+|Contraparte|
+:Examinar as condições;
+if (Aceita a versão?) then (Sim)
+ |Sistema|
+ :Registar as aceitações exigidas;
+ :AgreementVersion v1 = ACCEPTED;
+ :Engagement = ACTIVE;
+else (Não)
+ |Sistema|
+ :v1 = REJECTED;
+ :Condições devem ser revistas;
+ stop
+endif
+if (Surge alteração material durante ACTIVE?) then (Sim)
+ |Parte proponente|
+ :Propor modificação das condições;
+ |Sistema|
+ :Criar AgreementVersion vN+1 = PROPOSED;
+ :Preservar a versão vigente;
+ |Contraparte|
+ :Examinar nova versão;
+ if (Aceita a alteração?) then (Sim)
+  |Sistema|
+  :vN+1 = ACCEPTED;
+  :Nova versão passa a vigente;
+  :Preservar histórico de versões;
+ else (Não)
+  |Sistema|
+  :vN+1 = REJECTED;
+  :Versão anterior permanece vigente;
+ endif
+else (Não)
+ |Sistema|
+ :Manter a versão vigente;
+endif
+stop
+note right
+As partes podem alternar os papéis de proponente
+e contraparte. A aceitação inicial deve incluir
+todas as confirmações exigidas. Não é imposta
+assinatura digital avançada universal.
+end note
+@enduml

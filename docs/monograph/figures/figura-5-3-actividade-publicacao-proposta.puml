@@ -1,0 +1,55 @@
+@startuml
+' Modelo de actividades DA01 — versão editável de conteúdo
+' Referências: docs/modeling/activity-flows.md, RN01/RN02/RN04/RN08, RF07–RF12
+' Representa o MODELO CONCEPTUAL, não a implementação demonstrada.
+title DA01 — Publicar oportunidade e seleccionar proposta
+skinparam activity {
+  BackgroundColor #EEF4F8
+  BorderColor #344759
+}
+|Empregador|
+start
+:Definir oportunidade e condições;
+|Sistema|
+:Validar dados e regras;
+while (Dados válidos?) is (Não)
+  |Empregador|
+  :Corrigir oportunidade;
+  |Sistema|
+  :Validar dados e regras;
+endwhile (Sim)
+:Guardar Opportunity DRAFT;
+|Empregador|
+:Publicar oportunidade;
+|Sistema|
+:Opportunity OPEN;
+|Trabalhador|
+:Consultar oportunidade e preparar proposta;
+note right
+  O preço pode exigir diagnóstico prévio.
+  Localização é contextual.
+end note
+|Sistema|
+:Verificar estado OPEN e anti-auto-contratação;
+if (Trabalhador elegível?) then (Sim)
+  :Proposal SUBMITTED;
+  |Empregador|
+  :Avaliar proposta;
+  if (Empregador aceita proposta?) then (Sim)
+    |Sistema|
+    :Proposal ACCEPTED;
+    :Engagement PENDING_AGREEMENT;
+    note right
+      Continua em DA02: a aceitação das
+      condições de ambas as partes
+      precede o estado ACTIVE.
+    end note
+  else (Não)
+    |Sistema|
+    :Proposal REJECTED;
+  endif
+else (Não)
+  :Submissão recusada;
+endif
+stop
+@enduml

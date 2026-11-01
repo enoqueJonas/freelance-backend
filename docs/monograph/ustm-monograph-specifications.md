@@ -1,7 +1,7 @@
 # Especificações obrigatórias para edição da monografia
 
 > **Fonte normativa principal:** Manual de Investigação Científica da Universidade São Tomás de Moçambique (USTM).
-> **Benchmark editorial/técnico secundário:** `Monografia_Enoque_Macanda_070926.docx` (monografia Blockchain/DID).
+> **Benchmark editorial/técnico secundário:** `Monografia_Enoque_Macanda_30102026.docx` (monografia Blockchain/DID).
 >
 > **Regra de precedência:** quando houver conflito, o Manual USTM prevalece. A monografia Blockchain serve para operacionalizar aspectos visuais/estruturais compatíveis com o Manual, nunca para substituir a norma institucional.
 

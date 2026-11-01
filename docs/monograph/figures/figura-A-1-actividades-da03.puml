@@ -1,0 +1,61 @@
+@startuml
+' DA03 — modelo de actividades, referência científica editável.
+' Derivado de docs/modeling/activity-flows.md; não atesta implementação.
+' O desenho integrado na monografia é composto por dois painéis independentes:
+' conclusão de serviço NÃO implica pagamento e o momento do pagamento é definido no acordo.
+skinparam monochrome true
+title DA03 (A) — Execução, entrega e conclusão
+|Sistema|
+start
+:Verificar Engagement ACTIVE\ne AgreementVersion ACCEPTED;
+|Trabalhador|
+:Executar serviço fora da plataforma;
+|Sistema|
+:Registar actualizações\nExecutionRecord;
+|Trabalhador|
+:Registar entrega;
+|Sistema|
+:Registar ExecutionRecord\ne Engagement DELIVERED;
+|Empregador|
+:Consultar a entrega;
+if (Entrega aceite?) then (Sim)
+  |Sistema|
+  :Engagement COMPLETED;
+else (Não)
+  |Empregador|
+  :Solicitar alteração material\nou reportar conflito;
+  |Sistema|
+  :Preservar evidência e histórico; 
+endif
+stop
+@enduml
+
+@startuml
+skinparam monochrome true
+title DA03 (B) — Acompanhamento de pagamento (fluxo distinto)
+|Sistema|
+start
+:Identificar PaymentTerms da\nAgreementVersion vigente;
+note right
+  Pagamento pode anteceder a entrega,
+  ocorrer por etapas ou no final.
+end note
+|Empregador|
+:Registar pagamento efectuado\nfora da plataforma;
+|Sistema|
+:PaymentRecord REPORTED_PAID;
+|Trabalhador|
+if (Confirma pagamento?) then (Sim)
+  |Sistema|
+  :PaymentRecord CONFIRMED;
+else (Não)
+  |Sistema|
+  :PaymentRecord DISPUTED;
+endif
+stop
+note bottom
+  Integração com PSP é opcional e depende de implementação.
+  Uma PaymentTransaction guarda referência/estado,
+  nunca fundos custodiados pela aplicação.
+end note
+@enduml

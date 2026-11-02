@@ -24,6 +24,8 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/accounts/', include('apps.accounts.urls')),
+    path('api/marketplace/', include('apps.marketplace.urls')),
+    path('api/contracts/', include('apps.contracts.urls')),
     path('api/auth/login/', TokenObtainPairView.as_view(),
          name='token_obtain_pair'),
     path('api/auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

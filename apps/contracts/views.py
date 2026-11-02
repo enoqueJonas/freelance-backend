@@ -8,6 +8,7 @@ import hashlib
 import json
 
 from django.db import transaction
+from django.db.models import Q
 from django.db.models import Max
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
@@ -101,6 +102,24 @@ def engagement_data(obj):
             "acceptances": sorted(a.actor_id for a in v.acceptances.all()),
         } for v in versions],
     }
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def engagement_list(request):
+    engagements = (
+        Engagement.objects.select_related(
+            "proposal__worker__user", "proposal__opportunity__employer__user"
+        )
+        .filter(
+            Q(proposal__worker__user=request.user)
+            | Q(
+                proposal__opportunity__employer__user=request.user
+            )
+        )
+        .order_by("-created_at", "-pk")
+    )
+    return Response([engagement_data(e) for e in engagements])
 
 
 @api_view(["GET"])

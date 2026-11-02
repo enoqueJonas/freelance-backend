@@ -88,8 +88,11 @@ class ContractVerticalSliceTests(APITestCase):
 
     def accept(self, engagement_id, version_id, user):
         self.authenticate(user)
+        fingerprint = AgreementVersion.objects.get(pk=version_id).content_fingerprint
         return self.client.post(
-            f"/api/contracts/engagements/{engagement_id}/agreements/{version_id}/accept/"
+            f"/api/contracts/engagements/{engagement_id}/agreements/{version_id}/accept/",
+            {"content_fingerprint": fingerprint},
+            format="json",
         )
 
     def test_anonymous_cannot_list_opportunities(self):
@@ -291,7 +294,9 @@ class ContractVerticalSliceTests(APITestCase):
         second = self.engagement()
         self.authenticate(self.worker)
         r = self.client.post(
-            f"/api/contracts/engagements/{second}/agreements/{vid}/accept/"
+            f"/api/contracts/engagements/{second}/agreements/{vid}/accept/",
+            {"content_fingerprint": AgreementVersion.objects.get(pk=vid).content_fingerprint},
+            format="json",
         )
         self.assertEqual(r.status_code, 404)
 
@@ -303,7 +308,7 @@ class ContractVerticalSliceTests(APITestCase):
         self.assertEqual(r.status_code, 409)
         self.assertEqual(AgreementAcceptance.objects.count(), 0)
 
-    def test_active_engagement_rejects_reopening_initial_agreement(self):
+    def test_active_engagement_allows_new_version_without_reopening_initial_one(self):
         eid = self.engagement()
         vid = self.propose_version(eid)
         self.accept(eid, vid, self.worker)
@@ -311,7 +316,13 @@ class ContractVerticalSliceTests(APITestCase):
         self.authenticate(self.employer)
         r = self.client.post(
             f"/api/contracts/engagements/{eid}/agreements/",
-            {"scope": "Tentar reabrir", "amount": "2000"}, format="json"
+            {"scope": "Alteração ao acordo", "amount": "2000"}, format="json"
         )
-        self.assertEqual(r.status_code, 409)
-        self.assertEqual(AgreementVersion.objects.count(), 1)
+        self.assertEqual(r.status_code, 201)
+        self.assertEqual(r.data["number"], 2)
+        self.assertEqual(AgreementVersion.objects.get(pk=vid).status, AgreementVersion.Status.ACCEPTED)
+        self.assertEqual(
+            AgreementVersion.objects.get(pk=r.data["version_id"]).status,
+            AgreementVersion.Status.PROPOSED,
+        )
+        self.assertEqual(Engagement.objects.get(pk=eid).status, Engagement.Status.ACTIVE)

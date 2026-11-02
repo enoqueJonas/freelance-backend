@@ -28,6 +28,8 @@ class AgreementVersion(models.Model):
     class Status(models.TextChoices):
         PROPOSED = "PROPOSED", "Proposed"
         ACCEPTED = "ACCEPTED", "Accepted"
+        REJECTED = "REJECTED", "Rejected"
+        SUPERSEDED = "SUPERSEDED", "Superseded"
 
     engagement = models.ForeignKey(
         Engagement, on_delete=models.PROTECT, related_name="agreement_versions"
@@ -47,12 +49,28 @@ class AgreementVersion(models.Model):
         related_name="proposed_agreement_versions"
     )
     created_at = models.DateTimeField(auto_now_add=True)
+    rejected_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.PROTECT, related_name="rejected_agreement_versions"
+    )
+    rejected_at = models.DateTimeField(null=True, blank=True)
+    rejection_reason = models.TextField(blank=True, default="")
 
     class Meta:
         constraints = [
             models.UniqueConstraint(
                 fields=["engagement", "version"],
                 name="unique_engagement_agreement_version"
+            ),
+            models.UniqueConstraint(
+                fields=["engagement"],
+                condition=models.Q(status="PROPOSED"),
+                name="one_proposed_agreement_per_engagement",
+            ),
+            models.UniqueConstraint(
+                fields=["engagement"],
+                condition=models.Q(status="ACCEPTED"),
+                name="one_current_agreement_per_engagement",
             ),
         ]
 

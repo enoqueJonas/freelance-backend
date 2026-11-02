@@ -72,9 +72,29 @@ def publish_opportunity(request, opportunity_id):
         return Response(opportunity_data(obj))
 
 
-@api_view(["POST"])
+@api_view(["GET", "POST"])
 @permission_classes([IsAuthenticated])
 def submit_proposal(request, opportunity_id):
+    if request.method == "GET":
+        obj = get_object_or_404(
+            Opportunity.objects.select_related("employer"), pk=opportunity_id
+        )
+        if obj.employer.user_id != request.user.id:
+            return Response({"detail": "Not an owner"}, status=403)
+        proposals = (
+            Proposal.objects.filter(opportunity=obj)
+            .select_related("worker__user")
+            .order_by("created_at", "pk")
+        )
+        return Response([{
+            "id": p.pk,
+            "opportunity_id": p.opportunity_id,
+            "worker_user_id": p.worker.user_id,
+            "worker_name": p.worker.user.name,
+            "description": p.description,
+            "status": p.status,
+        } for p in proposals])
+
     input_data = ProposalInput(data=request.data)
     input_data.is_valid(raise_exception=True)
     worker = Worker.objects.filter(user=request.user).first()

@@ -76,6 +76,11 @@ class Engagement:
     delivery_records: int = 0
     next_event: int = 1
 
+    def __setattr__(self, name, value):
+        if name in ('worker', 'employer') and name in self.__dict__:
+            raise RuleError('identidade das partes nao pode ser alterada')
+        super().__setattr__(name, value)
+
     def __post_init__(self):
         if self.worker == self.employer:
             raise RuleError('G01: não se pode contratar a si mesmo')
@@ -110,6 +115,8 @@ class Engagement:
         if number < 1 or number > len(self.versions):
             raise RuleError("versão inexistente")
         v = self.versions[number - 1]
+        if self.status not in (EngagementStatus.PENDING_AGREEMENT, EngagementStatus.ACTIVE):
+            raise RuleError('nao aceitar acordo em contratacao terminal')
         if v.status is not AgreementStatus.PROPOSED or v.digest != digest:
             raise RuleError('G03/G16: versão inválida, rejeitada ou conteúdo divergente')
         if actor in v.approvals:
@@ -126,7 +133,11 @@ class Engagement:
 
     def reject(self, actor: int, number: int):
         self._party(actor)
+        if number < 1 or number > len(self.versions):
+            raise RuleError('versao inexistente')
         v = self.versions[number - 1]
+        if self.status not in (EngagementStatus.PENDING_AGREEMENT, EngagementStatus.ACTIVE):
+            raise RuleError('nao rejeitar acordo em contratacao terminal')
         if v.status is not AgreementStatus.PROPOSED:
             raise RuleError('só propostas pendentes podem ser rejeitadas')
         self.versions[number - 1] = replace(v, status=AgreementStatus.REJECTED)
@@ -167,6 +178,8 @@ class Engagement:
     def dispute_transition(self, admin: int, number: int, target: DisputeStatus):
         if admin not in self.admin_ids:
             raise RuleError('G13: acto administrativo não autorizado')
+        if number < 1 or number > len(self.disputes):
+            raise RuleError('disputa inexistente')
         d = self.disputes[number - 1]
         valid = {
             DisputeStatus.OPEN: {DisputeStatus.UNDER_REVIEW},
@@ -181,7 +194,9 @@ class Engagement:
         self._event(admin, f'DISPUTE_{number}_{target.value}')
 
     def report_payment(self, actor: int, value: int) -> PaymentRecord:
-        if actor != self.employer or value <= 0 or self.status is EngagementStatus.CANCELLED:
+        if actor != self.employer or value <= 0 or not self.current_accepted_version:
+            raise RuleError('G09: pagamento externo requer pagador e acordo aceite')
+        if self.status not in (EngagementStatus.ACTIVE, EngagementStatus.DELIVERED, EngagementStatus.COMPLETED):
             raise RuleError('G09: só pagador pode reportar um valor positivo')
         payment = PaymentRecord(len(self.payments) + 1, value)
         self.payments.append(payment)
@@ -192,6 +207,8 @@ class Engagement:
         # Política candidata: contraparte recebedora pode confirmar/contestar registo manual.
         if actor != self.worker or target not in (PaymentStatus.CONFIRMED, PaymentStatus.DISPUTED):
             raise RuleError('G10: confirmação/contestação requer contraparte autorizada')
+        if number < 1 or number > len(self.payments):
+            raise RuleError('pagamento inexistente')
         payment = self.payments[number - 1]
         if payment.status is not PaymentStatus.REPORTED_PAID:
             raise RuleError('transição de pagamento inválida')

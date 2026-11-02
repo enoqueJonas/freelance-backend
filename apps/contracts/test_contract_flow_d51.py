@@ -88,8 +88,11 @@ class ContractVerticalSliceTests(APITestCase):
 
     def accept(self, engagement_id, version_id, user):
         self.authenticate(user)
+        fingerprint = AgreementVersion.objects.get(pk=version_id).content_fingerprint
         return self.client.post(
-            f"/api/contracts/engagements/{engagement_id}/agreements/{version_id}/accept/"
+            f"/api/contracts/engagements/{engagement_id}/agreements/{version_id}/accept/",
+            {"content_fingerprint": fingerprint},
+            format="json",
         )
 
     def test_anonymous_cannot_list_opportunities(self):

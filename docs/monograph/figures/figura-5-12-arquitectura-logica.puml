@@ -1,0 +1,39 @@
+@startuml
+' Figura 5.12 — Arquitectura lógica da solução ConecTA (modelo-alvo)
+' Fonte: docs/modeling/solution-architecture.md (G-MODEL-ARCH: PASS).
+' Modelo conceptual, não implementação integral do backend/frontend existentes.
+' O desenho editorial incorporado na monografia foi produzido em SVG.
+skinparam monochrome true
+skinparam componentStyle rectangle
+title Arquitectura lógica proposta — ConecTA
+
+rectangle "Apresentação\nNavegador / React + TypeScript" as WEB
+rectangle "API / Application\nDjango REST Framework\nAutenticação e autorização contextual" as API
+rectangle "Serviços de aplicação\nPerfis/verificação | Oportunidades/propostas\nContratação/acordos/execução | Pagamentos\nReputação/conflitos/moderação" as APP
+rectangle "Domínio\nEntidades/agregados, invariantes e transições\nAnti-auto-contratação; versionamento de acordos" as DOMAIN
+rectangle "Persistência\nDjango ORM" as ORM
+database "PostgreSQL\n(alvo)" as PG
+
+WEB --> API : HTTPS / JSON (previsto)
+API --> APP : coordena casos de uso
+APP --> DOMAIN : regras e estados
+DOMAIN --> ORM : persistência transaccional
+ORM --> PG : modelo-alvo
+
+rectangle "Adaptador PSP\n(facultativo)" as PSP
+rectangle "Notificações\n(auxiliares)" as NOTI
+APP ..> PSP : apenas com RF20 implementado
+APP ..> NOTI : evento não bloqueante
+
+note bottom of WEB
+  AS-IS: frontend com mockApi/localStorage,
+  não ligado à API Django.
+end note
+note bottom of PG
+  PostgreSQL é a base de dados pretendida.
+  A configuração corrente do backend usa SQLite.
+end note
+note bottom of PSP
+  Não há custódia de fundos no ConecTA.
+end note
+@enduml

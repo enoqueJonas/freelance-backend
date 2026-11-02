@@ -9,4 +9,9 @@ urlpatterns = [
         views.accept_agreement,
         name="accept-agreement",
     ),
+    path(
+        "engagements/<int:engagement_id>/agreements/<int:version_id>/reject/",
+        views.reject_agreement,
+        name="reject-agreement",
+    ),
 ]

@@ -47,3 +47,12 @@
 - **M07: concluída apenas quanto à modelação**, não atesta conformidade funcional.
 - D39 contém o **Quadro A.1** de correspondência estática e uma distinção textual no Capítulo V; os sete placeholders continuam explícitos na versão de trabalho.
 - Critério de fecho: cada figura deve mostrar um **ecrã realmente renderizado** da revisão identificada, com origem, cenário, limites da funcionalidade e ausência de conteúdo fictício.
+
+## 02/11/2026 — Instrumentação de recolha preparada (execução ainda pendente)
+
+- Implementado [script de captura M08](scripts/capture_frontend_m08.py) no repositório de auditoria. Foi também produzido um kit ZIP autónomo nesta conversa, com versão Python mais detalhada e guia de execução. Ambos fixam a revisão `f41d72e8ace6c716e799131cb46ce425a1a4c215`.
+- O instrumento automatiza acesso às rotas reais com `HashRouter`, autenticação simulada por contas demo, isolamento do armazenamento por cenário, viewport 1365 × 900, PNG e manifesto JSON com data, SHA do código, contexto da imagem, estado e SHA-256 do ficheiro. As capturas **5.17 e 5.19 são explicitamente marcadas como simulação não equivalente ao modelo-alvo**.
+- QA efectuada ao kit local: `py_compile`, `--help`, leitura do ZIP e lançamento bem-sucedido de Chromium por Playwright num documento HTML de teste. **Este teste de ferramenta não é teste da aplicação**. O acesso directo ao clone GitHub continua indisponível no container por falha de DNS; **0/7 evidências do frontend real validadas nesta sessão**.
+- **Risco textual concreto:** `src/pages/OffersList.tsx` contém o selo «Ativo • Custódia Garantida», em contradição com RN10. `src/pages/Dashboard.tsx` atribui a obrigatoriedade de BI/NUIT a «políticas do Ministério da Ciência e Tecnologia em Moçambique», sem documentação normativa verificada na baseline. Não reproduzir tal alegação como facto académico ou jurídico.
+- O frontend possui `INITIAL_CONTRACTS = []` (em `mockApi.ts`): uma captura de `#/dashboard` pode apenas mostrar estado vazio sem que o contrato versionado esteja presente. Uma captura não é evidência de um cenário não executado.
+- **Próximo gate concreto:** executar o instrumento na revisão indicada, inspeccionar PNGs e manifesto, observar resultados de runtime e só então decidir se alguma imagem pode entrar como *captura do protótipo simulado*, com legenda fiel. Capturas de AgreementVersion e DisputeEvidence exigem implementação funcional e não devem ser encenadas.

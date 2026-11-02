@@ -1,0 +1,40 @@
+name: D51 Contract Core API Regression
+
+on:
+  push:
+    branches:
+      - feat/d51-contract-core
+  pull_request:
+    paths:
+      - "apps/accounts/**"
+      - "apps/marketplace/**"
+      - "apps/contracts/**"
+      - "backend/**"
+      - "requirements.txt"
+      - ".github/workflows/d51-contract-core.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  django-contract-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout tested revision
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install pinned dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile Python modules
+        run: python -m compileall -q backend apps
+      - name: Django checks
+        run: python manage.py check
+      - name: Check migrations are synchronized with models
+        run: python manage.py makemigrations --check --dry-run
+      - name: Run actual Django REST API regression tests
+        run: python manage.py test apps.accounts.test_api_d50 apps.contracts.test_contract_flow_d51 --verbosity 2

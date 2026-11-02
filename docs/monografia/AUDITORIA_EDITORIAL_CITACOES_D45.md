@@ -123,3 +123,36 @@ A segunda página descreve **artigos de conferência**, não necessariamente mon
 **Exige confirmação externa/acesso ao Word:** ED-02, ED-04, ED-06–ED-10, ED-18 e conformidade com o manual institucional.
 
 **Ficheiro técnico:** este registo pertence à branch `audit/monografia-d45-coerencia-cientifica` e deve ser aplicado à D44 antes de nova declaração de prontidão editorial.
+
+
+## 8. Verificação automatizada da coerência textual do índice (nova execução)
+
+A leitura integral paginada da D44 identifica **96 entradas no índice**, das quais **94 têm numeração hierárquica** (1–8, 1.1, 1.1.1, etc.) e duas são pré-textuais (RESUMO e ABSTRACT).
+
+**Procedimento reprodutível:** extrair as páginas 5–8; para cada linha com identificador hierárquico e número de página final, comparar o respectivo ID, início do título e página com o primeiro cabeçalho correspondente no texto extraído de todas as 82 páginas. O texto integral foi lido em cinco janelas consecutivas de linhas `1–500`, `501–1000`, `1001–1500`, `1501–2000` e `2001–2210`, sem lacunas. A primeira tentativa de validação usou intervalos que deixavam linhas por ler e gerou falsos negativos; esses números **não** foram usados na conclusão.
+
+**Resultado:** `94/94` entradas hierárquicas coincidem com o título e a página identificados no texto extraído, sem discrepância. As duas entradas pré-textuais correspondem a RESUMO (p. 9) e ABSTRACT (p. 10).
+
+**Limite:** o resultado comprova correspondência textual e paginação já extraída, mas não comprova estado dos campos `TOC`/`PAGEREF` do Word, legibilidade visual nem estabilidade da paginação após revisão. Por isso, a validação final dos campos e do índice continua pendente de acesso ao DOCX original.
+
+## 9. Siglas e terminologia PT-MZ — verificações adicionais
+
+| ID | Ocorrência | Achado | Acção proposta |
+|---|---|---|---|
+| ED-19 | `JWT`, p. 34 | Primeira ocorrência em «autenticação baseada em JWT» sem expansão observável | Na primeira ocorrência escrever `JSON Web Token (JWT)`; não afirmar que o mock frontend utiliza JWT real |
+| ED-20 | `KYC`, p. 45 (RN15) | `KYC financeiro` surge sem definição prévia | Acrescentar `Know Your Customer (KYC; conhecimento do cliente)` na primeira ocorrência, ligado ao contexto de identificação financeira, sem atribuir obrigações regulatórias específicas à aplicação |
+| ED-21 | `API` e `ORM`, p. 57 | Termos técnicos sem expansão na primeira ocorrência textual | Definir brevemente `interface de programação de aplicações (API)` e `mapeamento objecto-relacional (ORM)` uma vez, sem transformar o capítulo em glossário |
+| ED-22 | `PSP`, p. 61 | Usado antes de ser definido no texto extraído | Introduzir `prestador de serviços de pagamento (PSP)` antes de usar a sigla, no contexto de integração opcional e sem custódia própria |
+| ED-23 | `Engagement`, p. 45 | Nome de entidade de domínio em inglês no quadro de regras, sem definição explícita na primeira ocorrência | Acrescentar legenda breve `relação de contratação (Engagement, no modelo de domínio)`; conservar nome exacto de classe em diagramas e pseudocódigo |
+| ED-24 | `Telas`, p. 58 e índice p. 8 | Registo de português brasileiro numa dissertação PT-MZ; o restante texto fala em `interfaces` | Preferir `Interfaces do protótipo e estado de implementação` ou `Ecrãs e estado de implementação`, actualizando o índice automaticamente |
+| ED-25 | `matching`, várias passagens de pp. 21, 25, 42 e 58 | Anglicismo coexistente com `correspondência` | Na primeira menção, usar `correspondência (matching)`, depois privilegiar `correspondência automática` se não houver motivo técnico para manter o inglês |
+
+As siglas `UML` encontram-se correctamente introduzidas em §2.12 como «Linguagem de Modelação Unificada (UML)». Não alterar abreviaturas já explicadas.
+
+### Critério para este grupo
+
+Não substituir automaticamente identificadores de domínio (`Engagement`, `AgreementVersion`, `mockApi`, `localStorage`) por traduções, pois isso impediria a rastreabilidade com o código. Traduzir **prosa académica**, manter **símbolos de implementação** exactos, com explicação suficiente na primeira ocorrência.
+
+### Nota adicional sobre citações em linhas quebradas
+
+A citação do OWASP na p. 27 está presente como `(OWASP,` numa linha e `2025)` na seguinte. Um detector lexical que procure apenas `OWASP (2025)` sem normalização de espaço assinalá-la-ia erradamente como ausente. **Não é uma referência omissa**. A auditoria deve normalizar a quebra de linha antes de contar citações.

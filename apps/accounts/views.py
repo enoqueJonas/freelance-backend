@@ -31,6 +31,7 @@ class Register(APIView):
 
 
 class MyProfile(APIView):
+    permission_classes = [IsAuthenticated]
     """
     Fetch information of the loggedin user 
     """
@@ -62,7 +63,7 @@ class UserDetail(APIView):
 
 
 class UserList(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser]
 
     """
     List all users
@@ -81,8 +82,7 @@ class EmployerList(APIView):
     """
 
     def get(self, request, format=None):
-        employers = Employer.objects.select_related(
-            "user").prefetch_related('client_documents')
+        employers = Employer.objects.select_related("user").all()
         serializer = EmployerSerializer(employers, many=True)
         return Response(serializer.data)
 
@@ -107,6 +107,7 @@ class EmployerDetail(APIView):
 
 
 class MyEmployer(APIView):
+    permission_classes = [IsAuthenticated]
     """
     View employer details or create one
     """
@@ -174,6 +175,7 @@ class WorkerDetail(APIView):
 
 
 class MyWorker(APIView):
+    permission_classes = [IsAuthenticated]
     """
     Retrieve or create a worker profile
     """
@@ -181,7 +183,7 @@ class MyWorker(APIView):
     def post(self, request):
         # Prevent duplicates
         if hasattr(request.user, 'worker'):
-            return Response({"detail": "User already has a worker profile"})
+            return Response({"detail": "User already has a worker profile"}, status=status.HTTP_400_BAD_REQUEST)
 
         serializer = WorkerCreateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -194,7 +196,7 @@ class MyWorker(APIView):
 
     def get(self, request):
         try:
-            profile = request.user.worker_profile
+            profile = request.user.worker
         except Worker.DoesNotExist:
             return Response({"detail": "No worker profile"}, status=status.HTTP_404_NOT_FOUND)
         serializer = WorkerSerializer(profile)

@@ -13,7 +13,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = ['username', 'name', 'email', 'phone', 'password']
         extra_kwargs = {"password": {"write_only": True}}
 
-    def validate_phone_number(self, value):
+    def validate_phone(self, value):
         try:
             return normalize_mz_phone(value)  # return normalized value
         except ValueError as e:
@@ -46,7 +46,7 @@ class EmployerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Employer
-        fields = ['id', 'name', 'address', 'company_name']
+        fields = ['id', 'employer_name', 'address', 'company_name']
 
 
 class WorkerCreateSerializer(serializers.ModelSerializer):

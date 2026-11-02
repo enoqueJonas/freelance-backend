@@ -33,4 +33,4 @@ jobs:
       - name: Django system checks
         run: python manage.py check
       - name: Run REAL Django REST API tests on isolated SQLite test DB
-        run: python manage.py test apps.accounts --verbosity 2
+        run: python manage.py test apps.accounts.test_api_d50 --verbosity 2

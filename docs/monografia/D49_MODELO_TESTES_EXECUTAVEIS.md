@@ -1,7 +1,7 @@
 # D49 — Verificação executável do modelo de referência (não do protótipo)
 
 **Data:** 02-11-2026.  
-**Base:** [D48 — Diagramas e guardas](D48_MODELO_ESTADOS_DIAGRAMAS_EDITAVEIS.md), [D47 — Inspecção visual dos diagramas](VERIFICACAO_VISUAL_UML_D47.md), [D44 — Monografia](../../README.md).  
+**Base:** [D48 — Diagramas e guardas](D48_MODELO_ESTADOS_DIAGRAMAS_EDITAVEIS.md), [D47 — Inspecção visual dos diagramas](VERIFICACAO_VISUAL_UML_D47.md), D44 — `Monografia_D44_Metodologia_Proveniencia_Verificada.docx` (82 páginas, consultada via Library; não depositada neste repositório).  
 **Estatuto:** protótipo matemático/computacional **independente**, produzido durante a auditoria, **não aprovado como modelo final** e **não integrado** no frontend, backend ou DOCX.
 
 ## 1. Entrega executável

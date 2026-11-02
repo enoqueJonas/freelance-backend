@@ -49,6 +49,12 @@ class AgreementVersion(models.Model):
         related_name="proposed_agreement_versions"
     )
     created_at = models.DateTimeField(auto_now_add=True)
+    rejected_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.PROTECT, related_name="rejected_agreement_versions"
+    )
+    rejected_at = models.DateTimeField(null=True, blank=True)
+    rejection_reason = models.TextField(blank=True, default="")
 
     class Meta:
         constraints = [

@@ -1,0 +1,37 @@
+test_G01_auto_contratacao_bloqueada (test_reference_domain.AcceptanceModelTests.test_G01_auto_contratacao_bloqueada) ... ok
+test_G02_criacao_pendente_sem_versao (test_reference_domain.AcceptanceModelTests.test_G02_criacao_pendente_sem_versao) ... ok
+test_G03_aceitacao_duplicada_bloqueada (test_reference_domain.AcceptanceModelTests.test_G03_aceitacao_duplicada_bloqueada) ... ok
+test_G03_actor_estranho_nao_aceita (test_reference_domain.AcceptanceModelTests.test_G03_actor_estranho_nao_aceita) ... ok
+test_G03_duas_aceitacoes_obrigatorias (test_reference_domain.AcceptanceModelTests.test_G03_duas_aceitacoes_obrigatorias) ... ok
+test_G04_aceitar_v2_preserva_historico (test_reference_domain.AcceptanceModelTests.test_G04_aceitar_v2_preserva_historico) ... ok
+test_G04_rejeitar_v2_preserva_v1 (test_reference_domain.AcceptanceModelTests.test_G04_rejeitar_v2_preserva_v1) ... ok
+test_G05_nao_concluir_sem_entrega (test_reference_domain.AcceptanceModelTests.test_G05_nao_concluir_sem_entrega) ... ok
+test_G06_entrega_e_conclusao_por_actores_correctos (test_reference_domain.AcceptanceModelTests.test_G06_entrega_e_conclusao_por_actores_correctos) ... ok
+test_G07_conflito_nao_apaga_estado_do_servico (test_reference_domain.AcceptanceModelTests.test_G07_conflito_nao_apaga_estado_do_servico) ... ok
+test_G08_encerramento_do_conflito_nao_conclui_servico (test_reference_domain.AcceptanceModelTests.test_G08_encerramento_do_conflito_nao_conclui_servico) ... ok
+test_G09_reportar_pagamento_nao_equivale_a_confirmar (test_reference_domain.AcceptanceModelTests.test_G09_reportar_pagamento_nao_equivale_a_confirmar) ... ok
+test_G10_pagador_nao_autoconfirma_pagamento (test_reference_domain.AcceptanceModelTests.test_G10_pagador_nao_autoconfirma_pagamento) ... ok
+test_G10_recebedor_pode_confirmar_pagamento_manual (test_reference_domain.AcceptanceModelTests.test_G10_recebedor_pode_confirmar_pagamento_manual) ... ok
+test_G11_contestacao_financeira_nao_muda_entrega (test_reference_domain.AcceptanceModelTests.test_G11_contestacao_financeira_nao_muda_entrega) ... ok
+test_G12_eventos_tem_identificador_actor_e_accao (test_reference_domain.AcceptanceModelTests.test_G12_eventos_tem_identificador_actor_e_accao) ... ok
+test_G13_actor_estranho_sem_direito_sobre_acordo (test_reference_domain.AcceptanceModelTests.test_G13_actor_estranho_sem_direito_sobre_acordo) ... ok
+test_G13_so_admin_pode_encaminhar_disputa (test_reference_domain.AcceptanceModelTests.test_G13_so_admin_pode_encaminhar_disputa) ... ok
+test_G14_admin_nao_tem_poder_de_concluir_contrato (test_reference_domain.AcceptanceModelTests.test_G14_admin_nao_tem_poder_de_concluir_contrato) ... ok
+test_G15_nao_ha_integracao_psp_no_modelo_de_referencia (test_reference_domain.AcceptanceModelTests.test_G15_nao_ha_integracao_psp_no_modelo_de_referencia) ... ok
+test_G16_versao_com_conteudo_diferente_rejeitada (test_reference_domain.AcceptanceModelTests.test_G16_versao_com_conteudo_diferente_rejeitada) ... ok
+test_guard_cancelamento_exige_politica (test_reference_domain.AcceptanceModelTests.test_guard_cancelamento_exige_politica) ... ok
+test_guard_dupla_confirmacao_pagamento_rejeitada (test_reference_domain.AcceptanceModelTests.test_guard_dupla_confirmacao_pagamento_rejeitada) ... ok
+test_guard_identidade_das_partes_imutavel (test_reference_domain.AcceptanceModelTests.test_guard_identidade_das_partes_imutavel) ... ok
+test_guard_identificadores_invalidos_rejeitados (test_reference_domain.AcceptanceModelTests.test_guard_identificadores_invalidos_rejeitados) ... ok
+test_guard_nao_se_pode_propor_segunda_versao_pendente (test_reference_domain.AcceptanceModelTests.test_guard_nao_se_pode_propor_segunda_versao_pendente) ... ok
+test_guard_pagamento_sem_acordo_aceite_proibido (test_reference_domain.AcceptanceModelTests.test_guard_pagamento_sem_acordo_aceite_proibido) ... ok
+test_guard_revisao_por_estranho_rejeitada (test_reference_domain.AcceptanceModelTests.test_guard_revisao_por_estranho_rejeitada) ... ok
+test_guard_revisao_preserva_historico (test_reference_domain.AcceptanceModelTests.test_guard_revisao_preserva_historico) ... ok
+test_guard_transicao_de_disputa_ilegal_bloqueada (test_reference_domain.AcceptanceModelTests.test_guard_transicao_de_disputa_ilegal_bloqueada) ... ok
+test_guard_versao_aceite_e_imutavel (test_reference_domain.AcceptanceModelTests.test_guard_versao_aceite_e_imutavel) ... ok
+test_guard_versao_nao_pode_ser_aceite_apos_cancelamento (test_reference_domain.AcceptanceModelTests.test_guard_versao_nao_pode_ser_aceite_apos_cancelamento) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.002s
+
+OK

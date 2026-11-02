@@ -177,6 +177,35 @@ class AcceptanceModelTests(unittest.TestCase):
         e.deliver(101)
         self.assertRejects(lambda: e.request_revision(303))
 
+    def test_guard_versao_nao_pode_ser_aceite_apos_cancelamento(self):
+        e = Engagement(101, 202)
+        v = e.propose(101, 'Termos a aprovar')
+        e.accept(101, v.number, v.digest)
+        e.cancel(202, permitted_by_policy=True)
+        self.assertRejects(lambda: e.accept(202, v.number, v.digest))
+        self.assertEqual(e.status, ES.CANCELLED)
+
+    def test_guard_pagamento_sem_acordo_aceite_proibido(self):
+        e = Engagement(101, 202)
+        self.assertRejects(lambda: e.report_payment(202, 4000))
+
+    def test_guard_identidade_das_partes_imutavel(self):
+        e = Engagement(101, 202)
+        self.assertRejects(lambda: setattr(e, 'worker', 202))
+
+    def test_guard_identificadores_invalidos_rejeitados(self):
+        e = active()
+        self.assertRejects(lambda: e.accept(101, 99, 'hash'))
+        self.assertRejects(lambda: e.reject(101, 99))
+        self.assertRejects(lambda: e.payment_transition(101, 99, PS.CONFIRMED))
+        self.assertRejects(lambda: e.dispute_transition(999, 99, DS.UNDER_REVIEW))
+
+    def test_guard_dupla_confirmacao_pagamento_rejeitada(self):
+        e = active()
+        p = e.report_payment(202, 1000)
+        e.payment_transition(101, p.number, PS.CONFIRMED)
+        self.assertRejects(lambda: e.payment_transition(101, p.number, PS.CONFIRMED))
+
     def test_guard_cancelamento_exige_politica(self):
         e = Engagement(101, 202)
         self.assertRejects(lambda: e.cancel(101))

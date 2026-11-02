@@ -25,11 +25,11 @@ No backend, foram acrescentadas duas **listagens restritas por autorização**: 
 | Ensaio | Objecto efectivamente testado | Resultado verificável | O que NÃO demonstra |
 |---|---|---|---|
 | [CI backend D53 #41484092825](https://github.com/enoqueJonas/freelance-backend/actions/runs/41484092825) | Django/DRF com SQLite temporário, testes D50–D53 | **71/71 testes aprovados**; `manage.py check` sem problemas, `makemigrations --check --dry-run` sem alterações | Não prova que React enviou pedidos nem que UI é usável |
-| [CI frontend D53 #41485077612](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41485077612) | Cliente HTTP com `fetch` simulado, TypeScript e compilação | **6/6 testes do cliente aprovados**, `npm run lint` e `npm run build` concluídos | Não é teste com browser real nem Django em execução |
+| [CI frontend D53 #41486079214](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41486079214) | Cliente HTTP com `fetch` simulado, TypeScript e compilação | **6/6 testes do cliente aprovados**, `npm run lint` e `npm run build` concluídos na revisão mais recente | Não é teste com browser real nem Django em execução |
 | Revisão estrutural do código | Rota React isolada e cliente sem dependência de mock | Percurso programado e ligado aos endpoints identificados | Sem captura real de browser nem execução por participante |
 | V02/V03/V04 da monografia | Cenários académicos completos de ponta a ponta | **Ainda não executados** | Não se pode marcar «Aprovado» no quadro da D44 |
 
-O último commit posterior ao CI de frontend limitou-se a regressar ao formulário de login após terminar a sessão, para permitir trocar de conta. Confirmar nova execução do CI antes de fechar definitivamente o estado da branch.
+A última revisão frontend inclui a correcção de retorno ao formulário de login após terminar a sessão e a substituição do README genérico. O CI [#41486079214](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41486079214) verificou **6/6 testes do cliente, TypeScript e build**, todos com resultado positivo.
 
 ## 3. Decisões e mitigação de risco
 
@@ -69,7 +69,7 @@ O último commit posterior ao CI de frontend limitou-se a regressar ao formulár
 - [x] Implementar listagens Django autorizadas para propostas/contratações.
 - [x] Confirmar 71/71 testes backend no GitHub Actions.
 - [x] Confirmar 6/6 testes de cliente, typecheck e build na primeira execução frontend D53.
-- [ ] Confirmar última execução CI após alteração de modo de login.
+- [x] Confirmar última execução CI após correcção de troca de contas e README: #41486079214, 6/6 testes, typecheck e build.
 - [ ] Executar fluxo browser + Django real com duas contas e capturas/logs verificáveis.
 - [ ] Substituir progressivamente páginas antigas baseadas em mock por componentes reais.
 - [ ] Testar backend PostgreSQL em concorrência e preparar configuração segura.

@@ -84,7 +84,7 @@ Serv -> ER: save(estado/histórico, quando aplicável)
 Serv --> UI: notificar resultado registado
 UI --> Parte: consulta de processo
 note bottom
-O administrador regista/acomp​anha nos limites da plataforma;
+O administrador regista/acompanha nos limites da plataforma;
 não determina juridicamente culpa, mérito ou obrigação de pagamento.
 end note
 @enduml

@@ -2,7 +2,7 @@
 
 **Documento canónico:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, páginas 48, 50, 52, 54, 57, 58, 68–71, 73–71? [corrigir: 73–79].  
 **Tipo de evidência:** **imagem renderizada da página do documento original**, recuperada pelo leitor da Library (não é mera extracção textual).  
-**Estado:** **auditoria visual efectivamente realizada** dos diagramas enumerados abaixo. O documento Word canónico continua **não alterado**, pois os seus bytes editáveis não estão disponíveis. O painel **A.4(A), p. 72** não pôde ser inspeccionado visualmente nesta execução devido a falha temporária de recuperação da imagem. Não declarar essa figura verificada.
+**Estado:** **auditoria visual efectivamente realizada** dos diagramas enumerados abaixo. O documento Word canónico continua **não alterado**, pois os seus bytes editáveis não estão disponíveis. O painel **A.4(A), p. 72** foi recuperado numa segunda tentativa e inspecionado visualmente.
 
 ## 1. Matriz de cobertura da inspecção visual
 
@@ -17,7 +17,7 @@
 | A.1 — Actividade DA03 | 68 | Inspecção visual concluída; PaymentRecord reportado/confirmado/contestado é separado da conclusão do serviço |
 | A.2 — Actividade DA04 | 69 | Inspecção visual concluída; fonte inclui RF26/RF27 sem actividades correspondentes |
 | A.3(A), A.3(B), A.3(C) — DS01 | 70–71 | Inspecção visual concluída; os três painéis existem e distinguem proposta aceite de contrato activo |
-| A.4(A) — DS02 | 72 | **Não verificado visualmente**, falha temporária de recuperação da página |
+| A.4(A) — DS02 | 72 | Verificado visualmente: guarda manter PENDING_AGREEMENT sem as aceitações necessárias |
 | A.4(B) — DS02 | 73 | Inspecção visual concluída; guarda versão anterior se vN+1 for rejeitada |
 | A.5(A), A.5(B), A.5(C) — DS03 | 74–76 | Inspecção visual concluída; serviço/estado financeiro/integrador externo separados |
 | A.6(A), A.6(B), A.6(C) — DS04 | 77–79 | Inspecção visual concluída; conflitos, análise e encerramento representados em três painéis |
@@ -53,7 +53,7 @@ O elemento à direita de `IN_DISPUTE` é uma **anotação textual**, aproximadam
 
 ## 4. UML-V03 [P1] — Aceitação bilateral não totalmente explícita em DA02 (Figura 5.4)
 
-**Evidência visual p. 54:** `Parte proponente` → «Propor condições»; `Sistema` → «Criar v1 PROPOSED, registar autor e data»; `Contraparte` → «Examinar condições propostas / Aceita?»; `Sistema` → «Registar aceitações; v1 ACCEPTED / Engagement ACTIVE».
+**Evidência visual pp. 54 e 72:** `Parte proponente` → «Propor condições»; `Sistema` → «Criar v1 PROPOSED, registar autor e data»; `Contraparte` → «Examinar condições propostas / Aceita?»; `Sistema` → «Registar aceitações; v1 ACCEPTED / Engagement ACTIVE».
 
 O fluxo não mostra um passo explícito de aceitação da parte proponente distinto de «Propor condições». **Não afirmar que não houve aceitação bilateral:** propor condições **pode** ser interpretado como anuência do proponente, mas a regra não está formulada de modo inequívoco.
 
@@ -120,7 +120,7 @@ Estas decisões dão consistência ao modelo-alvo e não devem ser anuladas para
 - [ ] Explicitar a aceitação bilateral no DA02, não apenas na narrativa.
 - [ ] Corrigir fontes A.2, A.6(B), A.6(C) para não atribuir RF26/RF27 a operações inexistentes.
 - [ ] Definir estados e transições para `PaymentRecord`, `DisputeCase` e `Engagement`, preservando independência.
-- [ ] Verificar visualmente a Figura A.4(A), p. 72, cuja recuperação falhou temporariamente.
+- [x] Verificar visualmente a Figura A.4(A), p. 72; recuperação bem-sucedida.
 - [ ] Inserir legendas/capturas reais para 5.13–5.19 ou remover/remapear referências sem falsificar resultados.
 - [ ] Confirmar no documento final o salto 5.4→5.11 e actualizar toda a numeração, índice e campos `REF/SEQ`, se não existirem figuras intermédias.
 - [ ] Verificar legibilidade no Word em páginas A4 antes de aprovação.
@@ -134,4 +134,4 @@ O backend `backend/settings.py` contém `DEBUG = True` e uma `SECRET_KEY` defini
 
 ---
 
-**Status auditável:** Figuras listadas na secção 1 inspeccionadas visualmente conforme coluna, uma imagem pendente, DOCX original **não editado** e nenhum teste funcional executado.
+**Status auditável:** Figuras listadas na secção 1 inspeccionadas visualmente conforme coluna, todas as figuras enumeradas inspeccionadas, DOCX original **não editado** e nenhum teste funcional executado.

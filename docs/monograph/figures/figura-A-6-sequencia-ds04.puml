@@ -1,0 +1,90 @@
+' DS04 — reporte e acompanhamento de conflitos
+' Fonte: docs/modeling/sequence-flows.md, docs/modeling/state-model-uml.md
+' Representa responsabilidades lógicas do MODELO-ALVO, não implementação AS-IS.
+' Os painéis no DOCX são desenhos editoriais equivalentes, não exportações directas.
+@startuml
+title DS04 (A) — Reportar conflito e registar evidências
+skinparam monochrome true
+actor "Trabalhador/Empregador" as Parte
+boundary "UI/API" as UI
+control "DisputeService" as Serv
+entity "Domínio" as Dom
+database "EngagementRepository" as ER
+database "DisputeRepository" as DR
+Parte -> UI: reportDispute(engagementId, category, description, evidence)
+UI -> Serv: reportDispute(actor, data)
+Serv -> ER: get(engagementId)
+ER --> Serv: Engagement
+Serv -> Dom: validar actor como parte do Engagement
+alt actor inválido
+ Dom --> Serv: rejeição
+ Serv --> UI: erro (sem conflito criado)
+else actor autorizado
+ Dom --> Serv: Dispute OPEN + DisputeEvidence
+ Serv -> DR: save(dispute/evidence)
+ opt impacto operacional relevante
+  Serv -> Dom: sinalizar Engagement IN_DISPUTE e/ou pagamento DISPUTED
+  Dom --> Serv: preservar estado operacional anterior
+ end
+ Serv --> UI: processo registado (OPEN)
+end
+@enduml
+
+@startuml
+title DS04 (B) — Análise e informação adicional
+skinparam monochrome true
+actor "Administrador" as Admin
+actor "Parte interveniente" as Parte
+boundary "UI/API" as UI
+control "DisputeService" as Serv
+entity "Domínio" as Dom
+database "DisputeRepository" as DR
+Admin -> UI: reviewDispute(disputeId)
+UI -> Serv: reviewDispute(actor,id)
+Serv -> DR: get(id)
+DR --> Serv: Dispute OPEN / evidências
+Serv -> Dom: validar capacidade administrativa
+Dom --> Serv: UNDER_REVIEW
+Serv -> DR: save(UNDER_REVIEW)
+loop enquanto faltar informação
+ Admin -> UI: solicitar dados adicionais
+ UI -> Serv: requestEvidence(id)
+ Serv -> DR: save(WAITING_INFORMATION)
+ Parte -> UI: submitEvidence(disputeId, evidence)
+ UI -> Serv: submitEvidence(actor,evidence)
+ Serv -> Dom: validar participação
+ Serv -> DR: save(evidence); save(UNDER_REVIEW)
+end
+@enduml
+
+@startuml
+title DS04 (C) — Encerrar sem atribuir arbitragem jurídica
+skinparam monochrome true
+actor "Administrador" as Admin
+actor "Parte interveniente" as Parte
+boundary "UI/API" as UI
+control "DisputeService" as Serv
+entity "Domínio" as Dom
+database "DisputeRepository" as DR
+database "EngagementRepository" as ER
+Admin -> UI: closeDispute(outcome,note)
+UI -> Serv: closeDispute(actor,outcome,note)
+Serv -> DR: get(disputeId)
+DR --> Serv: estado e histórico
+Serv -> Dom: validar autoridade e resultado
+alt resolução registada
+ Dom --> Serv: Dispute RESOLVED
+else fecho administrativo
+ Dom --> Serv: Dispute CLOSED
+end
+Serv -> DR: save(estado,nota,autor,data/hora)
+Serv -> Dom: calcular retoma operacional válida
+Dom --> Serv: estado de Engagement elegível
+Serv -> ER: save(estado/histórico, quando aplicável)
+Serv --> UI: notificar resultado registado
+UI --> Parte: consulta de processo
+note bottom
+O administrador regista/acomp​anha nos limites da plataforma;
+não determina juridicamente culpa, mérito ou obrigação de pagamento.
+end note
+@enduml

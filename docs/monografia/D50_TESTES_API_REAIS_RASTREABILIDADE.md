@@ -8,7 +8,7 @@
 | Nível | Entrega | Estado e alcance |
 |---|---|---|
 | D49 | 32 testes em modelo Python independente | Executados no modelo de referência; **não testam aplicação** |
-| D50 | 18 testes com DRF APITestCase sobre endpoints Django reais | Testes adicionados ao repositório e workflow GitHub Actions configurado; **verificar resultado final do workflow antes de declarar aprovação** |
+| D50 | 18 testes com DRF APITestCase sobre endpoints Django reais | Testes adicionados ao repositório e workflow GitHub Actions configurado; **18/18 aprovados em execução real de CI**: [GitHub Actions D50, run #41478553838](https://github.com/enoqueJonas/freelance-backend/actions/runs/41478553838) na revisão `44c4e67097c79f31f48dd42406f3ceeb7b073722` (base de dados de teste SQLite; `python manage.py check` sem problemas) |
 | Monografia V01–V08 | Aceitação dos RF01–RF28 | **Não executados** como cenários integrais; D50 só abrange subconjunto de RF01–RF04 e aspectos de RNF02/RNF03 |
 | Monografia RNF01–RNF07 | Verificação não funcional integral | **Não executada**; D50 limita-se a controlo de acesso básico e privacidade da listagem, não a conformidade de segurança completa |
 | Fluxo V02/V03 | Proposta aceite → PENDING_AGREEMENT → acordo → ACTIVE | **Não implementado no backend**: não existem endpoints de propostas, contratos nem AgreementVersion na configuração examinada |
@@ -26,7 +26,7 @@
 | API-07 | `RegisterSerializer.validate_phone_number` | Método não corresponde ao campo `phone`; normalização específica não é invocada | Renomear para `validate_phone` |
 | API-08 | POST duplicado em `MyWorker` sem código de erro | Responde com sucesso HTTP 200 apesar de rejeitar a acção | Devolver HTTP 400 |
 
-**Atenção:** são defeitos demonstrados por leitura estática e correcções submetidas; o resultado de execução depende do CI e não é inferido do diff.
+**Atenção:** os oito defeitos foram identificados por leitura estática e as respectivas correcções submetidas; os 18 testes de API **passaram realmente no GitHub Actions**. Isso não confirma todos os caminhos possíveis, a segurança do sistema inteiro ou quaisquer RF do domínio de contratos.
 
 ## 2. Ensaios de API adicionados
 
@@ -59,7 +59,7 @@ Ambiente GitHub Actions configurado: Python 3.13, dependências do `requirements
 
 ## 4. Próximas verificações concretas
 
-- [ ] Consultar o resultado final de execução do workflow do PR #3 e os logs; documentar os testes realmente aprovados/reprovados.
+- [x] Consultar resultado final do GitHub Actions do PR #3: 18 testes executados e aprovados em 02-11-2026, run #41478553838; `manage.py check` sem problemas; não extrapolar para o frontend.
 - [ ] Testar autorização no registo e alterações de recursos segundo a relação com o utilizador, não apenas autenticação.
 - [ ] Rever configurações de segurança do Django e segredos de ambiente sem publicar credenciais.
 - [ ] Decidir o modelo de Engagement/AgreementVersion conforme D48/D49 antes de desenvolver endpoints.

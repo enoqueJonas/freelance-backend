@@ -16,7 +16,7 @@ Uma auditoria visual posterior das capturas D55 detectou ainda um problema disti
 - **Backend:** [GitHub Actions D55 #41603523124](https://github.com/enoqueJonas/freelance-backend/actions/runs/41603523124), **80/80 testes Django/DRF aprovados**, incluindo **nove testes novos** sobre filtragem e privacidade das próprias propostas, estado depois de encerramento da oportunidade, perfis acumuláveis, acesso anónimo e método somente de leitura. `manage.py check` sem erros e `makemigrations --check --dry-run` sem alterações.
 - **Frontend:** [CI frontend D55 #41603937303](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41603937303), **8/8 testes HTTP aprovados**, TypeScript e build aprovados após corrigir uma inferência de tipos. Esta execução foi anterior ao reforço de limpeza de formulários.
 - **Browser:** [GitHub Actions D55 #41603937276](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41603937276), cenário Playwright real aprovado com backend D55 e React em Chromium. Verificou supressão do formulário após submissão, persistência do estado depois de sair/reentrar e apresentação do estado ACCEPTED após selecção do empregador. [Capturas da execução](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41603937276/artifacts/13215343392) foram recuperadas e inspeccionadas: no ecrã de proposta o formulário foi substituído por «Proposta submetida · SUBMITTED».
-- **Última alteração da interface:** reforço de limpeza de dados no logout e remoção de títulos de versão D53 obsoletos. Confirmar resultado do CI no commit final antes de actualizar esta linha com um número de execução.
+- **Revisão final:** [CI frontend D55 #41604340359](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41604340359) aprovou **8/8 testes HTTP, TypeScript e build**. A execução integrada [Chromium #41604340826](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41604340826) concluiu com **1/1 cenário aprovado** depois da limpeza de campos e actualização de títulos. Foram arquivadas **seis capturas reais** no [artefacto #13216560888](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41604340826/artifacts/13216560888), com expiração prevista para 03-12-2026. A screenshot de submissão já não apresenta o formulário de envio duplicado.
 
 ## 3. Relação com requisitos e critérios da D44
 
@@ -40,7 +40,7 @@ A última D44 canónica **não foi editada**; as sete figuras 5.13–5.19 não p
 - [x] Nove testes backend D55 e CI 80/80.
 - [x] Cliente HTTP e React actualizados; oito testes HTTP e build verificados.
 - [x] Browser confirma estado SUBMITTED pós-envio, sobrevive ao novo login e passa a ACCEPTED.
-- [ ] Confirmar CI final de limpeza de campos após logout e os screenshots correspondentes.
+- [x] Confirmar CI final de limpeza de campos após logout e screenshots correspondentes: 8/8 HTTP, build/TypeScript e 1/1 Playwright após troca de contas (CI #41604340826).
 - [ ] Rever UX-02: perfis alternativos ocupam espaço excessivo; manter suporte a dois perfis sem distrair do fluxo principal.
 - [ ] Executar testes de segurança e usabilidade adicionais, incluindo sessão expirada e dados transientes em ambientes partilhados.
 - [ ] Integrar apenas as capturas aprovadas no DOCX original com fidelidade gráfica, preservação de campos e comentários.

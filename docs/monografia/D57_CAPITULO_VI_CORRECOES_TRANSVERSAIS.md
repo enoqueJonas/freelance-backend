@@ -4,7 +4,7 @@
 **Documento original:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, pp. 11–18, 31–35, 44–66 e 80–82.  
 **Dependência:** [D57_CAPITULO_V_REVISAO_INTEGRAL.md](D57_CAPITULO_V_REVISAO_INTEGRAL.md) e [D57_MATRIZ_VALIDACAO_V01_V08_RNF.md](D57_MATRIZ_VALIDACAO_V01_V08_RNF.md).
 
-> **Adenda D58 obrigatória antes de utilizar a conclusão candidata:** uma versão histórica `DraftMonografia.docx` alega **83 participantes (68 trabalhadores e 15 empregadores) em Julho de 2025**, um levantamento por inquéritos/entrevistas e percentagens, enquanto a D44 analisa onze perfis textuais sem proveniência confirmada. O draft não constitui, isoladamente, prova de recolha. A divergência 83/11, a pergunta com 30 respostas e os dados de campo alegados devem ser objecto de [auditoria/reconciliação D58](D58_AUDITORIA_83_PARTICIPANTES_VS_11_PERFIS.md) antes de ratificar a metodologia ou concluir que não há trabalho empírico recuperável. **Não usar a conclusão redigida nesta D57 como texto académico final sem resolver essa decisão.**
+> **DECISÃO D59 — actualização metodológica vinculativa:** a recolha foi realizada por **entrevistas semiestruturadas**. Não utilizar questionários, percentagens, gráficos nem denominadores do draft antigo para fundamentar a monografia. A pendência é verificar documentalmente a quantidade de entrevistas efectivamente realizadas, os seus guiões, notas/transcrições e a relação dos registos com T01–T08/E01–E03, mantendo o piloto sintético separado. A ausência de ficheiros originais nos sistemas consultados não permite concluir que as entrevistas não tenham ocorrido. Ver [D59 — decisão metodológica](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md).
 
 ## I. Substituições cirúrgicas de inconsistências verificadas
 
@@ -14,9 +14,9 @@ Texto actual:
 > Do ponto de vista científico, o estudo permite relacionar literatura sobre plataformas digitais de trabalho, confiança, reputação, contratação e intermediação com evidência empírica recolhida no contexto delimitado da investigação.
 
 Texto candidato:
-> Do ponto de vista científico, o estudo permite relacionar a literatura sobre plataformas digitais de trabalho, confiança, reputação, contratação e intermediação com documentação sobre a economia digital e com cenários exploratórios delimitados ao problema em análise. A recolha empírica independente junto de trabalhadores e empregadores da Cidade de Maputo permanece por documentar e validar; por isso, os registos de trabalho disponíveis são tratados como apoio à formulação de necessidades candidatas, sem lhes atribuir a condição de depoimentos de campo comprovados.
+> A investigação articula o enquadramento bibliográfico e documental com dados recolhidos por entrevistas semiestruturadas sobre a conexão e contratação de serviços de Tecnologias de Informação na Cidade de Maputo. A análise dos resultados deve apresentar rastreabilidade entre as entrevistas efectivamente realizadas, as categorias temáticas e as necessidades da solução, distinguindo-as do piloto sintético e das decisões de engenharia.
 
-Motivo: o §1.6 e o §3.2.2 já reconhecem a inexistência de documentação primária independente das onze entrevistas. A formulação actual de §1.2 contradiz essa ressalva.
+Motivo: a técnica de recolha está confirmada como entrevista semiestruturada. Os registos originais ainda precisam de ser associados ao corpus T/E para sustentar as citações e categorias.
 
 **P02 — Delimitação, §1.8, p. 17.**
 
@@ -24,7 +24,7 @@ Texto actual:
 > A investigação delimita-se à análise da conexão e do processo de contratação entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores ou clientes na Cidade de Maputo, utilizando os dados empíricos e documentais disponíveis para compreender esse contexto e orientar a concepção da solução proposta.
 
 Texto candidato:
-> A investigação delimita-se à análise da conexão e do processo de contratação entre trabalhadores autónomos de Tecnologias de Informação e empregadores ou clientes na Cidade de Maputo, apoiando-se nas fontes bibliográficas e documentais disponíveis e na análise de registos exploratórios de trabalho para orientar a concepção da solução proposta. A existência e a representatividade de dados de campo independentes não são pressupostas sem documentação de proveniência.
+> A investigação delimita-se à análise do processo de conexão e contratação entre trabalhadores autónomos de Tecnologias de Informação e empregadores ou clientes na Cidade de Maputo, recorrendo a entrevistas semiestruturadas e a fontes bibliográficas e documentais para fundamentar a concepção de um protótipo. O alcance dos resultados qualitativos depende dos participantes e das condições de recolha efectivamente documentadas.
 
 **P03 — Técnica documental, §3.2.1, p. 32.**
 
@@ -32,9 +32,9 @@ Texto actual:
 > As evidências documentais foram posteriormente confrontadas com os resultados das entrevistas.
 
 Texto candidato:
-> As evidências documentais foram posteriormente comparadas com temas extraídos dos registos exploratórios de trabalho e do piloto sintético identificado no repositório. Esta comparação permitiu formular questões e necessidades candidatas, mas não constitui triangulação com entrevistas de campo independentes comprovadas.
+> As fontes documentais foram confrontadas com os temas identificados na análise qualitativa das entrevistas semiestruturadas. Esta confrontação deve ser suportada por registos originais das entrevistas e por uma matriz de codificação que identifique fontes, excertos, temas e casos divergentes, não se confundindo entrevistas autênticas com dados do piloto sintético.
 
-Este é um dos trechos de maior risco científico da D44. A mera presença de guião ou codificação temática não prova entrevistas realizadas.
+Este trecho exige a correspondência entre os temas e os registos primários das entrevistas realizadas. A técnica está confirmada; faltam conferir as fontes individuais.
 
 **P04 — Modelo de desenvolvimento, §3.5, p. 34.**
 
@@ -42,7 +42,7 @@ Texto actual:
 > Esta estrutura procura representar a diversidade observada nas entrevistas, incluindo serviços cujo preço apenas pode ser definido após diagnóstico e alterações de escopo que exigem aceitação pelas partes.
 
 Texto candidato:
-> Esta estrutura procura representar a diversidade de situações descritas nos materiais exploratórios e nas fontes documentais, incluindo serviços cujo preço apenas pode ser definido após diagnóstico e alterações de âmbito que exigem aceitação pelas partes. A pertinência e a frequência de tais situações no público-alvo permanecem hipóteses a confirmar mediante recolha de campo verificável.
+> Esta estrutura procura representar diversidade de situações exploradas através das entrevistas semiestruturadas e das fontes documentais, incluindo serviços cujo preço pode depender de diagnóstico e alterações de âmbito que exigem consentimento das partes. A correspondência entre cada necessidade e o material recolhido deve ser demonstrada na matriz temática e revista se surgirem casos divergentes.
 
 **P05 — Procedimento de validação, §3.7, p. 35.**
 
@@ -60,7 +60,7 @@ Texto actual:
 > Esta sequência permite relacionar os resultados empíricos do Capítulo IV com a especificação e os artefactos de engenharia da solução proposta.
 
 Texto candidato:
-> Esta sequência permite relacionar as hipóteses de necessidades e os cenários exploratórios sistematizados no Capítulo IV com a especificação e os artefactos de engenharia da solução proposta, sem pressupor a validação empírica independente das categorias temáticas.
+> Esta sequência permite relacionar os temas resultantes das entrevistas semiestruturadas e das fontes documentais com a especificação e os artefactos de engenharia, distinguindo o que foi relatado pelos participantes, o que foi interpretado pela investigadora e o que constitui decisão técnica.
 
 **P07 — Baseline, §5.2.1, p. 46.**
 
@@ -124,7 +124,7 @@ A capa da D44 indica **Setembro de 2025**, enquanto a bibliografia já contém p
 
 O presente trabalho procurou conceber e desenvolver um protótipo de aplicação web para apoiar a conexão entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores na Cidade de Maputo. Para tal, foram sistematizadas fontes bibliográficas e documentais, cenários exploratórios de contratação, hipóteses de necessidades, regras de negócio, requisitos funcionais e não funcionais e modelos da solução, complementados por uma implementação técnica parcial e por ensaios automatizados.
 
-No que respeita ao primeiro objectivo específico, a revisão documental e os registos exploratórios permitiram identificar dimensões relevantes para o estudo do processo de conexão e contratação, incluindo descoberta de oportunidades, apresentação de competências, negociação, formalização de condições, pagamentos, reputação e conflitos. Todavia, a auditoria de proveniência encontrou um piloto de entrevistas explicitamente sintético e não identificou documentação primária suficiente para demonstrar que os onze registos temáticos posteriores resultam de entrevistas de campo independentes. Por esta razão, os temas identificados **não podem ser apresentados como dificuldades empiricamente confirmadas dos trabalhadores e empregadores da Cidade de Maputo**. Constituem hipóteses de necessidades que exigem investigação adicional.
+No que respeita ao primeiro objectivo específico, a investigação recorreu a **entrevistas semiestruturadas** e a fontes documentais para compreender o processo de conexão e contratação, contemplando descoberta de oportunidades, demonstração de competências, negociação, formalização, pagamentos, reputação e conflitos. Para apresentar os resultados empíricos com rigor, a codificação temática dos registos T01–T08/E01–E03 deve ser reconciliada com as entrevistas efectivamente realizadas, identificando a origem de cada tema, os casos divergentes e os limites da selecção de participantes. O piloto sintético previamente identificado não deve ser utilizado como evidência de depoimentos reais, e os resultados qualitativos não devem ser generalizados à população da Cidade de Maputo sem desenho adequado.
 
 Quanto ao segundo objectivo, foi elaborada uma especificação de referência com **16 regras de negócio, 28 requisitos funcionais e sete requisitos não funcionais**, organizada em torno dos processos de identidade, oportunidades, propostas, contratação, alterações ao acordo, execução, pagamentos, reputação, conflitos e governação. A modelação conceptual produziu casos de uso, diagramas de classes, actividades, sequência e estados, bem como uma arquitectura lógica baseada em frontend React e API Django. A coerência da especificação foi avaliada por rastreabilidade documental, mas a sua adequação ao público-alvo permanece dependente de confirmação empírica e das decisões finais de aprovação da autora e da supervisão.
 
@@ -140,7 +140,7 @@ As limitações centrais do estudo abrangem a proveniência não confirmada dos 
 
 ### 6.2 Recomendações
 
-Recomenda-se, em primeiro lugar, **documentar a proveniência das fontes qualitativas** antes de qualquer nova interpretação dos onze registos como entrevistas de campo. Se não existirem comprovativos primários de recrutamento, recolha, transcrição e procedimentos éticos, deverá ser realizado um estudo empírico verificável com trabalhadores autónomos de TI e empregadores da Cidade de Maputo. Os resultados devem ser utilizados para rever as necessidades candidatas e identificar divergências entre a concepção proposta e as práticas efectivamente observadas.
+Recomenda-se, em primeiro lugar, **consolidar a documentação das entrevistas semiestruturadas já realizadas**, recuperando o guião efectivamente aplicado, os registos originais, a caracterização e selecção dos participantes, os procedimentos éticos e uma matriz que ligue cada excerto às categorias temáticas e às necessidades N01–N18. A quantidade de entrevistas deve corresponder ao arquivo real, não ser inferida dos onze perfis textuais presentes na D44. Só se identificarem lacunas substantivas deve ser ponderada recolha complementar, mediante decisão da autora e da supervisão.
 
 No plano técnico, recomenda-se consolidar e rever os PRs de desenvolvimento que implementaram o núcleo de contratação, estabelecendo uma revisão estável do protótipo. Devem ser completados os campos e regras de prazos e entregáveis dos acordos, a gestão do ciclo de execução e entrega, a manutenção de histórico de eventos, a gestão de pagamentos sem custódia própria de fundos, a reputação bilateral com possibilidade de contestação e o reporte/acompanhamento administrativo de conflitos. A integração externa com prestadores financeiros deverá permanecer facultativa, desacoplada e sujeita a validação específica.
 
@@ -186,8 +186,8 @@ Preservar os procedimentos e evidências previstos como **critérios planeados**
 
 ## IV. Decisões ainda pendentes de autoria e supervisão
 
-- **D-01:** confirmar se a pesquisa conservará uma componente empírica sobre pessoas reais ou assumirá explicitamente abordagem documental + prototipagem, com reformulação de objectivos/hipóteses adequada às exigências da USTM.
-- **D-02:** verificar proveniência das onze entrevistas e, na ausência de evidências, **não inventar entrevistas, consentimentos, datas ou resultados**.
+- **D-01:** **resolvida pela decisão D59:** a recolha foi feita por entrevistas semiestruturadas. Falta integrar fielmente o procedimento e as evidências originais ao desenho metodológico do manuscrito.
+- **D-02:** conferir a quantidade e os originais das entrevistas semiestruturadas efectuadas; relacioná-las com T01–T08/E01–E03 sem presumir correspondência automática, mantendo separado o piloto sintético e sem inventar datas, consentimentos ou citações.
 - **D-03:** decidir a baseline RF01–RF28 e registar eventual aprovação; não presumir a aprovação pela existência de uma versão de tabela.
 - **D-04:** aprovar a semântica técnica de `PENDING_AGREEMENT`, duas aceitações expressas e versão `SUPERSEDED`, sem criar contradição entre UML e código.
 - **D-05:** decidir se os resultados de Novembro de 2026 integrarão a monografia, qual será a data formal do manuscrito e que revisão técnica será citada.

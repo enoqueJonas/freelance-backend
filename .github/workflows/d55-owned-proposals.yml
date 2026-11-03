@@ -1,0 +1,36 @@
+name: D55 Worker-Owned Proposal State
+
+on:
+  push:
+    branches: [feat/d55-owned-proposal-state]
+  pull_request:
+    paths:
+      - "apps/**"
+      - "backend/**"
+      - ".github/workflows/d55-owned-proposals.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  django-api:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python manage.py check
+      - run: python manage.py makemigrations --check --dry-run
+      - name: Run D50–D55 API regression suite
+        run: |
+          python manage.py test \
+            apps.accounts.test_api_d50 \
+            apps.contracts.test_contract_flow_d51 \
+            apps.contracts.test_agreement_amendments_d52 \
+            apps.contracts.test_ui_read_models_d53 \
+            apps.marketplace.test_owned_proposal_state_d55 \
+            --verbosity 2

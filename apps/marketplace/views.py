@@ -123,6 +123,30 @@ def submit_proposal(request, opportunity_id):
         }, status=201)
 
 
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def my_proposals(request):
+    """Return only the authenticated worker's own submissions.
+
+    Deliberately separate from the employer-only opportunity proposal list.
+    Preserve proposals from CLOSED opportunities so status survives login
+    and opportunity closure. Do not return other workers' personal data.
+    """
+    proposals = (
+        Proposal.objects.filter(worker__user=request.user)
+        .select_related("opportunity")
+        .order_by("-created_at", "-pk")
+    )
+    return Response([{
+        "id": p.pk,
+        "opportunity_id": p.opportunity_id,
+        "opportunity_title": p.opportunity.title,
+        "opportunity_status": p.opportunity.status,
+        "description": p.description,
+        "status": p.status,
+    } for p in proposals])
+
+
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def accept_proposal(request, proposal_id):

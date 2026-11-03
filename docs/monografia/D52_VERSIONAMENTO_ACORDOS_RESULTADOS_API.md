@@ -19,7 +19,7 @@ São resultados reais de código Django/DRF testado em base de dados SQLite temp
 | RN14 — Histórico | Versões anteriores e rejeições permanecem; aceitações registadas com actor/tempo | «Há registos persistidos de histórico de acordo», **não** «auditoria imutável e juridicamente suficiente» |
 | §5.2.6 / Fig. 5.2 | AgreementVersion 0..* e única vigente; edição proibida pelo protocolo | Harmonizar cardinalidade e estados apenas após decisão B1 autorizada |
 | Fig. 5.4 / A.4(A–B) | Aceite explícito de ambos os intervenientes, rejeição de alteração | Actualizar diagramas de actividades e sequências coerentemente, sem presumir autoria de uma única acção |
-| V03/V04 | 24 novos testes D52 de API e 23 D51 cobrem subconjuntos | **V03/V04 integrais permanecem não executados** até frontend e cenários completos |
+| **V03** — formalização/alterações | 24 novos testes D52 de API e 23 D51 cobrem subconjuntos | **V03 integral não executado** neste corte; **V04 é execução/entrega e não foi exercitado** |
 
 ## 3. Discussão proposta para §5.5 (redacção condicional, não aplicada)
 
@@ -31,7 +31,7 @@ São resultados reais de código Django/DRF testado em base de dados SQLite temp
 
 - O SHA-256 utilizado identifica o conteúdo da versão. Não equivale a assinatura digital legalmente qualificada, autenticação independente, prova de não-repúdio ou garantia de imutabilidade contra acesso administrativo à base de dados.
 - A verificação de concorrência sobre PostgreSQL está pendente; o CI usa SQLite.
-- Só se exercitaram pedidos reais de API. O React utiliza ainda `mockApi`, pelo que V03/V04 não podem ser considerados end-to-end.
+- Só se exercitaram pedidos reais de API nesta fase D52. O React utilizava ainda `mockApi`, pelo que **V03** não podia ser considerado end-to-end; **V04 (execução e entrega) não foi testado e não pertence ao versionamento**.
 - Não há prova de que o mecanismo melhora a confiança, reduz o incumprimento ou corresponde a necessidades empiricamente confirmadas em Maputo.
 - As decisões B/B1, dois aceites explícitos e rejeição exclusiva pela contraparte são **hipóteses de engenharia** ainda por confirmar com a supervisão.
 - Não foram editadas as figuras, comentários do supervisor, bibliografia ou o ficheiro DOCX.

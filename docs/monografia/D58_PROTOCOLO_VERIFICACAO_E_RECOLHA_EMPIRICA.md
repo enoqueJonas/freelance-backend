@@ -1,53 +1,34 @@
-# D58 — Protocolo operacional para recuperar fontes primárias ou realizar recolha empírica verificável
+# D58 revisto conforme D59 — Protocolo para verificar entrevistas semiestruturadas
 
-**Natureza:** procedimento proposto à autora/supervisão, **não** relato de entrevistas realizadas nem aprovação ética.  
-**Monografia:** protótipo de ligação entre profissionais autónomos de TI e empregadores na Cidade de Maputo (ConecTA/ServiPlus).  
-**Dependência de decisão:** [Auditoria D58 às alegações históricas de 83 participantes](D58_AUDITORIA_83_PARTICIPANTES_VS_11_PERFIS.md).  
-**Data:** 03-11-2026.
+**Decisão metodológica vigente:** a recolha efectuada foi **por entrevistas semiestruturadas**, conforme [D59](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md).  
+**Estatuto:** protocolo de verificação documental e, **apenas se necessário e aprovado**, de recolha complementar. Não constitui transcrição, consentimento ou certificado de entrevista.
 
-## Gate 0 — Não iniciar recolha duplicada antes de recuperar o estudo alegado
+## Gate 0 — Inventariar as entrevistas que efectivamente ocorreram
 
-O draft histórico refere **83 participantes** em Julho de 2025 e vários gráficos percentuais. A D44 contém apenas **11 perfis textuais cuja proveniência não foi certificada**. A primeira actividade é **verificar o acervo original**; não substituir automaticamente um levantamento potencialmente existente por outro.
+A investigação não seguirá a via dos questionários e não utilizará tabelas percentuais do draft antigo. A principal tarefa é recuperar e conferir os originais das **entrevistas semiestruturadas realizadas**, sem presumir que cada um dos onze perfis T01–T08/E01–E03 da D44 já está autenticado.
 
-**Se existir exportação de questionário:**
-- preservar o ficheiro original **inalterado**, registar origem/autoria/data, gerar checksum e criar cópia de análise separada;
-- manter identificadores pessoais fora do repositório GitHub e de partilhas abertas;
-- recolher o instrumento aplicado, lógica de salto, tipos de pergunta, datas e exclusões;
-- atribuir um ID pseudónimo distinto a cada resposta, remover ou proteger identificadores e deduplicar por critério documentado;
-- reconstruir uma tabela de fluxo amostral: convidados → elegíveis → consentidos → iniciaram → concluíram → válidos por pergunta;
-- reconstruir Figura 2 (30 respondentes) e reconciliá-la com 83 participantes/68 trabalhadores/15 empregadores;
-- para cada figura, registar `pergunta_id`, filtro aplicado, `n_eligible`, `n_answered`, `n_missing`, numerador por opção, tipo de resposta (única/múltipla) e arredondamento;
-- verificar se as percentagens e as conclusões do draft são reproduzíveis; **não inventar respostas ausentes nem ajustar números para forçar 83**.
+- [ ] Localizar o guião efectivamente aplicado e eventuais versões.
+- [ ] Registar quantas entrevistas ocorreram, critérios de escolha, função do interveniente, data/período, modo de realização e duração **quando houver comprovativo**.
+- [ ] Identificar transcrições/notas originais ou gravações **autorizadas** e confrontar cada caso com o resumo correspondente, sem guardar dados pessoais no GitHub.
+- [ ] Documentar procedimentos éticos efectivamente utilizados. Não inventar consentimentos, instituições autorizadoras ou prazos de retenção.
+- [ ] Inventariar inconsistências, casos divergentes e eventuais casos sem original acessível; não os transformar em novos participantes fictícios.
+- [ ] Separar os 11 registos exploratórios ou qualquer piloto sintético das entrevistas comprováveis. A quantidade de entrevistados **não se deduz** do número de perfis em uma tabela.
 
-**Se existirem entrevistas de 2025:**
-- verificar que as transcrições/notas são originais e datáveis;
-- identificar os procedimentos éticos aplicados, sem publicar contactos, áudios ou consentimentos no GitHub;
-- demonstrar a relação (ou inexistência) entre entrevistas antigas, inquiridos de 2025 e T01–T08/E01–E03;
-- confrontar o resumo temático e os excertos do draft com os registos originais, incluindo **casos divergentes**.
+## Gate 1 — Verificar análise qualitativa e rastreabilidade
 
-**Se nada for recuperável:** registar essa limitação de proveniência, pedir decisão académica sobre novo trabalho de campo ou reformulação documental. A simples impossibilidade de localizar ficheiros nesta conta **não prova** que a autora nunca os produziu.
+- [ ] Para cada entrevista, construir a trilha **fonte original → excerto/narrativa → código temático → categoria → N01–N18 → RN/RF/RNF**.
+- [ ] Explicar como foram identificadas convergências, divergências e casos negativos sem extrapolar para prevalência na população.
+- [ ] Identificar distinções entre relato de participante, interpretação e decisão técnica.
+- [ ] Rever HG/HE1–HE4 à luz das entrevistas confirmadas e da diferença entre testemunho e teste do protótipo.
+- [ ] Solicitar novos esclarecimentos à autora/supervisão **somente** quando os registos disponíveis não permitirem reconstituir o procedimento.
 
-## Gate 1 — Definir a pesquisa real **antes** de convidar participantes
+## Gate 2 — Recolha complementar (somente se for realmente necessária)
 
-**Questão orientadora de diagnóstico:** como trabalhadores autónomos de TI e empregadores de Maputo **efectivamente** encontram contrapartes, avaliam competência/legitimidade, negociam e formalizam serviços e acompanham alterações, pagamentos e conflitos?
+Este ramo não está activado automaticamente. Se existirem lacunas substantivas que não possam ser resolvidas a partir dos registos originais, a autora/supervisão decidirá se há necessidade de novas entrevistas. Antes de convidar participantes, aprovar critérios de elegibilidade, guião, consentimento e protecção de dados. Entrevistas novas usam IDs diferentes dos da D44; não criar dados ou citações retroactivamente.
 
-**População de interesse:** adultos que prestam serviços autónomos de TI ou que contrataram/seleccionaram tais serviços na Cidade de Maputo. Uma conta em rede social, um contacto ou uma indicação não basta para comprovar elegibilidade.
+**Modelo de explicação para convite, sujeito às normas institucionais:**
 
-**Amostragem candidata:** intencional, buscando diversidade de serviços (web, design, redes, suporte, mobile, QA), experiência, modalidades remota/presencial, tipos de clientes e padrões de contratação. Não fixar `n=11` apenas para reproduzir o piloto sintético: a dimensão deve ser fundamentada pela natureza do estudo, recursos e parecer da supervisão. A composição antiga 8 trabalhadores/3 empregadores não constitui automaticamente amostra ideal e pode sub-representar a perspectiva do empregador.
-
-**Critérios de inclusão/exclusão a aprovar:** relação real com TI freelance/contratação, enquadramento geográfico, possibilidade de consentimento livre, participação voluntária, idade e condições éticas aplicáveis; excluir contactos sem experiência relevante quando o estudo requer relatos de prática, mantendo-os apenas se outra categoria tiver sido aprovada.
-
-**Separação de corpora:** entrevistas novas recebem identificadores como `P-TI-2026-001` e `P-EMP-2026-001`, nunca os códigos `T01–T08/E01–E03` do material exploratório da D44. Não reutilizar respostas sintéticas, mesmo que sejam verosímeis, como citações de pessoas reais.
-
-**Gate de ética:** confirmar com a USTM/supervisão a necessidade de aprovação, o modelo de consentimento, a informação prévia, os procedimentos de gravação, segurança, conservação e eliminação dos dados. Não alegar aprovação nem escolher unilateralmente prazos de retenção.
-
-## Gate 2 — Modelo de convite e consentimento (minuta, não formulário institucional aprovado)
-
-**Explicação inicial sugerida, a ser adaptada à aprovação institucional:**
-
-> Está a ser convidado(a) a participar numa investigação académica sobre como profissionais autónomos de Tecnologias de Informação e clientes ou empregadores encontram e contratam serviços na Cidade de Maputo. O objectivo é compreender práticas reais, dificuldades e alternativas, não vender uma plataforma. A sua participação é voluntária; pode não responder a qualquer pergunta e terminar a conversa. A decisão de participar não interfere com relações profissionais. A informação será tratada segundo os procedimentos de protecção de dados e consentimento aprovados para o estudo. Não serão publicados o seu nome nem contactos no relatório, salvo autorização específica e justificada. Antes de iniciar, explicaremos quem pode aceder aos registos, onde ficarão guardados e o prazo aplicável.
-
-**Registar separadamente:** autorização para participar; autorização para notas; **autorização opcional** de gravação, nunca presumida; entendimento sobre tratamento de dados e retirada, nos termos aprovados. Pseudonimização **não** equivale a anonimato absoluto enquanto a chave existir. Guardar consentimento e chave de correspondência fora do repositório, com acesso limitado.
+> Está a ser convidado(a) a participar numa investigação académica sobre como profissionais autónomos de TI e clientes ou empregadores encontram e contratam serviços na Cidade de Maputo. O objectivo é compreender práticas reais, não promover uma plataforma comercial. A participação é voluntária; poderá recusar perguntas ou terminar a conversa. A recolha, acesso, conservação e eventual gravação seguirão os procedimentos previamente aprovados e explicados ao participante.
 
 ## Gate 3 — Guiões semiestruturados **não sugestivos**
 
@@ -141,6 +122,7 @@ O estudo com pessoas **não substitui** os testes CI; destina-se a observar se p
 - [ ] N01–N18, RN/RF/RNF e HG/HE1–HE4 são revistos conforme evidência, aceitando hipóteses não confirmadas.
 - [ ] Autora e supervisão ratificaram o desenho científico e o tratamento dos resultados.
 
-## Resultado honesto esperado
 
-Se não houver material bruto de 2025 e nenhuma nova recolha for aprovada/executada, **continuará a faltar prova empírica**. Este documento é um plano preparado, **não** uma forma de transformar os 83 participantes ou os onze perfis alegados em dados autênticos. Se a autora optar pela via documental, o trabalho deve ser coerentemente apresentado como **investigação documental + concepção e avaliação técnica de protótipo**, sob aprovação académica.
+## Resultado e critério de fecho
+
+A investigação foi esclarecida como baseada em **entrevistas semiestruturadas**. Fechar a auditoria de proveniência significa identificar e confrontar o material primário de cada entrevista efectivamente realizada, não pedir questionários nem produzir percentagens a partir do draft antigo. Se alguns originais não forem recuperáveis, apresentar o limite de forma proporcionada sem negar a declaração da realização das entrevistas nem inventar documentação ausente. O DOCX D44 não foi editado.

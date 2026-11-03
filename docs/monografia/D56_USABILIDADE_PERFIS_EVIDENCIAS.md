@@ -36,7 +36,7 @@ A auditoria visual D54–D55 revelou que a página `/#/real` apresentava dois gr
 
 A execução anterior, antes do refinamento final dos painéis, foi aprovada em [D56 CI #41611095291](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41611095291): **2/2 cenários Chromium**, além do typecheck e build. Produziu [nove PNG autênticos](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41611095291/artifacts/13219206876), com vencimento previsto para 03-12-2026. Os PNG 07–09 foram recuperados e inspeccionados visualmente; a revisão visual revelou a necessidade de esconder os painéis não aplicáveis e retirar a numeração rígida.
 
-**O refinamento final está sujeito à reexecução do CI na revisão mais recente.** Não reutilizar o resultado anterior como prova de alterações posteriores até confirmar os logs da última execução.
+**Resultado final verificado:** [CI frontend D56 #41611653340](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41611653340) terminou com TypeScript, testes do cliente HTTP e build aprovados. O [CI Chromium real #41611652980](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41611652980) concluiu **2/2 cenários E2E aprovados**: fluxo completo D54/D55 e cenário D56 de abertura por teclado e ecrã de 390 × 844 px. O [artefacto #13218388955](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41611652980/artifacts/13218388955) contém **nove capturas efectivamente geradas**, disponíveis até 03-12-2026. O código testado já inclui a remoção dos painéis não pertinentes e da numeração rígida.
 
 ## 4. Consequências para a monografia
 
@@ -57,8 +57,8 @@ A autora deve decidir se este nível de implementação compõe efectivamente a 
 - [x] Suporte dual Worker+Employer na mesma conta, sem atalhos de autenticação fictícia.
 - [x] Testes novos de mobile/teclado e preservação do histórico de propostas/contratações.
 - [x] Nove capturas obtidas na primeira execução D56 do Chromium.
-- [ ] Confirmar **última** execução do CI após remover painéis não pertinentes e números de secção.
-- [ ] Inspeccionar a última captura móvel e verificar rótulos, alinhamentos e legibilidade.
+- [x] Confirmar última execução do CI após remover painéis não pertinentes e números de secção: Chromium **2/2**, typecheck e build no GitHub Actions.
+- [x] Inspeccionar a última captura móvel 390×1325 PNG: cartões e rótulos alinhados e sem formulários expandidos. **Limitação UX residual:** numa janela de 390×844, o aviso e o cabeçalho extensos fazem com que a primeira acção de activação exija deslocação vertical. Não suprimir o aviso verdadeiro; considerar redução de altura sem esconder informação essencial.
 - [ ] Recolher opiniões de utilizadores representativos; não presumir ganhos de produtividade ou satisfação.
 - [ ] Integrar no **DOCX D44 original** somente o conteúdo aceite pela autora/supervisão, preservando comentários, imagens, campos e margens.
 

@@ -4,6 +4,8 @@
 **Documento original:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, pp. 11–18, 31–35, 44–66 e 80–82.  
 **Dependência:** [D57_CAPITULO_V_REVISAO_INTEGRAL.md](D57_CAPITULO_V_REVISAO_INTEGRAL.md) e [D57_MATRIZ_VALIDACAO_V01_V08_RNF.md](D57_MATRIZ_VALIDACAO_V01_V08_RNF.md).
 
+> **Adenda D58 obrigatória antes de utilizar a conclusão candidata:** uma versão histórica `DraftMonografia.docx` alega **83 participantes (68 trabalhadores e 15 empregadores) em Julho de 2025**, um levantamento por inquéritos/entrevistas e percentagens, enquanto a D44 analisa onze perfis textuais sem proveniência confirmada. O draft não constitui, isoladamente, prova de recolha. A divergência 83/11, a pergunta com 30 respostas e os dados de campo alegados devem ser objecto de [auditoria/reconciliação D58](D58_AUDITORIA_83_PARTICIPANTES_VS_11_PERFIS.md) antes de ratificar a metodologia ou concluir que não há trabalho empírico recuperável. **Não usar a conclusão redigida nesta D57 como texto académico final sem resolver essa decisão.**
+
 ## I. Substituições cirúrgicas de inconsistências verificadas
 
 **P01 — Justificativa, §1.2, p. 13.**

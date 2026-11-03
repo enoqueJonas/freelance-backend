@@ -56,9 +56,9 @@ A técnica de recolha está definida. A pendência é **documental**, não uma d
 ## 7. Alterações operacionais nos relatórios
 
 - [x] Registar decisão e prioridade da recolha **exclusivamente por entrevistas semiestruturadas**.
-- [ ] Marcar a auditoria histórica D58 como **arquivada, fora do escopo metodológico actual**, sem a apagar do histórico do Git.
-- [ ] Substituir o protocolo de recuperação de questionários pelo **protocolo de verificação das entrevistas**.
-- [ ] Rever os avisos em D57 Capítulo V, Capítulo VI e backlog para não exigir reconciliação estatística histórica.
+- [x] Marcar a auditoria histórica D58 como **arquivada, fora do escopo metodológico actual**, sem a apagar do histórico do Git.
+- [x] Substituir o protocolo de recuperação de questionários pelo **protocolo de verificação das entrevistas**.
+- [x] Rever os avisos em D57 Capítulo V, Capítulo VI e backlog para não exigir reconciliação estatística histórica.
 - [ ] Rever o Capítulo III, Capítulo IV, §5.5 e Capítulo VI na cópia **editável original** da monografia, após conferência dos registos da entrevista.
 - [ ] Não editar o DOCX por reconstrução a partir de texto extraído; preservar figuras, índices e comentários da supervisão.
 

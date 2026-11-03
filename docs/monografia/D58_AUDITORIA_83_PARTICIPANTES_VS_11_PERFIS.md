@@ -1,3 +1,7 @@
+> **ARQUIVO HISTÓRICO — SUPERADO PELA DECISÃO D59 (03-11-2026).** A técnica de recolha da investigação foi esclarecida como **entrevistas semiestruturadas**, exclusivamente. As alegações de questionários, 83/30 participantes, percentagens e gráficos deste draft anterior **não integram a metodologia nem os resultados da monografia em revisão**. Esta auditoria permanece apenas como registo da origem da inconsistência editorial; **não deve gerar tarefas activas de recuperar inquéritos, recalcular gráficos ou produzir estatísticas**. A tarefa vigente é **verificar registos e codificação das entrevistas realmente realizadas**, conforme [D59](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md).
+
+---
+
 # D58 — Auditoria de proveniência e reconciliação dos dados alegados no draft histórico
 
 **Data da auditoria:** 03-11-2026. **Estado:** evidência documental comparada, não certificação de trabalho de campo.  

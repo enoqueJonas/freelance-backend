@@ -58,7 +58,8 @@ A revisão posterior ao primeiro ensaio acrescentou **seis capturas automáticas
 | RF14/RN06 | Propor, aceitar, rejeitar v2/v3 e preservar versão vigente | Um cenário específico, sem teste de concorrência PostgreSQL |
 | RF18 | Preço positivo associado à versão do acordo | Sem meios de pagamento, etapas ou liquidação |
 | RNF02/03/04 | Testes de API anteriores comprovam algumas guardas; D54 mostra fluxo UI integrado | Não constitui ensaio completo de segurança, privacidade ou performance |
-| V02–V04 | **Uma trajectória integrada foi executada com sucesso** | Não declarar casos académicos integrais «Aprovados» sem confronto de todos os critérios de aceitação |
+| V02/V03 | **Uma trajectória integrada com oportunidade, proposta e acordo foi executada com sucesso** | Não declarar V02/V03 integrais «Aprovados» sem confronto de todos os critérios |
+| V04 — execução e entrega | **Não executado** | A activação do Engagement não corresponde a ExecutionRecord/DELIVERED/COMPLETED |
 
 ## 5. Formulação académica proposta (não aplicada à D44)
 

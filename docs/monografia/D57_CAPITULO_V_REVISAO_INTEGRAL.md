@@ -6,6 +6,8 @@
 **Fonte verificável dos ensaios:** [D55 backend 80/80](https://github.com/enoqueJonas/freelance-backend/actions/runs/41603523124); [D56 Chromium 2/2](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41612082795); [D56 frontend 8/8 e build](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41612082848).  
 **Matriz de resultados canónicos:** [D57_MATRIZ_VALIDACAO_V01_V08_RNF.md](D57_MATRIZ_VALIDACAO_V01_V08_RNF.md).
 
+> **AVISO D58 — descoberta posterior de alta prioridade científica:** o `DraftMonografia.docx` histórico apresenta a alegação de **83 participantes em Julho de 2025**, enquanto a D44 possui **11 perfis textuais com proveniência não comprovada**. A secção antiga de resultados usa ainda **30 respondentes** numa pergunta de categoria. Nenhuma destas alegações adicionais foi confirmada por ficheiros de respostas ou transcrições recuperáveis na presente auditoria. **Não integrar esta redacção do Capítulo V no Word nem fechar o desenho científico sem reconciliar as fontes e os denominadores conforme [D58](D58_AUDITORIA_83_PARTICIPANTES_VS_11_PERFIS.md).** A existência de um draft com números não comprova recolha real e a ausência de ficheiros acessíveis não prova que não existiram.
+
 ## Directriz de inserção editorial
 
 Este capítulo precisa de **duas perspectivas temporais** em vez de substituir retroactivamente a descrição que existia quando a D44 foi produzida:

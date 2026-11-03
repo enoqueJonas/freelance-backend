@@ -17,18 +17,21 @@
 - [ ] Exportar DOCX + PDF e inspeccionar todas as páginas para sobreposição, margens e numeração.
 - [ ] Verificar que não há textos do auditor, prompts, mensagens de commit ou placeholders involuntários no corpo final.
 
-**Adenda D58 — descoberta crítica em versão histórica:** o `DraftMonografia.docx` afirma **83 participantes (68 trabalhadores, 15 empregadores) de 1 a 30-07-2025**, com questionários, entrevistas, observação e percentagens. A Figura 2 refere **30 respostas (96,7% trabalhadores; 3,3% empregadores)**, sem reconciliação dos denominadores e subconjuntos. Estes números e procedimentos ainda **não foram autenticados**; o corpus D44 tem onze perfis textuais de origem independente não confirmada. A prioridade **é recuperar os dados originais de 2025 antes de iniciar entrevistas novas ou aceitar a reformulação documental**. Consultar [D58 — auditoria 83 vs 11](D58_AUDITORIA_83_PARTICIPANTES_VS_11_PERFIS.md) e [protocolo de recuperação/recolha](D58_PROTOCOLO_VERIFICACAO_E_RECOLHA_EMPIRICA.md).
+**Actualização D59 — decisão de metodologia:** a recolha foi realizada por **entrevistas semiestruturadas**, sem questionários. Alegações quantitativas do draft anterior foram arquivadas, **fora do escopo**. Não voltar a pedir ficheiros de respostas, validar percentagens nem programar inquéritos. A tarefa activa consiste em conferir o **arquivo primário das entrevistas efectivamente realizadas**, a quantidade e o vínculo com a codificação T01–T08/E01–E03, separando o piloto sintético. Consultar [D59](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md) e [protocolo actualizado](D58_PROTOCOLO_VERIFICACAO_E_RECOLHA_EMPIRICA.md).
 
-## P0-02 — Resolver proveniência de entrevistas e desenho científico
+## P0-02 — Documentar e relacionar entrevistas semiestruturadas efectivamente realizadas
 
-**Situação actual:** o piloto com 11 entrevistas está expressamente identificado como sintético; T01–T08 e E01–E03 não dispõem de documentação primária suficiente para comprovar recolha independente. D44 §§1.6, 3.2.2 e 6.1 reconhecem o problema; §§1.2, 3.2.1 e 3.5 contradizem-no.
+**Método confirmado pela D59:** entrevistas semiestruturadas; a opção por questionários ou a reformulação para investigação exclusivamente documental **não está em discussão**. O problema pendente é a rastreabilidade da recolha: a D44 apresenta perfis T01–T08/E01–E03, mas os respectivos originais não foram localizados no acervo acessível. Um piloto sintético também aparece no histórico e deve ficar separado.
 
-- [ ] A autora deve confirmar se existem arquivos **autênticos e independentes do piloto sintético** de recrutamento/recolha/transcrição/consentimento, com tratamento de dados ético.
-- [ ] Se existirem, auditar correspondência do corpus, datas, procedimentos, codificação e fontes antes de falar em entrevistas reais.
-- [ ] Se não existirem, manter T/E como **registos exploratórios de trabalho** e rever objectivos, métodos, resultados e alcance das hipóteses.
-- [ ] Verificar com a supervisão se investigação documental + prototipagem atende aos requisitos científicos da USTM; caso contrário, planear recolha empírica real.
-- [ ] Não inventar participantes, entrevistas, depoimentos, consentimentos, triangulações ou frequências de problemas reais.
-- [ ] Aplicar os patches metodológicos D57 apenas após decisão de autoria.
+- [x] Confirmar técnica de recolha: **entrevistas semiestruturadas**.
+- [ ] Localizar o guião realmente aplicado e a documentação de realização das entrevistas, respeitando privacidade e ética.
+- [ ] Registar o número efectivo de entrevistas a partir do arquivo original; **não assumir n=11** apenas porque há onze perfis na D44.
+- [ ] Relacionar cada entrevista, registo de notas/transcrição e excerto à codificação temática T/E, com datas e procedimentos na medida em que estão documentados.
+- [ ] Excluir o piloto sintético de qualquer conjunto de evidências de participantes reais.
+- [ ] Rever Capítulos III, IV, §5.5 e VI e a matriz N01–N18 segundo os resultados autênticos, não segundo percentagens históricas.
+- [ ] Não inventar participantes, depoimentos, consentimentos ou generalizações sobre a Cidade de Maputo.
+- [ ] Aplicar o [protocolo de verificação D59](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md) antes da integração na D44.
+
 
 ## P0-03 — Aprovar requisitos, estados e cronologia do manuscrito
 

@@ -13,7 +13,7 @@ Log de execução: `Running 1 test using 1 worker`; `D54: two JWT users, real op
 
 Uma primeira pipeline falhou **antes de iniciar o browser** porque Playwright 1.56.1 não é compatível com o runner `ubuntu26.04-x64`. A execução foi reproduzida com Ubuntu 24.04, suportado pelo runner seleccionado. As falhas de infra-estrutura estão distintas de defeitos da aplicação.
 
-A revisão posterior ao primeiro ensaio acrescentou **seis capturas automáticas em pontos definidos**, com dados de teste sintéticos, e imobilizou o SHA do backend no workflow. O estado destas novas imagens deve ser confirmado no run mais recente; não presumir que artefactos foram gerados apenas porque o código os solicita.
+A revisão posterior ao primeiro ensaio acrescentou **seis capturas automáticas em pontos definidos**, com dados de teste sintéticos, e imobilizou o SHA do backend no workflow. A nova execução [D54 GitHub Actions #41600019575](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41600019575) terminou com **1/1 teste Playwright aprovado**, verificações de TypeScript e build concluídas, e o artefacto visual foi **efectivamente publicado** no GitHub Actions. O backend foi fixado em `ced54117d2db0db9e049086fcc975dd4f36807e0`, evitando alterações silenciosas da branch entre ensaios.
 
 ## 2. Percurso executado no browser
 
@@ -43,6 +43,8 @@ A revisão posterior ao primeiro ensaio acrescentou **seis capturas automáticas
 | `05-versao-v2-vigente.png` | Substituição por nova versão | Evidenciar SUPERSEDED/ACCEPTED |
 | `06-versao-v3-rejeitada.png` | Rejeição fundamentada | Evidenciar preservação do acordo vigente |
 
+**Artefacto confirmado:** [d54-real-browser-screenshots (ZIP, GitHub Actions)](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41600019575/artifacts/13213853540), ID `13213853540`, 570 409 bytes, gerado em **03-11-2026 08:01 UTC**, com expiração agendada para **03-12-2026 08:01 UTC**. São seis imagens capturadas em passos do teste, conforme código Playwright. O conteúdo visual ainda carece de inspecção editorial de resolução, margens e legibilidade antes da integração no Word.
+
 **Cautela:** capturas de um browser automatizado com dados fictícios são evidências visuais legítimas do estado do protótipo, **não** fotografias de utilizadores reais nem resultados de entrevistas ou medições de usabilidade. As legendas devem indicar «interface do protótipo — execução automatizada com dados de teste». Não usar para fundamentar estatísticas do mercado.
 
 ## 4. Rastreamento com requisitos e hipóteses
@@ -68,7 +70,8 @@ A redacção requer revisão da autora e da supervisão, confirmação da versã
 
 - [x] Executar Playwright contra **React e Django reais**, com duas contas distintas.
 - [x] Confirmar um cenário integrado completo com v1 aceite, v2 substituída e v3 rejeitada.
-- [ ] Confirmar capturas na última execução e disponibilizar o artefacto visual.
+- [x] Confirmar capturas na última execução e disponibilizar o artefacto visual: [CI #41600019575](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41600019575), [ZIP das seis capturas](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41600019575/artifacts/13213853540).
+- [ ] Inspeccionar visualmente cada imagem antes de decidir se substitui os placeholders 5.13–5.19; seis capturas não equivalem automaticamente a sete figuras previstas.
 - [ ] Testar multiplos cenários de browser negativos, navegação em outras resoluções e erros de sessão/servidor.
 - [ ] Executar os mesmos fluxos sobre PostgreSQL com concorrência, não só SQLite.
 - [ ] Corrigir configurações inseguras de desenvolvimento antes de qualquer publicação.

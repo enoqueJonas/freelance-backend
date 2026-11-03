@@ -27,7 +27,7 @@ No backend, foram acrescentadas duas **listagens restritas por autorização**: 
 | [CI backend D53 #41484092825](https://github.com/enoqueJonas/freelance-backend/actions/runs/41484092825) | Django/DRF com SQLite temporário, testes D50–D53 | **71/71 testes aprovados**; `manage.py check` sem problemas, `makemigrations --check --dry-run` sem alterações | Não prova que React enviou pedidos nem que UI é usável |
 | [CI frontend D53 #41486079214](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41486079214) | Cliente HTTP com `fetch` simulado, TypeScript e compilação | **6/6 testes do cliente aprovados**, `npm run lint` e `npm run build` concluídos na revisão mais recente | Não é teste com browser real nem Django em execução |
 | Revisão estrutural do código | Rota React isolada e cliente sem dependência de mock | Percurso programado e ligado aos endpoints identificados | Sem captura real de browser nem execução por participante |
-| V02/V03/V04 da monografia | Cenários académicos completos de ponta a ponta | **Ainda não executados** | Não se pode marcar «Aprovado» no quadro da D44 |
+| V02/V03 da monografia | Publicação/proposta e acordo versionado | **Ainda não executados integralmente nesta etapa** | V04 corresponde a execução/entrega, não a acordos |
 
 A última revisão frontend inclui a correcção de retorno ao formulário de login após terminar a sessão e a substituição do README genérico. O CI [#41486079214](https://github.com/enoqueJonas/freelance-frontend/actions/runs/41486079214) verificou **6/6 testes do cliente, TypeScript e build**, todos com resultado positivo.
 
@@ -45,7 +45,7 @@ A última revisão frontend inclui a correcção de retorno ao formulário de lo
 
 **Cenário V02 (parcial):** empregador publica oportunidade, trabalhador de outra conta encontra-a e submete proposta, empregador recebe e aceita. Validar estados e autorização de terceiros.
 
-**Cenário V03/V04 (parcial):** contratação inicia PENDING_AGREEMENT; uma parte propõe v1, ambas aceitam a mesma versão e passam a ACTIVE; criar v2, rejeitar e verificar persistência de v1; propor v3 e aceitar bilateralmente para validar estado SUPERSEDED/ACCEPTED.
+**Cenário V03 (parcial):** contratação inicia PENDING_AGREEMENT; uma parte propõe v1, ambas aceitam a mesma versão e passam a ACTIVE; criar v2, rejeitar e verificar persistência de v1; propor v3 e aceitar bilateralmente para validar estado SUPERSEDED/ACCEPTED. **V04 exige ExecutionRecord, entrega e conclusão, e não é exercitado por este fluxo.**
 
 **Evidência necessária:** identificadores de revisão do software, timestamps de execução, vídeo/capturas do browser, registos de requests/responses sem segredos, estados persistidos no backend e resultado por passo. Não incluir tokens JWT em capturas ou documentação.
 
@@ -60,7 +60,8 @@ A última revisão frontend inclui a correcção de retorno ao formulário de lo
 | RF07/RF11/RF12 | Criar/publicar, propor e seleccionar, com API testada e componentes React programados |
 | RF13/RF14/RN06 | Aceitação inicial e versionamento no backend; interface React adicionada; sem browser E2E comprovado |
 | RNF02/RNF03/RNF04 | Controlo básico de acesso e histórico de versões; **não** segurança/conformidade integral |
-| V02/V03/V04 | **Não executados na sua íntegra** |
+| V02/V03 | **Fluxos ainda não executados na sua íntegra** |
+| V04 — execução/entrega | **Não executado** |
 
 ## 6. Critérios de fecho
 

@@ -17,6 +17,8 @@
 - [ ] Exportar DOCX + PDF e inspeccionar todas as páginas para sobreposição, margens e numeração.
 - [ ] Verificar que não há textos do auditor, prompts, mensagens de commit ou placeholders involuntários no corpo final.
 
+**Adenda D58 — descoberta crítica em versão histórica:** o `DraftMonografia.docx` afirma **83 participantes (68 trabalhadores, 15 empregadores) de 1 a 30-07-2025**, com questionários, entrevistas, observação e percentagens. A Figura 2 refere **30 respostas (96,7% trabalhadores; 3,3% empregadores)**, sem reconciliação dos denominadores e subconjuntos. Estes números e procedimentos ainda **não foram autenticados**; o corpus D44 tem onze perfis textuais de origem independente não confirmada. A prioridade **é recuperar os dados originais de 2025 antes de iniciar entrevistas novas ou aceitar a reformulação documental**. Consultar [D58 — auditoria 83 vs 11](D58_AUDITORIA_83_PARTICIPANTES_VS_11_PERFIS.md) e [protocolo de recuperação/recolha](D58_PROTOCOLO_VERIFICACAO_E_RECOLHA_EMPIRICA.md).
+
 ## P0-02 — Resolver proveniência de entrevistas e desenho científico
 
 **Situação actual:** o piloto com 11 entrevistas está expressamente identificado como sintético; T01–T08 e E01–E03 não dispõem de documentação primária suficiente para comprovar recolha independente. D44 §§1.6, 3.2.2 e 6.1 reconhecem o problema; §§1.2, 3.2.1 e 3.5 contradizem-no.

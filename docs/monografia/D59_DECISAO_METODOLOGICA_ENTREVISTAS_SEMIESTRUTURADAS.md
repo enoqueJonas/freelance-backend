@@ -4,6 +4,8 @@
 **Âmbito:** monografia de Chirley da Techa Narciso Mtefula, protótipo ConecTA / ServiPlus.  
 **Origem:** esclarecimento explícito do responsável pela revisão: **«A recolha que ocorreu foi a de entrevistas semiestruturadas. Esqueça os questionários.»**
 
+> **RECTIFICAÇÃO D60 (posterior):** foi entregue um DOCX de 21 páginas com perguntas e respostas completas de T01–T08/E01–E03. O responsável confirmou que **esta é a transcrição literal original, não editada**. Logo, deixam de ser válidas as dúvidas anteriores sobre «respostas editadas», «transcrições perdidas» ou inexistência de registo primário textual. Estão presentes onze blocos textuais; importa ainda documentar como foram registados, selecção/consentimento e confronto com a codificação D44. Ver [D60](D60_CONFIRMACAO_TRANSCRICOES_LITERAIS.md). Áudio não é condição obrigatória para classificar um registo textual como transcrição, mas não se deve afirmar que houve verificação com áudio.
+
 ## 1. Decisão obrigatória para as próximas revisões
 
 1. **Técnica de recolha adoptada:** entrevistas semiestruturadas, com tratamento **qualitativo**.
@@ -20,10 +22,10 @@
 
 A técnica de recolha está definida. A pendência é **documental**, não uma dúvida sobre se a técnica deve ser questionário ou entrevista:
 
-- [ ] Localizar a versão do guião semiestruturado efectivamente utilizada.
-- [ ] Identificar o **número real de entrevistas realizadas**, apenas com base nos registos de execução (não inferir `n=11` a partir da codificação).
+- [x] Localizar os cinco blocos do guião semiestruturado no documento entregue; conferir se a versão apresentada corresponde ao instrumento aplicado.
+- [x] Identificar onze transcrições textuais completas, T01–T08/E01–E03; o responsável confirma que representam as entrevistas realizadas. O número consta também da ficha do documento. A validação externa do cronograma é separada.
 - [ ] Relacionar cada registo com um identificador pseudónimo, contexto/data aproximados e origem verificável, quando disponíveis.
-- [ ] Obter notas, transcrições ou gravações consentidas, ou outra documentação primária que permita verificar o conteúdo; evitar publicação de dados pessoais em repositório aberto.
+- [x] Obter o documento de **transcrições literais originais** com perguntas/respostas de onze entrevistados. [ ] Descrever como foi produzido e os procedimentos reais de consentimento; não pressupor gravação áudio nem publicar dados pessoais no GitHub.
 - [ ] Distinguir entrevistas reais, registos de trabalho, piloto sintético e comentários ou sínteses editoriais.
 - [ ] Documentar critérios de escolha de participantes, procedimento de entrevista, questões éticas e técnica de análise temática efectivamente seguida.
 - [ ] Reconstruir uma matriz **excerto da entrevista → código → tema → necessidade N01–N18 → requisito RN/RF/RNF**, com localização rastreável e casos divergentes.
@@ -62,4 +64,4 @@ A técnica de recolha está definida. A pendência é **documental**, não uma d
 - [ ] Rever o Capítulo III, Capítulo IV, §5.5 e Capítulo VI na cópia **editável original** da monografia, após conferência dos registos da entrevista.
 - [ ] Não editar o DOCX por reconstrução a partir de texto extraído; preservar figuras, índices e comentários da supervisão.
 
-**Estado de validação:** método confirmado pela orientação recebida; quantidade, conteúdo e proveniência individual das entrevistas **ainda não certificados pelos ficheiros originais disponíveis**. A D44 permanece sem edição directa.
+**Estado de validação actualizado pela D60:** método confirmado; documento de 21 páginas com onze blocos de perguntas/respostas recebido e classificado pelo responsável como **transcrição literal não editada**. A quantidade textual e o conteúdo estão disponíveis para análise; continuam pendentes os metadados de produção, procedimentos éticos e comparação temática com a D44. A D44 permanece sem edição directa.

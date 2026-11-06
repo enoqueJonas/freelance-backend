@@ -1,5 +1,7 @@
 # D45 — Fundamentação metodológica, fontes científicas e decisões de enquadramento
 
+> **SUPERADO EM PARTE POR D60–D62:** este diagnóstico D45 foi escrito antes de receber as onze transcrições literais de entrevistas e antes da decisão de **primazia documental + entrevistas subsidiárias**. Estão ultrapassadas as afirmações de que as entrevistas não foram realizadas ou de que a abordagem deve ser apenas documental por inexistência de registos. Ver [D60](D60_CONFIRMACAO_TRANSCRICOES_LITERAIS.md), [D61](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md) e [D62](D62_AUDITORIA_FONTES_DOCUMENTAIS_N01_N18.md). As correções bibliográficas históricas de D45 ainda devem ser confrontadas com a edição efetiva e com a data de submissão do manuscrito.
+
 **Base:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, 82 páginas (consultada em texto extraído).  
 **Estado deste documento:** proposta científica/recomendações e auditoria de bibliografia; **não altera a D44**.  
 **Data:** 02-11-2026.  

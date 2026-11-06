@@ -1,5 +1,7 @@
 # D61 — Plano de integração do guião e transcrições no anexo da D44
 
+> **D66 — execução do anexo:** produzido e verificado um DOCX autónomo de 23 páginas, `D66_Anexos_Entrevistas_Semiestruturadas_ConecTA.docx`, com os cinco blocos do guião, T01–T08/E01–E03 e **183 perguntas/183 respostas/11 perfis confrontados carácter por carácter com o original**; inquérito estruturado excluído. Ficheiro entregue no chat, **não publicado neste repositório**. Ver [preflight D66](D66_PREFLIGHT_INTEGRACAO_ANEXOS.md). A **D44 original permanece sem alterações**, pois os bytes do ficheiro canónico não estão acessíveis para edição segura.
+
 **Objectivo:** reproduzir a **função editorial**, não os dados, do precedente blockchain/Xitique: requisitos fundamentados principalmente na revisão documental; referência breve a alguns depoimentos no corpo; **guião semiestruturado e respostas no ANEXO**.  
 **Estatuto:** instruções para edição controlada. **O DOCX D44 canónico não foi modificado.**  
 **Fonte a preservar:** `Estudo_de_Mercado_Entrevistas_e_Inquerito_TI_Maputo(1).docx` (21 páginas), SHA-256 `e85420e8d306c3914028fd75f24e56624d90d0df649e916ce9a49c6025a3e64f`; o responsável declarou que os blocos T01–T08/E01–E03 são **transcrição literal não editada**.

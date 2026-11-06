@@ -1,5 +1,7 @@
 # D46 — Livro de evidências das hipóteses N01–N18: origem, inferência e prova pendente
 
+> **ADENDA D61 (06-11-2026):** o nível `E1` e a ausência de originais descritos abaixo referem-se **ao estado da investigação na D46**. Posteriormente foi recebido um DOCX com onze transcrições literais, confirmado pelo responsável como não editado. **Não se deve, contudo, alterar automaticamente todos os N01–N18 para «origem entrevista» ou «validado»: a análise documental permanece a fonte principal, e a relação `ENT→N` é complementar/selectiva.** A matriz vigente de apoio é [D61](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md). A revisão das referências/documentos deve identificar o recorte de origem de cada decisão de requisito. Este ficheiro permanece uma auditoria histórica e necessita de reconciliação antes da integração no Word.
+
 **Monografia de referência:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, sobretudo §§4.1–4.16 (pp. 36–43), regras §5.2 e Quadro A.2.  
 **Complementos:** `CAPITULO_IV_REVISAO_INTEGRAL_D46.md` e `MATRIZ_N01_N18_RASTREABILIDADE_D45.md`.  
 **Âmbito:** cruzamento das afirmações **presentes no texto da D44**, não reconstrução de transcrições. Este ficheiro **não é prova de entrevistas** e não certifica a origem dos registos T/E.

@@ -1,5 +1,7 @@
 # D57 — Revisão das conclusões e correcções transversais da D44
 
+> **EVOLUÇÃO D65 (06-11-2026):** a conclusão/recomendações (Capítulo VI) deste relatório D57 foram **substituídas como candidato preferido** pela [D65 — Capítulo VI integral e discussão das hipóteses](D65_DISCUSSÃO_HIPOTESES_CAPITULOS_V_VI.md). Esta D57 conserva utilidade para **patches transversais P01–P13 e Apêndice A**, não devendo ser integrada isoladamente como conclusão final. A D65 respeita D60–D64 e o estado real dos ensaios V01–V08.
+
 **Objectivo:** preparar alterações académicas defensáveis, coerentes com a revisão proposta do Capítulo V, a proveniência documental e os ensaios D50–D56. **Documento de revisão, não texto já inserido na monografia.**  
 **Documento original:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, pp. 11–18, 31–35, 44–66 e 80–82.  
 **Dependência:** [D57_CAPITULO_V_REVISAO_INTEGRAL.md](D57_CAPITULO_V_REVISAO_INTEGRAL.md) e [D57_MATRIZ_VALIDACAO_V01_V08_RNF.md](D57_MATRIZ_VALIDACAO_V01_V08_RNF.md).

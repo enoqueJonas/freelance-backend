@@ -6,6 +6,8 @@
 
 > **DECISÃO D59 — actualização metodológica vinculativa:** a recolha foi realizada por **entrevistas semiestruturadas**. Não utilizar questionários, percentagens, gráficos nem denominadores do draft antigo para fundamentar a monografia. A pendência é verificar documentalmente a quantidade de entrevistas efectivamente realizadas, os seus guiões, notas/transcrições e a relação dos registos com T01–T08/E01–E03, mantendo o piloto sintético separado. A ausência de ficheiros originais nos sistemas consultados não permite concluir que as entrevistas não tenham ocorrido. Ver [D59 — decisão metodológica](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md).
 
+> **Actualização D60:** o responsável confirmou que o DOCX de 21 páginas agora entregue contém as **onze transcrições literais originais não editadas**, identificadas como T01–T08/E01–E03. A descrição anterior de ausência de registos primários textuais está ultrapassada. Prossegue a análise temática, a conferência das condições de produção/consentimento e a correspondência com a D44; gravações áudio não são obrigatórias. Ver [D60](D60_CONFIRMACAO_TRANSCRICOES_LITERAIS.md).
+
 ## I. Substituições cirúrgicas de inconsistências verificadas
 
 **P01 — Justificativa, §1.2, p. 13.**

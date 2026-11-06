@@ -1,5 +1,7 @@
 # D62 — Emendas prontas para revisão: Capítulo II, Capítulo IV e ponte com requisitos
 
+> **ESTADO D63:** as emendas aqui sugeridas para o Capítulo IV foram desenvolvidas numa [redacção integral 4.1–4.16](D63_CAPITULO_IV_CONSOLIDADO_DOCUMENTAL.md) com [controlo de alterações](D63_CONTROLO_ALTERACOES_CAPITULO_IV.md). As propostas relativas ao Capítulo II **continuam apenas candidatas**, ainda não integradas no DOCX. Evitar aplicar este ficheiro e D63 em duplicado.
+
 **Estado:** substituições **candidatas**, sem alterações directas à D44 Word.  
 **Hierarquia obrigatória:** análise documental **principal**; entrevistas semiestruturadas **complementares**, preservadas em anexo; decisão de engenharia explícita.  
 **Fundamentação:** [D62 — auditoria oficial e matriz N01–N18](D62_AUDITORIA_FONTES_DOCUMENTAIS_N01_N18.md), [D61 — apoio qualitativo selectivo](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md).  

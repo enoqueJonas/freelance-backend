@@ -21,19 +21,20 @@
 
 > **Actualização D60:** o responsável confirmou que o DOCX de 21 páginas agora entregue contém as **onze transcrições literais originais não editadas**, identificadas como T01–T08/E01–E03. A descrição anterior de ausência de registos primários textuais está ultrapassada. Prossegue a análise temática, a conferência das condições de produção/consentimento e a correspondência com a D44; gravações áudio não são obrigatórias. Ver [D60](D60_CONFIRMACAO_TRANSCRICOES_LITERAIS.md).
 
-## P0-02 — Documentar e relacionar entrevistas semiestruturadas efectivamente realizadas
+## P0-02 — Consolidar suporte documental principal e transcrições no anexo (D61)
 
-**Método confirmado pela D59:** entrevistas semiestruturadas; a opção por questionários ou a reformulação para investigação exclusivamente documental **não está em discussão**. O problema pendente é a rastreabilidade da recolha: a D44 apresenta perfis T01–T08/E01–E03, mas os respectivos originais não foram localizados no acervo acessível. Um piloto sintético também aparece no histórico e deve ficar separado.
+**Decisão metodológica de 06-11-2026:** o levantamento bibliográfico e a **análise documental são a base principal dos requisitos**, reproduzindo a estrutura da monografia blockchain/Xitique. As **entrevistas semiestruturadas são fonte qualitativa complementar** para decisões seleccionadas; o guião e as respostas serão apresentados nos **ANEXOS**. O responsável confirmou que o ficheiro entregue contém as **11 transcrições literais originais T01–T08/E01–E03**. Não solicitar questionários nem transformar todas as entrevistas em requisito ou validação de eficácia.
 
-- [x] Confirmar técnica de recolha: **entrevistas semiestruturadas**.
-- [ ] Localizar o guião realmente aplicado e a documentação de realização das entrevistas, respeitando privacidade e ética.
-- [ ] Registar o número efectivo de entrevistas a partir do arquivo original; **não assumir n=11** apenas porque há onze perfis na D44.
-- [ ] Relacionar cada entrevista, registo de notas/transcrição e excerto à codificação temática T/E, com datas e procedimentos na medida em que estão documentados.
-- [ ] Excluir o piloto sintético de qualquer conjunto de evidências de participantes reais.
-- [ ] Rever Capítulos III, IV, §5.5 e VI e a matriz N01–N18 segundo os resultados autênticos, não segundo percentagens históricas.
-- [ ] Não inventar participantes, depoimentos, consentimentos ou generalizações sobre a Cidade de Maputo.
-- [ ] Aplicar o [protocolo de verificação D59](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md) antes da integração na D44.
-
+- [x] Confirmar a técnica **entrevistas semiestruturadas** e excluir inquéritos, gráficos e percentagens históricos.
+- [x] Localizar fonte textual primária: **11 transcrições literais**, 21 páginas de documento, com perguntas e respostas.
+- [x] Elaborar [matriz D61 de apoio selectivo](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md), distinguindo origem documental, decisão de engenharia, apoio por entrevista e resultado técnico.
+- [x] Preparar [plano D61 do guião e dos 11 registos em anexo](D61_PLANO_ANEXOS_TRANSCRICOES.md), sem publicar corpus íntegro no GitHub.
+- [ ] Documentar a **fonte documental com recorte/página efectivamente utilizado** para cada grupo de decisões de requisitos; não inventar citações.
+- [ ] Conferir que os relatos e localizadores T01–T08/E01–E03 correspondem à codificação N01–N18 e aos vínculos RN/RF que serão aprovados.
+- [ ] Rever no original as informações de selecção dos participantes, produção das transcrições e procedimentos éticos/consentimento aplicáveis, sem presumir gravação áudio.
+- [ ] Excluir o piloto sintético de qualquer conjunto atribuído às entrevistas reais.
+- [ ] Reequilibrar o **Capítulo IV** e corrigir §§3.1–3.2, §5.5 e Capítulo VI; **não** declarar resultados populacionais nem eficácia do protótipo a partir das entrevistas.
+- [ ] Integrar o guião e **todas** as transcrições no anexo da D44 editável, após conferência de confidencialidade, normas de estrutura e paginação.
 
 ## P0-03 — Aprovar requisitos, estados e cronologia do manuscrito
 

@@ -8,6 +8,8 @@
 
 > **Actualização D60:** o responsável confirmou que o DOCX de 21 páginas agora entregue contém as **onze transcrições literais originais não editadas**, identificadas como T01–T08/E01–E03. A descrição anterior de ausência de registos primários textuais está ultrapassada. Prossegue a análise temática, a conferência das condições de produção/consentimento e a correspondência com a D44; gravações áudio não são obrigatórias. Ver [D60](D60_CONFIRMACAO_TRANSCRICOES_LITERAIS.md).
 
+> **D61 — hierarquia de fontes aprovada para a revisão:** fundamentação documental principal; entrevistas semiestruturadas **subsidiárias** para alguns requisitos; guião e onze transcrições no **anexo**, sem questionários. Ver [matriz D61](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md) e [plano de anexos](D61_PLANO_ANEXOS_TRANSCRICOES.md). Não tratar o corpus de entrevistas como origem universal de RF ou como teste de eficácia.
+
 ## I. Substituições cirúrgicas de inconsistências verificadas
 
 **P01 — Justificativa, §1.2, p. 13.**
@@ -16,7 +18,7 @@ Texto actual:
 > Do ponto de vista científico, o estudo permite relacionar literatura sobre plataformas digitais de trabalho, confiança, reputação, contratação e intermediação com evidência empírica recolhida no contexto delimitado da investigação.
 
 Texto candidato:
-> A investigação articula o enquadramento bibliográfico e documental com dados recolhidos por entrevistas semiestruturadas sobre a conexão e contratação de serviços de Tecnologias de Informação na Cidade de Maputo. A análise dos resultados deve apresentar rastreabilidade entre as entrevistas efectivamente realizadas, as categorias temáticas e as necessidades da solução, distinguindo-as do piloto sintético e das decisões de engenharia.
+> A revisão bibliográfica e a análise documental constituíram a **base principal** da fundamentação e especificação dos requisitos da plataforma. As entrevistas semiestruturadas com profissionais autónomos de TI e empregadores de Maputo foram utilizadas **complementarmente**, para ilustrar práticas específicas, apoiar ou questionar algumas decisões e registar casos divergentes. O guião e as transcrições são apresentados nos anexos; não se presume que todos os requisitos derivem directamente das entrevistas.
 
 Motivo: a técnica de recolha está confirmada como entrevista semiestruturada. Os registos originais ainda precisam de ser associados ao corpus T/E para sustentar as citações e categorias.
 
@@ -34,7 +36,7 @@ Texto actual:
 > As evidências documentais foram posteriormente confrontadas com os resultados das entrevistas.
 
 Texto candidato:
-> As fontes documentais foram confrontadas com os temas identificados na análise qualitativa das entrevistas semiestruturadas. Esta confrontação deve ser suportada por registos originais das entrevistas e por uma matriz de codificação que identifique fontes, excertos, temas e casos divergentes, não se confundindo entrevistas autênticas com dados do piloto sintético.
+> O levantamento bibliográfico e documental foi o **procedimento principal para identificar problemas e fundamentar requisitos**, com atenção às fontes científicas, institucionais e técnicas pertinentes. As entrevistas semiestruturadas foram examinadas como **apoio qualitativo a decisões seleccionadas**, com referência aos códigos T01–T08/E01–E03 e às transcrições literais nos anexos. A inclusão de uma funcionalidade depende de uma decisão de especificação justificada, não apenas de ter sido mencionada numa entrevista.
 
 Este trecho exige a correspondência entre os temas e os registos primários das entrevistas realizadas. A técnica está confirmada; faltam conferir as fontes individuais.
 
@@ -126,7 +128,7 @@ A capa da D44 indica **Setembro de 2025**, enquanto a bibliografia já contém p
 
 O presente trabalho procurou conceber e desenvolver um protótipo de aplicação web para apoiar a conexão entre trabalhadores autónomos da área de Tecnologias de Informação e empregadores na Cidade de Maputo. Para tal, foram sistematizadas fontes bibliográficas e documentais, cenários exploratórios de contratação, hipóteses de necessidades, regras de negócio, requisitos funcionais e não funcionais e modelos da solução, complementados por uma implementação técnica parcial e por ensaios automatizados.
 
-No que respeita ao primeiro objectivo específico, a investigação recorreu a **entrevistas semiestruturadas** e a fontes documentais para compreender o processo de conexão e contratação, contemplando descoberta de oportunidades, demonstração de competências, negociação, formalização, pagamentos, reputação e conflitos. Para apresentar os resultados empíricos com rigor, a codificação temática dos registos T01–T08/E01–E03 deve ser reconciliada com as entrevistas efectivamente realizadas, identificando a origem de cada tema, os casos divergentes e os limites da selecção de participantes. O piloto sintético previamente identificado não deve ser utilizado como evidência de depoimentos reais, e os resultados qualitativos não devem ser generalizados à população da Cidade de Maputo sem desenho adequado.
+No que respeita ao primeiro objectivo específico, a investigação recorreu **principalmente à revisão bibliográfica e à análise documental** para caracterizar os problemas e as alternativas de solução no processo de conexão e contratação, contemplando descoberta de oportunidades, demonstração de competências, negociação, formalização, pagamentos, reputação e conflitos. As **entrevistas semiestruturadas complementaram** esse exame, oferecendo exemplos qualitativos concretos e divergências relevantes para algumas decisões de requisitos. Para apresentar os resultados empíricos com rigor, a codificação temática dos registos T01–T08/E01–E03 deve ser reconciliada com as entrevistas efectivamente realizadas, identificando a origem de cada tema, os casos divergentes e os limites da selecção de participantes. O piloto sintético previamente identificado não deve ser utilizado como evidência de depoimentos reais, e os resultados qualitativos não devem ser generalizados à população da Cidade de Maputo sem desenho adequado.
 
 Quanto ao segundo objectivo, foi elaborada uma especificação de referência com **16 regras de negócio, 28 requisitos funcionais e sete requisitos não funcionais**, organizada em torno dos processos de identidade, oportunidades, propostas, contratação, alterações ao acordo, execução, pagamentos, reputação, conflitos e governação. A modelação conceptual produziu casos de uso, diagramas de classes, actividades, sequência e estados, bem como uma arquitectura lógica baseada em frontend React e API Django. A coerência da especificação foi avaliada por rastreabilidade documental, mas a sua adequação ao público-alvo permanece dependente de confirmação empírica e das decisões finais de aprovação da autora e da supervisão.
 
@@ -142,7 +144,7 @@ As limitações centrais do estudo abrangem a proveniência não confirmada dos 
 
 ### 6.2 Recomendações
 
-Recomenda-se, em primeiro lugar, **consolidar a documentação das entrevistas semiestruturadas já realizadas**, recuperando o guião efectivamente aplicado, os registos originais, a caracterização e selecção dos participantes, os procedimentos éticos e uma matriz que ligue cada excerto às categorias temáticas e às necessidades N01–N18. A quantidade de entrevistas deve corresponder ao arquivo real, não ser inferida dos onze perfis textuais presentes na D44. Só se identificarem lacunas substantivas deve ser ponderada recolha complementar, mediante decisão da autora e da supervisão.
+Recomenda-se, em primeiro lugar, **consolidar a rastreabilidade da revisão documental que fundamentou os requisitos**, indicando a fonte e o recorte consultado para as decisões principais. Como apoio complementar, o guião e as onze transcrições literais das entrevistas semiestruturadas devem constar dos anexos, preservando-se as respostas e relacionando apenas excertos pertinentes a necessidades seleccionadas. Documentar também a selecção dos participantes, os procedimentos éticos e a forma de produção do registo textual, sem pressupor gravação áudio. A quantidade de entrevistas deve corresponder ao arquivo real, não ser inferida dos onze perfis textuais presentes na D44. Só se identificarem lacunas substantivas deve ser ponderada recolha complementar, mediante decisão da autora e da supervisão.
 
 No plano técnico, recomenda-se consolidar e rever os PRs de desenvolvimento que implementaram o núcleo de contratação, estabelecendo uma revisão estável do protótipo. Devem ser completados os campos e regras de prazos e entregáveis dos acordos, a gestão do ciclo de execução e entrega, a manutenção de histórico de eventos, a gestão de pagamentos sem custódia própria de fundos, a reputação bilateral com possibilidade de contestação e o reporte/acompanhamento administrativo de conflitos. A integração externa com prestadores financeiros deverá permanecer facultativa, desacoplada e sujeita a validação específica.
 

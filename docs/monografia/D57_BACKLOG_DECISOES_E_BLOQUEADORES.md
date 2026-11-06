@@ -1,5 +1,7 @@
 # D57 — Registo de decisões pendentes e tarefas P0/P1 da monografia
 
+> **D62 — progresso documental:** [12 fontes da D44 verificadas quanto à existência/alcance e matriz N01–N18](D62_AUDITORIA_FONTES_DOCUMENTAIS_N01_N18.md); [emendas candidatas Capítulos II/IV](D62_EMENDAS_CAPITULOS_II_IV.md). O bloco documental está **auditado por tema**, mas faltam páginas internas completas das edições PDF, a verificação do enquadramento legal financeiro de 2026 e a ratificação dos vínculos pelas decisões da autora. Não declarar bibliografia integralmente auditada nem DOCX actualizado.
+
 **Data:** 03-11-2026. **Estado:** backlog operacional; não implica autorização, aprovação ou tarefa concluída.  
 **Ramo:** `audit/monografia-d45-coerencia-cientifica`, PR académico #2.  
 **Nota de gestão:** foi tentada a criação de Issues GitHub para estes bloqueadores, mas a API devolveu **HTTP 410 — "Issues has been disabled in this repository"**. Por conseguinte, as tarefas ficam aqui, no repositório versionado. Não inventar IDs ou links de issues que não existem.

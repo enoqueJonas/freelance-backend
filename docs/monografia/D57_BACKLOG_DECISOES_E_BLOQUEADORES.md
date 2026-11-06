@@ -19,6 +19,8 @@
 
 **Actualização D59 — decisão de metodologia:** a recolha foi realizada por **entrevistas semiestruturadas**, sem questionários. Alegações quantitativas do draft anterior foram arquivadas, **fora do escopo**. Não voltar a pedir ficheiros de respostas, validar percentagens nem programar inquéritos. A tarefa activa consiste em conferir o **arquivo primário das entrevistas efectivamente realizadas**, a quantidade e o vínculo com a codificação T01–T08/E01–E03, separando o piloto sintético. Consultar [D59](D59_DECISAO_METODOLOGICA_ENTREVISTAS_SEMIESTRUTURADAS.md) e [protocolo actualizado](D58_PROTOCOLO_VERIFICACAO_E_RECOLHA_EMPIRICA.md).
 
+> **Actualização D60:** o responsável confirmou que o DOCX de 21 páginas agora entregue contém as **onze transcrições literais originais não editadas**, identificadas como T01–T08/E01–E03. A descrição anterior de ausência de registos primários textuais está ultrapassada. Prossegue a análise temática, a conferência das condições de produção/consentimento e a correspondência com a D44; gravações áudio não são obrigatórias. Ver [D60](D60_CONFIRMACAO_TRANSCRICOES_LITERAIS.md).
+
 ## P0-02 — Documentar e relacionar entrevistas semiestruturadas efectivamente realizadas
 
 **Método confirmado pela D59:** entrevistas semiestruturadas; a opção por questionários ou a reformulação para investigação exclusivamente documental **não está em discussão**. O problema pendente é a rastreabilidade da recolha: a D44 apresenta perfis T01–T08/E01–E03, mas os respectivos originais não foram localizados no acervo acessível. Um piloto sintético também aparece no histórico e deve ficar separado.

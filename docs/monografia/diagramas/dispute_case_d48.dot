@@ -1,0 +1,19 @@
+digraph DisputeLifecycle {
+  graph [rankdir=LR, bgcolor="white", pad="0.34", nodesep="0.52", ranksep="0.9", splines=true, label="Acompanhamento do conflito (DisputeCase)", labelloc=t, fontsize=18, fontname="DejaVu Sans", fontcolor="#172235"];
+  node [shape=box, style="rounded,filled", fillcolor="#F3F7FA", color="#64748B", fontcolor="#16253A", fontsize=12, fontname="DejaVu Sans", penwidth=1.2, margin="0.19,0.13"];
+  edge [color="#475569", fontcolor="#344256", fontsize=10, fontname="DejaVu Sans", arrowsize=0.75, penwidth=1.1];
+  start [shape=point, width=0.13, fillcolor="#334155", color="#334155", label=""];
+  opened [label="OPEN\nreportado"];
+  review [label="UNDER_REVIEW\nem análise", fillcolor="#F1F4FA", color="#617AAB"];
+  waiting [label="WAITING_INFORMATION\naguarda informação"];
+  resolved [label="RESOLVED\nresultado registado", fillcolor="#E9F4F1", color="#417E76"];
+  closed [label="CLOSED\nencerramento registado", fillcolor="#E9F4F1", color="#417E76"];
+  end [shape=doublecircle, width=0.19, fixedsize=true, color="#334155", label="", fillcolor="white"];
+  start -> opened;
+  opened -> review [label="iniciar análise"];
+  review -> waiting [label="pedir elementos"];
+  waiting -> review [label="elementos recebidos", constraint=false];
+  review -> resolved [label="registar resultado"];
+  resolved -> closed [label="encerramento"];
+  closed -> end;
+}

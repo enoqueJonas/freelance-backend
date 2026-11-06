@@ -1,0 +1,12 @@
+digraph PaymentLifecycle {
+  graph [rankdir=LR, bgcolor="white", pad="0.30", nodesep="0.52", ranksep="0.9", splines=true, label="Registo de pagamento externo (PaymentRecord)", labelloc=t, fontsize=18, fontname="DejaVu Sans", fontcolor="#172235"];
+  node [shape=box, style="rounded,filled", fillcolor="#F3F7FA", color="#64748B", fontcolor="#16253A", fontsize=12, fontname="DejaVu Sans", penwidth=1.2, margin="0.19,0.13"];
+  edge [color="#475569", fontcolor="#344256", fontsize=10, fontname="DejaVu Sans", arrowsize=0.75, penwidth=1.1];
+  start [shape=point, width=0.13, fillcolor="#334155", color="#334155", label=""];
+  reported [label="REPORTED_PAID\npagamento declarado"];
+  confirmed [label="CONFIRMED\npagamento confirmado", fillcolor="#E9F4F1", color="#417E76"];
+  disputed [label="DISPUTED\npagamento contestado", fillcolor="#FBEDED", color="#B77975"];
+  start -> reported [label="registo externo"];
+  reported -> confirmed [label="confirmação válida"];
+  reported -> disputed [label="contestação"];
+}

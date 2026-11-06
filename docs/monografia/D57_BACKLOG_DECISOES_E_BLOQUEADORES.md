@@ -1,5 +1,7 @@
 # D57 — Registo de decisões pendentes e tarefas P0/P1 da monografia
 
+> **D63 — progresso no Capítulo IV:** publicada a [revisão integral 4.1–4.16](D63_CAPITULO_IV_CONSOLIDADO_DOCUMENTAL.md) e o [mapa de controlo](D63_CONTROLO_ALTERACOES_CAPITULO_IV.md). Os 18 N foram preservados, a hierarquia documental foi corrigida e as entrevistas continuam apoio pontual. **O DOCX original não foi editado**, nem os anexos inseridos; o Capítulo III é o próximo bloco de reconciliação.
+
 > **D62 — progresso documental:** [12 fontes da D44 verificadas quanto à existência/alcance e matriz N01–N18](D62_AUDITORIA_FONTES_DOCUMENTAIS_N01_N18.md); [emendas candidatas Capítulos II/IV](D62_EMENDAS_CAPITULOS_II_IV.md). O bloco documental está **auditado por tema**, mas faltam páginas internas completas das edições PDF, a verificação do enquadramento legal financeiro de 2026 e a ratificação dos vínculos pelas decisões da autora. Não declarar bibliografia integralmente auditada nem DOCX actualizado.
 
 **Data:** 03-11-2026. **Estado:** backlog operacional; não implica autorização, aprovação ou tarefa concluída.  

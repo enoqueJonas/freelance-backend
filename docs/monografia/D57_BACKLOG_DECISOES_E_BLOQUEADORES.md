@@ -1,5 +1,7 @@
 # D57 — Registo de decisões pendentes e tarefas P0/P1 da monografia
 
+> **D64 — Capítulo III e coerência do Capítulo I:** concluídas propostas integrais para [§§3.1–3.7](D64_CAPITULO_III_METODOLOGIA_CONSOLIDADA.md) e [correcções §§1.6, 1.7 e 1.9](D64_CORRECOES_CAPITULO_I_E_CONTROLO.md). Fundamentação documental principal, entrevistas semiestruturadas subsidiárias e validação técnica foram separadas, preservando os 11 registos literais e os casos V01–V08 com os estados da D57. São **textos candidatos**, não inseridos na D44. Pendências: ética/consentimento e modo de registo realmente ocorridos, páginas exactas das fontes, anexos e Word original editável.
+
 > **D63 — progresso no Capítulo IV:** publicada a [revisão integral 4.1–4.16](D63_CAPITULO_IV_CONSOLIDADO_DOCUMENTAL.md) e o [mapa de controlo](D63_CONTROLO_ALTERACOES_CAPITULO_IV.md). Os 18 N foram preservados, a hierarquia documental foi corrigida e as entrevistas continuam apoio pontual. **O DOCX original não foi editado**, nem os anexos inseridos; o Capítulo III é o próximo bloco de reconciliação.
 
 > **D62 — progresso documental:** [12 fontes da D44 verificadas quanto à existência/alcance e matriz N01–N18](D62_AUDITORIA_FONTES_DOCUMENTAIS_N01_N18.md); [emendas candidatas Capítulos II/IV](D62_EMENDAS_CAPITULOS_II_IV.md). O bloco documental está **auditado por tema**, mas faltam páginas internas completas das edições PDF, a verificação do enquadramento legal financeiro de 2026 e a ratificação dos vínculos pelas decisões da autora. Não declarar bibliografia integralmente auditada nem DOCX actualizado.
@@ -37,7 +39,7 @@
 - [ ] Conferir que os relatos e localizadores T01–T08/E01–E03 correspondem à codificação N01–N18 e aos vínculos RN/RF que serão aprovados.
 - [ ] Rever no original as informações de selecção dos participantes, produção das transcrições e procedimentos éticos/consentimento aplicáveis, sem presumir gravação áudio.
 - [ ] Excluir o piloto sintético de qualquer conjunto atribuído às entrevistas reais.
-- [ ] Reequilibrar o **Capítulo IV** e corrigir §§3.1–3.2, §5.5 e Capítulo VI; **não** declarar resultados populacionais nem eficácia do protótipo a partir das entrevistas.
+- [x] Preparar propostas integrais do **Capítulo IV D63** e do **Capítulo III D64**, mantendo documental principal e entrevistas subsidiárias. [ ] Integrar essas propostas ao Word e reconciliar §5.5/Capítulo VI; não declarar resultados populacionais nem eficácia do protótipo a partir das entrevistas.
 - [ ] Integrar o guião e **todas** as transcrições no anexo da D44 editável, após conferência de confidencialidade, normas de estrutura e paginação.
 
 ## P0-03 — Aprovar requisitos, estados e cronologia do manuscrito

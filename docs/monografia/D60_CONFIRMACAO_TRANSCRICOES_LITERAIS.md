@@ -1,5 +1,7 @@
 # D60 — Rectificação de proveniência: onze transcrições literais de entrevistas semiestruturadas
 
+> **D61 — clarificação de função metodológica:** a confirmação de transcrições literais permite fazer referências exactas às entrevistas, **mas não converte os depoimentos em fonte principal dos RF**. Conforme orientação da autoria e precedente blockchain/Xitique, os requisitos continuam fundamentados **primordialmente em fontes bibliográficas/documentais**, com **apoio pontual das entrevistas**; o guião e as respostas constarão no anexo. Ver [matriz D61](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md) e [plano do anexo](D61_PLANO_ANEXOS_TRANSCRICOES.md).
+
 **Estado:** rectificação factual da avaliação D58–D59, com base na confirmação expressa do responsável pela revisão.  
 **Fonte entregue:** `Estudo_de_Mercado_Entrevistas_e_Inquerito_TI_Maputo(1).docx`, 21 páginas, com blocos de perguntas e respostas T01–T08/E01–E03. **Não inserir o conteúdo integral das entrevistas num repositório aberto.**
 

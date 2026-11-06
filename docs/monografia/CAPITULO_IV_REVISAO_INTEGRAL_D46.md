@@ -1,5 +1,7 @@
 # D46 — Proposta integral de revisão do Capítulo IV (texto para integração controlada)
 
+> **SUPERADO TAMBÉM PELA D63 (06-11-2026):** existe agora uma [redacção integral candidata do Capítulo IV 4.1–4.16](D63_CAPITULO_IV_CONSOLIDADO_DOCUMENTAL.md), acompanhada de [mapa de alterações e verificação estrutural](D63_CONTROLO_ALTERACOES_CAPITULO_IV.md). Esta versão D46 **não deve ser integrada** na D44. A nova D63 é documental como base principal, com entrevistas T/E em função complementar e onze transcrições previstas em anexo. O documento D46 fica guardado apenas para histórico.
+
 > **SUPERADO PARA INTEGRAÇÃO NA D44 — DECISÃO D61 (06-11-2026):** este texto D46 foi escrito quando os originais de entrevista ainda não tinham sido recebidos e atribui aos registos um estatuto exploratório sem proveniência confirmada. **Esses pressupostos estão ultrapassados:** foram entregues as 11 transcrições literais, conforme D60, e a autoria definiu que **a análise bibliográfica e documental é a fonte PRINCIPAL dos requisitos; entrevistas são apenas apoio qualitativo a alguns requisitos**, com perguntas/respostas nos anexos. **Não copiar este Capítulo IV D46 na monografia sem reescrever a hierarquia das fontes.** Referências vigentes: [D61 matriz documental e apoio](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md), [D61 plano de anexos](D61_PLANO_ANEXOS_TRANSCRICOES.md). O documento D46 é mantido como histórico de auditoria.
 
 **Documento-base:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, pp. 36–43.  

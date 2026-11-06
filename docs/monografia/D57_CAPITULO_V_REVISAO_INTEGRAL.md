@@ -1,5 +1,7 @@
 # D57 — Proposta de revisão integral do Capítulo V, com estado técnico actualizado
 
+> **EVOLUÇÃO D65 (06-11-2026):** esta D57 permanece referência para §§5.3–5.4, tabelas de implementação e ensaios, mas a **redacção de §5.5/discussão das hipóteses foi consolidada e substituída** em [D65 — discussão e Capítulo VI](D65_DISCUSSÃO_HIPOTESES_CAPITULOS_V_VI.md), com [mapa de controlo](D65_CONTROLO_COERENCIA_E_HIPOTESES.md). Não copiar a antiga §5.5 D57 para o Word em lugar da D65; as entrevistas são **subsidiárias** e os requisitos principalmente documentais. D65 não substitui os detalhes de §§5.3–5.4.
+
 **Natureza:** substituição textual candidata e controlada dos §§5.3–5.5 da D44, além de orientações para Quadros 5.3–5.4, Figuras 5.13–5.19 e Apêndice A. **Não aplicada ao DOCX original.**  
 **Referência canónica:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, Capítulo V pp. 44–63 e Apêndice A pp. 80–82.  
 **Estado de referência técnica:** 03-11-2026, PRs **draft e não integrados na branch principal**: backend #3–#7; frontend #1, #2, #4, #5.  

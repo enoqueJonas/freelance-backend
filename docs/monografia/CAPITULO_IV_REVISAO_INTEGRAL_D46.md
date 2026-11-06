@@ -1,5 +1,7 @@
 # D46 — Proposta integral de revisão do Capítulo IV (texto para integração controlada)
 
+> **SUPERADO PARA INTEGRAÇÃO NA D44 — DECISÃO D61 (06-11-2026):** este texto D46 foi escrito quando os originais de entrevista ainda não tinham sido recebidos e atribui aos registos um estatuto exploratório sem proveniência confirmada. **Esses pressupostos estão ultrapassados:** foram entregues as 11 transcrições literais, conforme D60, e a autoria definiu que **a análise bibliográfica e documental é a fonte PRINCIPAL dos requisitos; entrevistas são apenas apoio qualitativo a alguns requisitos**, com perguntas/respostas nos anexos. **Não copiar este Capítulo IV D46 na monografia sem reescrever a hierarquia das fontes.** Referências vigentes: [D61 matriz documental e apoio](D61_MATRIZ_DOCUMENTAL_APOIO_ENTREVISTAS.md), [D61 plano de anexos](D61_PLANO_ANEXOS_TRANSCRICOES.md). O documento D46 é mantido como histórico de auditoria.
+
 **Documento-base:** `Monografia_D44_Metodologia_Proveniencia_Verificada.docx`, pp. 36–43.  
 **Âmbito:** secções 4.1–4.16, mantendo a estrutura, a numeração, o tema, os códigos T01–T08/E01–E03 e as 18 necessidades N01–N18 da versão canónica.  
 **Estatuto:** **proposta de redacção, não integrada no DOCX**. O título «CASO DE ESTUDO» foi preservado para não alterar a estrutura sem aprovação; a adequação metodológica deste título requer decisão da supervisão.

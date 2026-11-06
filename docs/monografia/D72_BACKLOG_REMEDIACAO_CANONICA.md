@@ -24,12 +24,12 @@
 - [ ] Produzir mapa de correspondência **índice blockchain → índice ConecTA**: títulos canónicos do Capítulo V, distribuição entre corpo/apêndice/anexo, exclusões justificadas.
 
 ### P0 — T02 Remover estruturas de rastreabilidade internas e reduzir o Capítulo IV
-- [ ] Eliminar **4.15 «Síntese de hipóteses de necessidades»** e enumeração N01–N18 do manuscrito.
-- [ ] Eliminar **4.16 «Confronto da fundamentação documental, entrevistas e especificação»** como secção de tracker.
-- [ ] Eliminar **5.2.8 «Rastreabilidade entre investigação e solução»** como título académico.
-- [ ] Reexaminar **4.1–4.14**: reduzir repetição de literatura e relatos, aproximando-se do **Capítulo IV blockchain «Contexto de aplicação»** (contextualização e caracterização do grupo-alvo). Preservar conteúdo científico essencial em 1–3 secções concisas.
-- [ ] Retirar referências redundantes a Nxx de Resumo, Introdução, Metodologia, Discussão, Conclusões e legendas sem alterar RN/RF/RNF.
-- [ ] Reconstruir índices/listas após mudanças e garantir ausência de secções fantasmas.
+- [x] Eliminar **4.15 «Síntese de hipóteses de necessidades»** e enumeração N01–N18 do manuscrito na cópia D72 Etapa 1.
+- [x] Eliminar **4.16 «Confronto da fundamentação documental, entrevistas e especificação»** como secção de tracker na cópia D72 Etapa 1.
+- [x] Eliminar **5.2.8 «Rastreabilidade entre investigação e solução»** como título académico na cópia D72 Etapa 1.
+- [x] Condensar **4.1–4.14** em **4.1 Caracterização do contexto de contratação** e **4.2 Caracterização do grupo-alvo**, segundo a estrutura do Capítulo IV blockchain. Verificar no final remissões/consistência de toda a monografia.
+- [x] Remover os códigos N01–N18 do texto principal da cópia D72, mantendo RN/RF/RNF e a análise de origem dos requisitos no documento de auditoria.
+- [x] Actualizar **índice de 85 entradas** após a mudança da estrutura; **0 divergências de página, 0 bookmarks quebrados**. [ ] Rever lista de figuras/quadros após as próximas substituições de diagramas.
 
 ### P0 — T03 Normalizar o quadro de REGRAS DE NEGÓCIO
 - [ ] Seguir a tabela blockchain **ID | Regra de negócio | Descrição | Módulo** ou simplificar apenas com justificação, em vez de uma lista solta de duas colunas.
@@ -102,3 +102,19 @@ Uma versão D72+ só é «corrigida» após **auditoria comparativa com o Word b
 ## Registo de execução
 
 - 2026-11-07: **T01 concluída quanto ao inventário inicial**; leitura do Word blockchain e da ConecTA D71 feita. A estrutura actual contém `4.15`, `4.16`, `5.2.8` que devem sair; RF em quadro condensado de três colunas; diagramas de sequência foram localizados no Apêndice A.
+
+
+## D72 — Etapa 1 concluída em cópia autónoma (07-11-2026)
+
+**DOCX entregue na conversa, não no repositório:** `Monografia_ConecTA_D72_Etapa1_Estrutura_Indice_Validado.docx`.
+
+- Base real: D71 com quadros tipográficos uniformizados e bibliografia corrigida.
+- Capítulo IV reduzido a **4 CONTEXTO DE APLICAÇÃO**, §§4.1–4.2, em **duas páginas renderizadas** (págs. 36–37), em substituição das antigas 16 secções de contexto e rastreabilidade.
+- Secção 5.2.8 de rastreabilidade interna removida e **N01–N18 retirados de todo o corpo académico**, mas as 16 RN, 28 RF e 7 RNF **mantidas**.
+- A explicação dos pseudónimos Txx/Exx foi clarificada **uma vez no procedimento metodológico**, sem alterar a identificação dos depoimentos no Anexo B.
+- D72 etapa 1: **101 páginas** na renderização, **85 entradas de índice**, **0 inconsistências título/página**, **0 links internos quebrados**.
+- Comparação XML: **14 tabelas** e todos os media pré-existentes e `word/comments.xml` preservados byte a byte; **183 perguntas + 183 respostas** e perfis mantidos literalmente.
+- **Limite:** ainda não se remodelaram os quadros RN/RF/RNF nem diagramas e esta cópia **não é versão para submissão**. O ponto seguinte é T03/T04/T05, depois T06–T10.
+- SHA-256 da cópia: `4a5a7561fbfc13f1babb91ef03c71a29d9c312930d486a640e5d7a783a54ca47`.
+
+**Nota de gestão:** GitHub Issues está desactivado no repo (HTTP 410); todas estas tarefas permanecem sob controlo através do backlog Markdown do PR académico.

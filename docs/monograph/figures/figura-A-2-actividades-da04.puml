@@ -1,0 +1,51 @@
+@startuml
+' DA04 — Reporte e acompanhamento de conflitos (modelo conceptual)
+' Fontes: docs/modeling/activity-flows.md, docs/modeling/state-model-uml.md
+' Corresponde semanticamente à Figura A.2 do documento; o layout da
+' figura incorporada foi desenhado separadamente em SVG.
+title DA04 — Reporte e acompanhamento de conflitos
+skinparam monochrome true
+|Parte interveniente|
+start
+:Consultar contratação e reportar conflito;
+:Indicar categoria, descrição e evidências;
+|Sistema|
+:Associar Dispute ao Engagement;
+:Registar autor, data e evidências;
+:Dispute = OPEN;
+if (Impacta estado operacional ou pagamento?) then (Sim)
+  :Sinalizar Engagement IN_DISPUTE e/ou\nPaymentRecord DISPUTED, conforme aplicável;
+endif
+|Administrador|
+:Consultar caso e iniciar análise;
+|Sistema|
+:Dispute = UNDER_REVIEW;
+|Administrador|
+while (Informação suficiente?) is (Não)
+  |Sistema|
+  :Dispute = WAITING_INFORMATION;
+  :Solicitar elementos adicionais;
+  |Parte interveniente|
+  :Fornecer informação e evidências;
+  |Sistema|
+  :Preservar registos e voltar a UNDER_REVIEW;
+  |Administrador|
+  :Reavaliar o caso;
+endwhile (Sim)
+:Registar acompanhamento segundo a política;
+if (Resolução documentada?) then (Sim)
+  |Sistema|
+  :Dispute = RESOLVED;
+else (Não)
+  |Sistema|
+  :Dispute = CLOSED;
+endif
+:Preservar histórico, evidências e decisões;
+:Avaliar a retoma ou encerramento do Engagement\nsegundo o estado operacional anterior e regras;
+stop
+note right
+RESOLVED e CLOSED são estados do processo
+administrativo, não decisões judiciais.
+O administrador não arbitra culpa ou pagamentos.
+end note
+@enduml

@@ -1,0 +1,46 @@
+// Figura 5.2 — Diagrama conceptual das classes essenciais
+// Fonte científica: docs/modeling/domain-class-model.md (baseline G-MODEL-CLASS)
+// Esta figura representa o domínio proposto, NÃO uma implementação verificada.
+// Vista sintética (13/18 classes). Auxiliares no texto:
+// VerificationCase, PaymentTransaction, ReviewContest, DisputeEvidence, ModerationAction.
+
+graph Model {
+  graph [rankdir=TB, bgcolor="white", pad="0.14", nodesep="0.27", ranksep="0.49",
+         splines=polyline, outputorder=edgesfirst];
+  node [shape=plain, fontname="DejaVu Sans", fontsize=10.5];
+  edge [color="#5B6672", penwidth=1.0, fontname="DejaVu Sans", fontsize=8.5,
+        labelfontsize=8.5, labelfontcolor="#293845", dir=none];
+
+  user [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>User</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">id<BR ALIGN="LEFT"/>account_status</FONT></TD></TR></TABLE>>];
+  worker [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>WorkerProfile</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">user_id<BR ALIGN="LEFT"/>headline</FONT></TD></TR></TABLE>>];
+  employer [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>EmployerProfile</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">user_id<BR ALIGN="LEFT"/>display_name</FONT></TD></TR></TABLE>>];
+  evidence [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>ProfessionalEvidence</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">type<BR ALIGN="LEFT"/>reference</FONT></TD></TR></TABLE>>];
+  opportunity [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>Opportunity</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">status<BR ALIGN="LEFT"/>location_mode [opcional]</FONT></TD></TR></TABLE>>];
+  proposal [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>Proposal</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">status<BR ALIGN="LEFT"/>proposed_price [opcional]</FONT></TD></TR></TABLE>>];
+  engagement [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#DBE9E1"><B>Engagement</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">status<BR ALIGN="LEFT"/>worker_profile_id; employer_profile_id</FONT></TD></TR></TABLE>>];
+  agreement [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>AgreementVersion</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">version<BR ALIGN="LEFT"/>status</FONT></TD></TR></TABLE>>];
+  execution [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>ExecutionRecord</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">type<BR ALIGN="LEFT"/>created_at</FONT></TD></TR></TABLE>>];
+  review [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>Review</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">perspective<BR ALIGN="LEFT"/>rating</FONT></TD></TR></TABLE>>];
+  dispute [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>Dispute</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">category<BR ALIGN="LEFT"/>status</FONT></TD></TR></TABLE>>];
+  terms [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>PaymentTerms</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">amount<BR ALIGN="LEFT"/>method</FONT></TD></TR></TABLE>>];
+  payment [label=<<TABLE BORDER="1" COLOR="#31445E" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4"><TR><TD BGCOLOR="#E8EFF5"><B>PaymentRecord</B></TD></TR><HR/><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="9">status<BR ALIGN="LEFT"/>confirmed_at [opcional]</FONT></TD></TR></TABLE>>];
+
+  {rank=same; worker; employer}
+  {rank=same; evidence; proposal; opportunity}
+  {rank=same; agreement; execution; review; dispute}
+  {rank=same; terms; payment}
+
+  user -- worker [taillabel="1", headlabel="0..1"];
+  user -- employer [taillabel="1", headlabel="0..1"];
+  worker -- evidence [taillabel="1", headlabel="0..*"];
+  worker -- proposal [taillabel="1", headlabel="0..*"];
+  employer -- opportunity [taillabel="1", headlabel="0..*"];
+  opportunity -- proposal [taillabel="1", headlabel="0..*", constraint=false];
+  proposal -- engagement [taillabel="0..1", headlabel="0..1"];
+  engagement -- agreement [taillabel="1", headlabel="1..*"];
+  engagement -- execution [taillabel="1", headlabel="0..*"];
+  engagement -- review [taillabel="1", headlabel="0..2"];
+  engagement -- dispute [taillabel="1", headlabel="0..*"];
+  agreement -- terms [taillabel="1", headlabel="0..*"];
+  terms -- payment [taillabel="1", headlabel="0..*", constraint=false];
+}

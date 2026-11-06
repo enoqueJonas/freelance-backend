@@ -1,0 +1,100 @@
+' DS03 — Entrega, conclusão e pagamento (modelo lógico proposto).
+' Baseline: docs/modeling/sequence-flows.md; docs/modeling/state-model-uml.md
+' Não atesta integração de backend, execução de pagamento nem validação com utilizadores.
+' Os painéis do DOCX foram desenhados editorialmente com a mesma semântica.
+
+@startuml
+title DS03 (A) — Entrega e confirmação de conclusão
+skinparam monochrome true
+actor Trabalhador as T
+actor Empregador as E
+boundary "UI / API" as UI
+control "EngagementService" as ES
+entity "Regras de domínio" as D
+database "Engagement / Execution
+Repositories" as R
+T -> UI: registerDelivery(engagementId, evidence)
+UI -> ES: registerDelivery(actor, engagementId, evidence)
+ES -> R: get(Engagement, currentAgreement)
+R --> ES: ACTIVE + AgreementVersion ACCEPTED
+ES -> D: validar actor, estado e acordo
+D --> ES: ExecutionRecord(DELIVERY), DELIVERED
+ES -> R: save(ExecutionRecord, Engagement DELIVERED)
+ES --> UI: entrega registada
+E -> UI: confirmCompletion(engagementId)
+UI -> ES: confirmCompletion(actor, engagementId)
+ES -> D: validar empregador e estado DELIVERED
+alt Entrega aceite, sem impedimento
+ D --> ES: Engagement COMPLETED
+ ES -> R: save(COMPLETED)
+ ES --> UI: conclusão confirmada
+else Problema material na entrega
+ D --> ES: manter estado; não concluir
+ ES --> UI: solicitar alteração válida ou reportar conflito (DA04)
+end
+note bottom
+Execução do serviço ocorre fora da plataforma.
+Engagement COMPLETED não implica PaymentRecord CONFIRMED.
+end note
+@enduml
+
+@startuml
+title DS03 (B) — Reporte e confirmação de pagamento externo/manual
+skinparam monochrome true
+actor "Parte que reporta" as P
+actor Contraparte as C
+boundary "UI / API" as UI
+control "PaymentService" as PS
+entity "Regras de domínio" as D
+database "PaymentRepository" as R
+P -> UI: reportPayment(paymentTermsId, data)
+UI -> PS: reportPayment(actor, id, data)
+PS -> R: get(PaymentTerms, payment records)
+R --> PS: termos ligados à AgreementVersion vigente
+PS -> D: validar actor e condições
+D --> PS: PaymentRecord REPORTED_PAID
+PS -> R: save(REPORTED_PAID)
+C -> UI: confirm / contest payment(recordId)
+UI -> PS: decidePayment(actor, recordId)
+PS -> D: validar contraparte e registro
+alt Confirmado
+ D --> PS: PaymentRecord CONFIRMED
+else Contestação válida
+ D --> PS: PaymentRecord DISPUTED
+end
+PS -> R: persistir estado e histórico
+PS --> UI: estado registado
+note bottom
+O momento do pagamento depende dos termos aceites:
+adiantamento, etapa ou final. Sem custódia de fundos.
+end note
+@enduml
+
+@startuml
+title DS03 (C) — Prestador externo (integração opcional, RF20)
+skinparam monochrome true
+actor Parte as P
+boundary "UI / API" as UI
+control "PaymentService" as PS
+control "PSPAdapter" as A
+participant "PSP externo" as PSP
+database "PaymentRepository" as R
+P -> UI: initiateExternalPayment(paymentTermsId)
+UI -> PS: initiateExternalPayment(actor, id)
+PS -> R: get(PaymentTerms) e verificar elegibilidade RF20
+R --> PS: condições válidas
+PS -> A: initiate(termos aprovados)
+A -> PSP: solicitar operação externa
+PSP --> A: referência e estado devolvidos
+A --> PS: resposta / referência
+alt Falha da operação
+ PS -> R: guardar PaymentRecord FAILED
+else Confirmação fiável do PSP
+ PS -> R: guardar PaymentTransaction e PaymentRecord CONFIRMED
+end
+PS --> UI: referência/estado da operação
+note bottom
+RF20 é opcional e não há prova de integração executada.
+A aplicação não guarda saldos nem custodia fundos.
+end note
+@enduml

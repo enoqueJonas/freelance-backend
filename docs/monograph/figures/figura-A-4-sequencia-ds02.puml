@@ -1,0 +1,79 @@
+' DS02 — formalização e alteração do acordo (modelo lógico da solução proposta)
+' Baseline: docs/modeling/sequence-flows.md e docs/modeling/activity-flows.md
+' Não representa implementação integral demonstrada no backend AS-IS.
+' Diagramas do DOCX são painéis editoriais equivalentes, não exportação literal.
+
+@startuml
+title DS02 (A) — Propor e aceitar condições iniciais
+skinparam monochrome true
+actor "Parte proponente" as P
+actor "Contraparte" as C
+boundary "UI / API" as UI
+control "AgreementService" as AS
+entity "Regras do domínio" as D
+database "EngagementRepository" as ER
+database "AgreementRepository" as AR
+P -> UI: proposeAgreement(engagementId, conditions)
+UI -> AS: proposeAgreement(actor, engagementId, conditions)
+AS -> ER: get(engagementId)
+ER --> AS: Engagement(PENDING_AGREEMENT)
+AS -> D: validar participante, estado e condições
+alt Actor/estado inválido
+ D --> AS: rejeitar operação
+ AS --> UI: erro sem criar versão
+else Elegível
+ D --> AS: AgreementVersion v1 (PROPOSED)
+ AS -> AR: save(v1)
+end
+C -> UI: acceptAgreement(v1)
+UI -> AS: acceptAgreement(actor, v1)
+AS -> AR: get(v1)
+AR --> AS: v1 PROPOSED
+AS -> D: validar contraparte e registar aceitação
+alt Faltam aceitações exigidas
+ AS -> AR: save(acceptance)
+ AS --> UI: manter Engagement PENDING_AGREEMENT
+else Aceitações concluídas
+ D --> AS: v1 ACCEPTED, Engagement ACTIVE
+ AS -> AR: save(v1 ACCEPTED)
+ AS -> ER: save(Engagement ACTIVE)
+ AS --> UI: acordo vigente
+end
+@enduml
+
+@startuml
+title DS02 (B) — Alterar condições sem perder histórico
+skinparam monochrome true
+actor "Parte proponente" as P
+actor "Contraparte" as C
+boundary "UI / API" as UI
+control "AgreementService" as AS
+entity "Regras do domínio" as D
+database "EngagementRepository" as ER
+database "AgreementRepository" as AR
+P -> UI: proposeChange(engagementId, changes)
+UI -> AS: proposeChange(actor, engagementId, changes)
+AS -> ER: get(engagementId)
+ER --> AS: Engagement(ACTIVE)
+AS -> AR: getCurrentAcceptedVersion(engagementId)
+AR --> AS: AgreementVersion vN vigente
+AS -> D: validar participante e criar vN+1
+D --> AS: vN+1 PROPOSED
+AS -> AR: save(vN+1)
+note over AR: vN aceite permanece imutável
+C -> UI: accept / reject(vN+1)
+UI -> AS: decideChange(actor, vN+1, outcome)
+AS -> AR: get(vN+1)
+AR --> AS: vN+1 PROPOSED
+AS -> D: validar contraparte e decisão
+alt Rejeição
+ D --> AS: vN+1 REJECTED
+ AS -> AR: save(rejected)
+ note over AR: versão vN continua vigente
+else Aceitação válida
+ D --> AS: vN+1 ACCEPTED e vigente
+ AS -> AR: save(accepted + histórico)
+ note over AR: vN histórica, nunca sobrescrita
+end
+AS --> UI: resultado da decisão
+@enduml

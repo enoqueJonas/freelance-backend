@@ -1,0 +1,19 @@
+digraph Tipologia {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.32", ranksep="0.45", splines=ortho, outputorder=edgesfirst];
+  node [shape=box, style="rounded,filled", color="#6C7785", fillcolor="#F5F7FA", fontcolor="#20242A", fontname="DejaVu Sans", fontsize=16, penwidth=1.3, margin="0.23,0.17"];
+  edge [color="#6C7785", penwidth=1.5, arrowsize=0.65];
+  root [label="Plataformas digitais de trabalho", fontsize=20, fillcolor="#E8EDF3", penwidth=1.7];
+  web [label="Baseadas na web\n(tarefas executáveis à distância)", fillcolor="#ECF4FB"];
+  local [label="Baseadas na localização\n(serviço executado em local físico)", fillcolor="#EFF6EF"];
+  webex [label="Exemplos no âmbito de TI\nDesenvolvimento de software\nDesign digital · Análise de dados", fontsize=14, fillcolor="#FAFCFE"];
+  localex [label="Exemplos no âmbito de TI\nSuporte e manutenção\nInstalação e configuração de redes", fontsize=14, fillcolor="#FCFEFC"];
+  app [label="Aplicação web proposta\nIntermedia a conexão e a contratação;\na execução pode ser remota ou presencial", fontsize=15, fillcolor="#F5F3FF", color="#8475A5"];
+  root -> web;
+  root -> local;
+  {rank=same;web;local}
+  web -> webex;
+  local -> localex;
+  {rank=same;webex;localex}
+  webex -> app [style=dashed, color="#8475A5"];
+  localex -> app [style=dashed, color="#8475A5"];
+}

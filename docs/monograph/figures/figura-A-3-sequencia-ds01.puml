@@ -1,0 +1,81 @@
+' DS01 — Modelo-alvo de sequência, separado em três painéis para legibilidade.
+' Referência: docs/modeling/sequence-flows.md; RN01, RN02, RN04, RN08; RF07–RF12.
+' Responsabilidades lógicas, não documentação AS-IS da implementação.
+' Os PNGs da monografia são desenhos editoriais equivalentes (não exportações do PlantUML).
+
+@startuml
+title DS01 (A) — Criar e publicar oportunidade
+skinparam monochrome true
+actor Empregador as E
+boundary "UI / API" as UI
+control "OpportunityService" as OS
+entity "Opportunity (domínio)" as DOM
+database "OpportunityRepository" as OR
+E -> UI: criar oportunidade(data)
+UI -> OS: createOpportunity(actor, data)
+OS -> DOM: validar perfil e dados
+DOM --> OS: Opportunity(DRAFT)
+OS -> OR: save(DRAFT)
+E -> UI: publicar(id)
+UI -> OS: publish(actor, id)
+OS -> OR: get(id)
+OR --> OS: Opportunity(DRAFT)
+OS -> DOM: validar autoria e estado; publish()
+DOM --> OS: Opportunity(OPEN)
+OS -> OR: save(OPEN)
+OS --> UI: publicação confirmada
+@enduml
+
+@startuml
+title DS01 (B) — Submeter proposta
+skinparam monochrome true
+actor Trabalhador as T
+boundary "UI / API" as UI
+control "ProposalService" as PS
+entity "Regras do domínio" as DOM
+database "OpportunityRepository" as OR
+database "ProposalRepository" as PR
+T -> UI: submeter proposta(id, dados)
+UI -> PS: submitProposal(actor, id, dados)
+PS -> OR: get(opportunityId)
+OR --> PS: Opportunity
+PS -> DOM: validar OPEN, WorkerProfile e anti-auto-contratação
+alt Estado ou elegibilidade inválidos
+  DOM --> PS: inválido
+  PS --> UI: erro; nenhuma proposta persistida
+else Válido
+  DOM --> PS: Proposal(SUBMITTED)
+  PS -> PR: save(SUBMITTED)
+  PS --> UI: proposta registada
+end
+@enduml
+
+@startuml
+title DS01 (C) — Seleccionar proposta e iniciar contratação
+skinparam monochrome true
+actor Empregador as E
+boundary "UI / API" as UI
+control "ProposalService" as PS
+control "EngagementService" as ES
+entity "Regras do domínio" as DOM
+database "ProposalRepository" as PR
+database "OpportunityRepository" as OR
+database "EngagementRepository" as ER
+E -> UI: aceitar proposta(id)
+UI -> PS: acceptProposal(actor, id)
+PS -> PR: get(proposalId)
+PS -> OR: get(proposal.opportunity)
+PS -> DOM: validar autor do anúncio e Proposal(SUBMITTED)
+alt Actor/estado inválido
+  DOM --> PS: rejeitar
+  PS --> UI: erro
+else Válido
+  DOM --> PS: Proposal(ACCEPTED)
+  PS -> PR: save(ACCEPTED)
+  PS -> ES: startFromAcceptedProposal(proposal)
+  ES -> DOM: criar Engagement(PENDING_AGREEMENT)
+  ES -> ER: save(PENDING_AGREEMENT)
+  ES --> PS: contratação iniciada
+  PS --> UI: aceite; requer acordo bilateral (DS02)
+end
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+' Figura 5.11 — Diagrama de estados da contratação (Engagement)
+' Fonte: docs/modeling/state-model-uml.md
+' Representa o modelo conceptual aprovado, não a implementação AS-IS do backend.
+' A figura impressa da D37 é uma versão editorial sintética do mesmo modelo.
+title Ciclo de vida de Engagement — modelo conceptual
+skinparam monochrome true
+skinparam state {
+  BackgroundColor White
+  BorderColor Black
+}
+hide empty description
+
+[*] --> PENDING_AGREEMENT : Proposal.ACCEPTED
+PENDING_AGREEMENT --> ACTIVE : AgreementVersion.ACCEPTED\n[partes distintas e aceitações válidas]
+ACTIVE --> DELIVERED : entrega registada
+DELIVERED --> COMPLETED : conclusão confirmada
+
+PENDING_AGREEMENT --> CANCELLED : cancelamento permitido
+ACTIVE --> CANCELLED : cancelamento permitido
+
+ACTIVE --> IN_DISPUTE : conflito reportado
+DELIVERED --> IN_DISPUTE : conflito reportado
+IN_DISPUTE --> ACTIVE : retomar execução [estado anterior/regra]
+IN_DISPUTE --> DELIVERED : retomar após entrega [estado anterior/regra]
+IN_DISPUTE --> COMPLETED : conclusão válida [regra]
+IN_DISPUTE --> CANCELLED : cancelamento válido [regra]
+
+COMPLETED --> [*]
+CANCELLED --> [*]
+
+note right of ACTIVE
+  Requer versão do acordo aceite
+  e trabalhador diferente do empregador.
+end note
+
+note right of COMPLETED
+  COMPLETED não implica
+  PaymentRecord.CONFIRMED.
+  Pagamento tem ciclo independente.
+end note
+
+note bottom of IN_DISPUTE
+  O estado anterior é preservado
+  para permitir retoma consistente.
+  A resolução do conflito não
+  implica arbitragem jurídica.
+end note
+@enduml

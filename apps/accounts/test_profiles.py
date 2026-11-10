@@ -110,6 +110,10 @@ class RichProfileTests(APITestCase):
         self.assertEqual(public.data["location"], "Matola")
         for field in ["address", "contact_name", "employer_name", "email"]:
             self.assertNotIn(field, public.data)
+        self.client.force_authenticate(user=None)
+        public_result = self.client.get(f"/api/accounts/employers/{created.data['id']}/")
+        self.assertEqual(public_result.status_code, 200)
+        self.assertNotIn("address", public_result.data)
         self.client.force_authenticate(user=self.owner)
         own = self.client.get(f"/api/accounts/employers/{created.data['id']}/")
         self.assertEqual(own.data["contact_name"], "Contacto interno")

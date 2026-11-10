@@ -15,6 +15,7 @@ The React frontend has not been connected to the API. See
 | Current account | GET /api/accounts/me/ | Authenticated |
 | Create/view/edit worker | POST/GET/PATCH /api/accounts/me/worker/ | Account owner |
 | Create/view/edit employer | POST/GET/PATCH /api/accounts/me/employer/ | Account owner |
+| Business detail | GET /api/accounts/employers/{id}/ | Public safe subset; owner/staff see contact |
 | List/search workers | GET /api/accounts/workers/ | Public |
 | Opportunities | GET/POST /api/marketplace/offers/ | Public read; employer write |
 | Own opportunities | GET /api/marketplace/offers/mine/ | Employer owner |

@@ -7,7 +7,7 @@ class Worker(models.Model):
     user = models.OneToOneField("accounts.User", on_delete=models.CASCADE)
     # Legacy compatibility: existing values are comma-separated strings.
     skills = models.CharField(max_length=200)
-    experience = models.CharField(max_length=200)
+    experience = models.CharField(max_length=200, blank=True, default="")
     title = models.CharField(max_length=180, blank=True)
     bio = models.TextField(blank=True)
     location = models.CharField(max_length=150, blank=True)

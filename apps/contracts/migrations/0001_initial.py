@@ -141,14 +141,14 @@ class Migration(migrations.Migration):
         migrations.AddConstraint(
             model_name="agreementversion",
             constraint=models.UniqueConstraint(
-                fields=("contract"), condition=models.Q(status="active"),
+                fields=("contract",), condition=models.Q(status="active"),
                 name="agreement_one_active_per_contract",
             ),
         ),
         migrations.AddConstraint(
             model_name="agreementversion",
             constraint=models.UniqueConstraint(
-                fields=("contract"), condition=models.Q(status__in=["draft", "pending_approval"]),
+                fields=("contract",), condition=models.Q(status__in=["draft", "pending_approval"]),
                 name="agreement_one_open_per_contract",
             ),
         ),

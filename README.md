@@ -73,6 +73,7 @@ and the React API adapter. Frontend remains a local demonstration.
 | GET/POST/PATCH | `/api/accounts/me/employer/` | Own employer profile |
 | GET | `/api/accounts/workers/` | Public |
 | GET | `/api/accounts/workers/{id}/` | Public |
+| GET | `/api/accounts/employers/{id}/` | Public business fields; owner/staff get private details |
 | GET | `/api/accounts/users/` | Admin only |
 | GET | `/api/marketplace/offers/` | Public, active offers |
 | POST | `/api/marketplace/offers/` | JWT + employer profile |

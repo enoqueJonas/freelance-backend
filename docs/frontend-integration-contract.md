@@ -96,9 +96,11 @@ a signature/activation; both are required. This is **not a certified e-signature
 5. **Status handling:** server owns offer/proposal/contract status and
    agreement approvals; frontend must reload authoritative server state after
    mutations rather than writing `localStorage` directly.
-6. **Finances and disputes:** Django payments/disputes/notifications remain
-   scaffolding. **Do not connect the frontend payment/conflict UI to fictitious
-   endpoints** or claim transaction or arbitration support.
+6. **Finances and disputes:** payment declaration and dispute follow-up
+   endpoints now exist on the `feat/conecta-backend-payments-disputes`
+   branch. Connect through DTO mappers and JWT-aware service adapters.
+   Never claim actual transfer, escrow, bank confirmation or binding arbitration.
+   See [API details](payment-dispute-api.md).
 7. **Identity, verification and audit:** client-supplied evidence and
    timestamps are not trusted. Implement secure uploads, ownership checks
    and server-side histories before storing real personal documents.
@@ -113,13 +115,13 @@ a signature/activation; both are required. This is **not a certified e-signature
 ## Next backend slices
 
 - Profile richness and evidence, without overclaiming identity verification
-- External payment declarations and confirmations (RN09/RN10), no custody
-- Administrative dispute reporting/history (RN13/RF24/RF25), no arbitration
 - Notifications/messaging/reviews backed by PostgreSQL (or SQLite in tests)
 - Frontend API adapter and browser E2E tests
 
 ## Verification
 
-CI runs Django check, committed migration drift check and **36 explicitly
-discovered tests** on the contracts branch. The `master` branch was not
-modified. No React/Django integration has yet been demonstrated.
+CI in the payments/disputes branch requires **60 explicitly
+discovered tests** (accounts, marketplace, contracts, payments and disputes),
+Django checks and committed migration checks. Verify the actual latest
+GitHub Actions run before describing tests as passed. The `master` branch
+is unmodified. React/Django integration is not yet demonstrated.

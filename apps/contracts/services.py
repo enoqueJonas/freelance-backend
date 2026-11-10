@@ -162,6 +162,24 @@ def approve_version(version_id, user):
 
     approvals = set(version.approvals.values_list("party", flat=True))
     if approvals == {AgreementApproval.Party.EMPLOYER, AgreementApproval.Party.WORKER}:
+        # An amendment may not undercut external amounts already declared.
+        # The final approval and the check run inside one database transaction,
+        # protected by the locked Contract row used by payment declarations.
+        from decimal import Decimal
+        from django.db.models import Sum
+        from apps.payments.models import ExternalPayment
+
+        declared = ExternalPayment.objects.filter(
+            contract=contract,
+            status__in=[
+                ExternalPayment.Status.REPORTED_PAID,
+                ExternalPayment.Status.CONFIRMED,
+            ],
+        ).aggregate(total=Sum("amount"))["total"] or Decimal("0.00")
+        if declared > Decimal(str(version.terms["budget"])):
+            raise Conflict(
+                "Uma nova versão não pode ter valor inferior aos pagamentos declarados."
+            )
         old = AgreementVersion.objects.select_for_update().filter(
             contract=contract, status=AgreementVersion.Status.ACTIVE
         ).exclude(pk=version.pk).first()

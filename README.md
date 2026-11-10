@@ -25,7 +25,7 @@ development secret and database must be treated as compromised and replaced.
 Only run with `DJANGO_DEBUG=1` locally. A real deployment needs trusted hosts,
 HTTPS and secure cookie/proxy configuration.
 
-## Implemented backend foundation (this branch)
+## Backend foundation and agreements (this branch)
 
 - Real password-validated user registration, hashed passwords and JWT login.
 - Both worker and employer profiles on the **same** account.
@@ -38,10 +38,17 @@ HTTPS and secure cookie/proxy configuration.
 - Unique proposals per worker and offer, positive budget and timeline checks.
 - Explicit, origin-allowlisted CORS to permit later React integration.
 
-**Not implemented yet:** contract creation from accepted proposals, bilateral
-agreement versions, evidence/uploads, payment declarations and dispute workflow.
-These still require server-side APIs, models, migrations and tests **before**
-removing the `mockApi` from the frontend.
+**Implemented on this contracts feature branch:** accepting a proposal
+creates a pending database contract and an unsigned agreement draft.
+Both distinct participants must approve the same published terms to activate
+a contract; amendments, rejection and history are persisted server-side.
+See [integration contract](docs/frontend-integration-contract.md) for endpoints
+and the remaining field mappings.
+
+**Still not implemented:** external payment recording, dispute history,
+file evidence/verification, real messaging and the React API adapter.
+These need ownership-safe endpoints and tests **before** replacing all
+`mockApi` functionality.
 
 ## API endpoints
 
@@ -109,7 +116,7 @@ python manage.py makemigrations --check --dry-run
 python manage.py test --verbosity 2
 ```
 
-Until backend contract/payments/disputes endpoints are finished, the
-frontend remains a separate **demonstration** using localStorage. A successful
-Django test suite does not establish end-to-end integration, production
-security or empirical acceptance for the monograph.
+The frontend remains a separate **demonstration** using localStorage
+until adapter, payments, disputes, profiles and E2E tests are completed.
+A successful Django test suite does not establish end-to-end integration,
+production security or empirical acceptance for the monograph.

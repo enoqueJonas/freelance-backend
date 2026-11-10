@@ -37,5 +37,14 @@ jobs:
         run: python manage.py check
       - name: Verify all model migrations are committed
         run: python manage.py makemigrations --check --dry-run
-      - name: Run all Django test suites
-        run: python manage.py test --verbosity 2
+      - name: Run explicit account, marketplace and contracts tests (nonzero gate)
+        shell: bash
+        run: |
+          set -o pipefail
+          python manage.py test apps.accounts.tests apps.marketplace.tests apps.contracts.tests --verbosity 2 2>&1 | tee /tmp/conecta-test-results.log
+          RUN_COUNT=$(grep -Eo 'Ran [0-9]+ tests?' /tmp/conecta-test-results.log | tail -1 | awk '{print $2}')
+          echo "Discovered test count: ${RUN_COUNT:-0}"
+          if [ -z "$RUN_COUNT" ] || [ "$RUN_COUNT" -lt 22 ]; then
+            echo "ERROR: test discovery ran fewer than 22 expected foundation cases."
+            exit 1
+          fi

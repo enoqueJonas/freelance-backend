@@ -1,0 +1,40 @@
+name: ConecTA Backend Quality
+
+on:
+  push:
+    branches:
+      - feat/conecta-backend-foundation-auth-marketplace
+  pull_request:
+    paths:
+      - 'apps/**'
+      - 'backend/**'
+      - 'requirements.txt'
+      - '.github/workflows/backend-quality.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  django:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      DJANGO_DEBUG: '1'
+      DJANGO_SECRET_KEY: 'ci-only-development-key-not-for-real-services'
+      DJANGO_ALLOWED_HOSTS: '127.0.0.1,localhost,testserver'
+      CORS_ALLOWED_ORIGINS: 'http://localhost:3000,http://127.0.0.1:3000'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install pinned Python requirements
+        run: python -m pip install -r requirements.txt
+      - name: Django system checks
+        run: python manage.py check
+      - name: Verify all model migrations are committed
+        run: python manage.py makemigrations --check --dry-run
+      - name: Run all Django test suites
+        run: python manage.py test --verbosity 2

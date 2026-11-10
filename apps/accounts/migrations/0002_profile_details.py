@@ -7,6 +7,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
+            model_name="worker", name="experience",
+            field=models.CharField(blank=True, default="", max_length=200),
+        ),
+        migrations.AlterField(
             model_name="employer", name="address",
             field=models.CharField(blank=True, default="", max_length=150),
         ),

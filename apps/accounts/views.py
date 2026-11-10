@@ -11,6 +11,7 @@ from .models import Employer, Worker
 from .serializers import (
     EmployerCreateSerializer,
     EmployerSerializer,
+    EmployerPublicSerializer,
     RegisterSerializer,
     UserSerializer,
     WorkerCreateSerializer,
@@ -74,7 +75,12 @@ class EmployerDetail(APIView):
         profile = get_object_or_404(
             Employer.objects.select_related("user"), pk=pk
         )
-        return Response(EmployerSerializer(profile).data)
+        serializer = (
+            EmployerSerializer
+            if request.user.is_staff or profile.user_id == request.user.id
+            else EmployerPublicSerializer
+        )
+        return Response(serializer(profile).data)
 
 
 class MyEmployer(APIView):

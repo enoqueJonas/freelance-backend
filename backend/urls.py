@@ -10,6 +10,8 @@ urlpatterns = [
     path("api/accounts/", include("apps.accounts.urls")),
     path("api/marketplace/", include("apps.marketplace.urls")),
     path("api/contracts/", include("apps.contracts.urls")),
+    path("api/payments/", include("apps.payments.urls")),
+    path("api/disputes/", include("apps.contracts.dispute_urls")),
     path("api/auth/login/", UsernameOrEmailTokenView.as_view(), name="token_obtain_pair"),
     path("api/auth/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]

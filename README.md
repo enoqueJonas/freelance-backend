@@ -25,7 +25,7 @@ development secret and database must be treated as compromised and replaced.
 Only run with `DJANGO_DEBUG=1` locally. A real deployment needs trusted hosts,
 HTTPS and secure cookie/proxy configuration.
 
-## Backend foundation, agreements, payments and disputes
+## Backend foundation, agreements, payments, disputes and profiles
 
 - Real password-validated user registration, hashed passwords and JWT login.
 - Both worker and employer profiles on the **same** account.
@@ -51,10 +51,15 @@ worker confirmation/contestation; administrative (non-arbitral) dispute
 reporting, descriptive evidence and status history. See
 [Payments and disputes API](docs/payment-dispute-api.md).
 
-**Still not implemented:** real messaging, rich professional profiles,
-secure evidence uploads/verification and the React API adapter.
-All API authorization is enforced on the server; however, the frontend
-still uses its local mock and has not been integrated.
+**Implemented in the profiles/evidence branch:** extended professional and
+employer fields, protected employer contacts, optional location and HTTPS
+portfolio links. Users may privately submit portfolio, certificate or business
+references for **documentary administrative review**, but this is not identity
+verification. See [profile and evidence API](docs/profile-evidence-api.md).
+
+**Still not implemented:** legal identity-document verification and secure
+uploads, trusted ratings/completed-job aggregates, messaging, notifications,
+and the React API adapter. Frontend remains a local demonstration.
 
 ## API endpoints
 
@@ -123,6 +128,6 @@ python manage.py test --verbosity 2
 ```
 
 The frontend remains a separate **demonstration** using localStorage
-until the API adapter, richer profiles, messaging and E2E tests are completed.
+until the API adapter, messaging, verification safeguards and E2E tests are completed.
 A successful Django test suite does not establish end-to-end integration,
 production security or empirical acceptance for the monograph.

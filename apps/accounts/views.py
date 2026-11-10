@@ -69,7 +69,8 @@ class EmployerList(APIView):
 
 
 class EmployerDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    # Public business metadata only; authenticated owners/staff see private fields.
+    permission_classes = [AllowAny]
 
     def get(self, request, pk):
         profile = get_object_or_404(

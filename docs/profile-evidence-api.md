@@ -14,7 +14,7 @@ The API uses ownership from JWT; the selected UI role is not an authorization cr
 | GET/POST/PATCH | `/api/accounts/me/employer/` | Owner |
 | GET | `/api/accounts/workers/` | Public (no email/phone) |
 | GET | `/api/accounts/workers/{id}/` | Public (no email/phone) |
-| GET | `/api/accounts/employers/{id}/` | Authenticated; private contact fields only to owner/staff |
+| GET | `/api/accounts/employers/{id}/` | Public business metadata; private contact fields only to owner/staff |
 
 Worker fields: `skills` (legacy comma-separated text; accepts a list on write),
 `skills_list` (read-only list), `experience` (legacy text),

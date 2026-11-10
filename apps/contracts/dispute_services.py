@@ -34,7 +34,9 @@ def accessible_disputes(actor):
 def accessible_case(pk, actor, lock=False):
     qs = accessible_disputes(actor)
     if lock:
-        qs = qs.select_for_update()
+        # Mutation endpoints must not reuse prefetched events/evidence.
+        # Otherwise the response serializes stale audit history after add_event().
+        qs = qs.prefetch_related(None).select_for_update()
     # 404, rather than exposing identifiers to outsiders.
     return get_object_or_404(qs, pk=pk)
 

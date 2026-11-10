@@ -149,3 +149,81 @@ class AgreementEvent(models.Model):
     class Meta:
         db_table = "conecta_agreement_events"
         ordering = ["recorded_at", "id"]
+
+
+class Dispute(models.Model):
+    """Documentary follow-up; deliberately NOT arbitration or contract adjudication."""
+
+    class Category(models.TextChoices):
+        SCOPE = "SCOPE", "Âmbito"
+        DEADLINE = "DEADLINE", "Prazo"
+        DELIVERABLE = "DELIVERABLE", "Entregáveis"
+        PAYMENT = "PAYMENT", "Pagamento"
+        COMMUNICATION = "COMMUNICATION", "Comunicação"
+        OTHER = "OTHER", "Outro"
+
+    class Status(models.TextChoices):
+        OPEN = "OPEN", "Reportado"
+        UNDER_REVIEW = "UNDER_REVIEW", "Em análise"
+        WAITING_INFORMATION = "WAITING_INFORMATION", "A aguardar informação"
+        RESOLVED = "RESOLVED", "Resultado administrativo registado"
+        CLOSED = "CLOSED", "Acompanhamento encerrado"
+
+    contract = models.ForeignKey(
+        Contract, on_delete=models.PROTECT, related_name="disputes",
+    )
+    reported_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT,
+        related_name="reported_disputes",
+    )
+    category = models.CharField(max_length=16, choices=Category.choices)
+    description = models.TextField()
+    status = models.CharField(
+        max_length=24, choices=Status.choices, default=Status.OPEN,
+    )
+    requested_from = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT,
+        related_name="dispute_information_requests", null=True, blank=True,
+    )
+    administrative_result = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "conecta_disputes"
+        ordering = ["-created_at", "-id"]
+
+
+class DisputeEvidence(models.Model):
+    dispute = models.ForeignKey(
+        Dispute, on_delete=models.PROTECT, related_name="evidence",
+    )
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT,
+        related_name="submitted_dispute_evidence",
+    )
+    description = models.TextField()
+    url = models.URLField(max_length=400, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "conecta_dispute_evidence"
+        ordering = ["created_at", "id"]
+
+
+class DisputeEvent(models.Model):
+    dispute = models.ForeignKey(
+        Dispute, on_delete=models.PROTECT, related_name="events",
+    )
+    actor = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.PROTECT,
+        related_name="dispute_events",
+    )
+    action = models.CharField(max_length=32)
+    status_after = models.CharField(max_length=24, choices=Dispute.Status.choices)
+    note = models.TextField()
+    recorded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "conecta_dispute_events"
+        ordering = ["recorded_at", "id"]

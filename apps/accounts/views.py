@@ -11,6 +11,7 @@ from .models import Employer, Worker
 from .serializers import (
     EmployerCreateSerializer,
     EmployerSerializer,
+    EmployerPublicSerializer,
     RegisterSerializer,
     UserSerializer,
     WorkerCreateSerializer,
@@ -68,13 +69,19 @@ class EmployerList(APIView):
 
 
 class EmployerDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    # Public business metadata only; authenticated owners/staff see private fields.
+    permission_classes = [AllowAny]
 
     def get(self, request, pk):
         profile = get_object_or_404(
             Employer.objects.select_related("user"), pk=pk
         )
-        return Response(EmployerSerializer(profile).data)
+        serializer = (
+            EmployerSerializer
+            if request.user.is_staff or profile.user_id == request.user.id
+            else EmployerPublicSerializer
+        )
+        return Response(serializer(profile).data)
 
 
 class MyEmployer(APIView):

@@ -6,6 +6,7 @@ on:
       - feat/conecta-backend-foundation-auth-marketplace
       - feat/conecta-backend-contracts-agreements
       - feat/conecta-backend-payments-disputes
+      - feat/conecta-profiles-evidence-review
   pull_request:
     paths:
       - 'apps/**'
@@ -42,10 +43,10 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          python manage.py test apps.accounts.tests apps.marketplace.tests apps.contracts.tests apps.payments.tests apps.contracts.test_disputes --verbosity 2 2>&1 | tee /tmp/conecta-test-results.log
+          python manage.py test apps.accounts.tests apps.accounts.test_profiles apps.marketplace.tests apps.contracts.tests apps.payments.tests apps.contracts.test_disputes apps.verification.tests --verbosity 2 2>&1 | tee /tmp/conecta-test-results.log
           RUN_COUNT=$(grep -Eo 'Ran [0-9]+ tests?' /tmp/conecta-test-results.log | tail -1 | awk '{print $2}')
           echo "Discovered test count: ${RUN_COUNT:-0}"
-          if [ -z "$RUN_COUNT" ] || [ "$RUN_COUNT" -lt 60 ]; then
-            echo "ERROR: test discovery ran fewer than 60 expected backend cases."
+          if [ -z "$RUN_COUNT" ] || [ "$RUN_COUNT" -lt 84 ]; then
+            echo "ERROR: test discovery ran fewer than 84 expected backend cases."
             exit 1
           fi

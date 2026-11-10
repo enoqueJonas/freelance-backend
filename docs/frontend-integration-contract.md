@@ -1,8 +1,9 @@
 # ConecTA — Backend ↔ Frontend Integration Contract (working draft)
 
-**Status:** two separate backend PRs, no frontend API adapter yet. Back-end branch
-`feat/conecta-backend-contracts-agreements` builds on
-`feat/conecta-backend-foundation-auth-marketplace`.
+**Status:** staged backend branches (PR #8 → #9 → #10 → profile/evidence).
+The React frontend has not been connected to the API. See
+[profile/evidence API](profile-evidence-api.md) and
+[external payments/disputes API](payment-dispute-api.md).
 
 ## Implemented endpoints (real Django database)
 
@@ -14,6 +15,7 @@
 | Current account | GET /api/accounts/me/ | Authenticated |
 | Create/view/edit worker | POST/GET/PATCH /api/accounts/me/worker/ | Account owner |
 | Create/view/edit employer | POST/GET/PATCH /api/accounts/me/employer/ | Account owner |
+| Business detail | GET /api/accounts/employers/{id}/ | Public safe subset; owner/staff see contact |
 | List/search workers | GET /api/accounts/workers/ | Public |
 | Opportunities | GET/POST /api/marketplace/offers/ | Public read; employer write |
 | Own opportunities | GET /api/marketplace/offers/mine/ | Employer owner |
@@ -86,10 +88,12 @@ a signature/activation; both are required. This is **not a certified e-signature
    `proposed_amount`, `timeline_days`, `acceptance_criteria`,
    `payment_conditions`); UI currently uses camelCase and different models.
    Introduce an explicitly tested `apiClient`/DTO mapper.
-3. **Account profile fields:** Django `Worker.skills` is a string and the
-   backend profile lacks the frontend's `title`, `bio`, `location`,
-   portfolio evidence, verification status and rating. Add migrations and
-   ownership-safe serializers before claiming profile parity.
+3. **Account profile fields:** worker and employer public metadata now exist,
+   including biography, location, portfolio URLs and industry. Legacy
+   `Worker.skills` is still stored as text; `skills_list` is provided
+   for a typed frontend adapter. Trusted ratings/completed-job aggregates,
+   legal identity verification and secure document uploads **do not yet exist**.
+   Do not transform documentary `REVIEWED` into an identity verified badge.
 4. **Role state:** backend accounts have no exclusive `role` column.
    Roles derive from existence of `Worker` and `Employer`; `role` in
    frontend must be a **display context only**, not an authorization token.
@@ -101,9 +105,11 @@ a signature/activation; both are required. This is **not a certified e-signature
    branch. Connect through DTO mappers and JWT-aware service adapters.
    Never claim actual transfer, escrow, bank confirmation or binding arbitration.
    See [API details](payment-dispute-api.md).
-7. **Identity, verification and audit:** client-supplied evidence and
-   timestamps are not trusted. Implement secure uploads, ownership checks
-   and server-side histories before storing real personal documents.
+7. **Evidence reviews:** the backend can collect private metadata/HTTPS
+   references for portfolio, declared certificates and organisations;
+   administrative decisions include reviewer, timestamp and reason.
+   This is **not** legal identity verification or qualified certification.
+   Never send BI/passport scans or financial KYC through this API.
 8. **Browser security:** CORS is allowlisted, not authorization.
    Use bearer JWT via HTTPS; design refresh/session handling carefully,
    avoid long-lived tokens in readable browser storage, and never log tokens.
@@ -114,14 +120,14 @@ a signature/activation; both are required. This is **not a certified e-signature
 
 ## Next backend slices
 
-- Profile richness and evidence, without overclaiming identity verification
-- Notifications/messaging/reviews backed by PostgreSQL (or SQLite in tests)
+- Real identity-verification design (private storage, consent, retention and deletion), if required
+- Trusted ratings/completed-job aggregation and messaging/notifications, with ownership checks
 - Frontend API adapter and browser E2E tests
 
 ## Verification
 
-CI in the payments/disputes branch requires **60 explicitly
-discovered tests** (accounts, marketplace, contracts, payments and disputes),
-Django checks and committed migration checks. Verify the actual latest
-GitHub Actions run before describing tests as passed. The `master` branch
-is unmodified. React/Django integration is not yet demonstrated.
+CI in the profiles/evidence branch requires **84 explicitly
+discovered tests**, Django checks and committed migration checks, including
+ownership and privacy tests for employer/worker data and staff evidence review.
+A passing test suite is **not** evidence of legal identity verification or
+React/Django end-to-end integration. The `master` branch is unmodified.

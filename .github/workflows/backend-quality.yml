@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feat/conecta-backend-foundation-auth-marketplace
+      - feat/conecta-backend-contracts-agreements
   pull_request:
     paths:
       - 'apps/**'
